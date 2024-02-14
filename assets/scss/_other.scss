@@ -1,1 +1,41 @@
 @charset "UTF-8";
+
+.register{
+    & .card {
+        margin-bottom: 30px;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
+        & .card-body{
+            & .card-title{
+                font-size: 23px;
+                color: #012970;
+            }
+            & .input-group {
+                & .form-control:focus{
+                    box-shadow: none;
+                    outline: 0;
+                }
+            }
+            & .form-check-input:focus { 
+                box-shadow: none;
+            }
+            ::placeholder{
+                color: $gray-500;
+                font-weight: 300; 
+                font-size: 14px;
+            }
+            & .password-container {
+                position: relative;
+            }
+        
+            & .password-toggle {
+                position: absolute;
+                top: 50%;
+                right: 10px;
+                transform: translateY(-50%);
+                cursor: pointer;
+            }
+        }
+    }
+}
