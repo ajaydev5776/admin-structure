@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- *Bootstrap Css* -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- *Custom Css* -->
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css"> 
+
+    <!-- DataTables Select CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/select/1.3.4/css/select.dataTables.min.css">
+
+    <!-- *Fontawesome 5* -->   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body >
+    <!-- *Admin Structure Start* -->
+    <div class="container-fluid vh-100 overflow-hidden">
+        <div class="row h-100">
+            <div class="col-auto h-100">
+                <!-- Aside Bar Start -->
+                <aside class="asidebar bg-white h-100 row flex-nowrap flex-column" id="asidebar">
+                    <div class="col-12 logopart"><a href="index.html" class="logo mx-3"><img src="assets/img/logo.svg" alt="log"></a></div>
+                    <div class="col-12 h-100 flex-fill overflow-y-auto overflow-x-hidden">
+                        <div class="asideitem p-3">
+                            <ul class="navlist list-unstyled m-0 p-0">
+                                <li><a href="index.html" class="navitems"><span><img src="assets/img/icon/home.svg" alt="icon"></span>Dashboard</a></li>
+                                <li><a href="profile.html" class="navitems"><span><img src="assets/img/icon/profile.svg" alt="icon"></span>My Profile</a></li>
+                                <li><a href="order.html" class="navitems"><span><img src="assets/img/icon/order.svg" alt="icon"></span>Orders</a></li>
+                                <li><a href="sign-up.html" class="navitems"><span><img src="assets/img/icon/sign-up.svg" alt="icon"></span>Sign Up</a></li>
+                                <li><a href="login.html" class="navitems"><span><img src="assets/img/icon/login.svg" alt="icon"></span>Login</a></li>
+                                <li><a href="forget-password.html" class="navitems"><span><img src="assets/img/icon/password.svg" alt="icon"></span>Forget Password</a></li> 
+                            </ul>
+                        </div>
+                        <button id="switch">hello</button>
+                    </div>
+                </aside>
+                <!-- Aside Bar End -->
+            </div>
+            <div class="col h-100 rightside">     
+                <div class="row h-100 flex-column flex-nowrap">
+                    <div class="col-12 header d-flex align-items-center bg-white">
+                        <div class="search-bar">
+                            <form class="search-form d-flex align-items-center w-100" method="POST" action="#">
+                              <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+                              <button type="submit" title="Search"><i class="fas fa-search"></i></button>
+                            </form>
+                        </div><!-- End Search Bar -->
+                      
+                        <nav class="header-nav ms-auto">
+                            <ul class="d-flex align-items-center">
+                    
+                                <li class="nav-item d-block d-lg-none">
+                                    <a class="nav-link nav-icon search-bar-toggle " href="#">
+                                        <i class="fas fa-search"></i>
+                                    </a>
+                                </li><!-- End Search Icon-->
+                    
+                    
+                                <li class="nav-item dropdown pe-3">
+                        
+                                    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+                                        <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+                                        <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+                                    </a><!-- End Profile Iamge Icon -->
+                        
+                                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                                        <li class="dropdown-header">
+                                            <h6>Kevin Anderson</h6>
+                                            <span>Web Designer</span>
+                                        </li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                        
+                                        <li>
+                                            <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                                                <i class="far fa-user"></i>
+                                                <span>My Profile</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                        
+                                        <li>
+                                            <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                                                <i class="fas fa-cog"></i>
+                                                <span>Account Settings</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                            
+                                        <li>
+                                            <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                                                <i class="far fa-question-circle"></i>
+                                                <span>Need Help?</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                        
+                                        <li>
+                                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                                <i class="fas fa-sign-out-alt"></i>
+                                                <span>Sign Out</span>
+                                            </a>
+                                        </li>
+                        
+                                    </ul><!-- End Profile Dropdown Items -->
+                                </li><!-- End Profile Nav -->
+                    
+                            </ul>
+                        </nav><!-- End Icons Navigation -->
+                    </div>
+                    <div class="col-12 h-100 flex-fill overflow-y-auto">
+                        <div class="innerbody_part h-100">
+                            <div class="card h-100 border-0 bg-transparent shadow-0">
+                                <div class="card-body h-100">
+                                    
+                                    <main id="content" role="main" class="main">
+                                        <!-- Content -->
+                                        <div class="content container-fluid">
+                                            <!-- Page Header -->
+                                            <div class="page-header">
+                                                <div class="row align-items-center mb-3">
+                                                    <div class="col-sm">
+                                                        <h2 class="page-header-title">Orders</h2>
+                                                    </div> 
+                                                </div>
+                                                <!-- End Row --> 
+                                                <!-- Nav pills -->
+                                                <ul class="nav nav-pills page-header-tabs">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link active" data-bs-toggle="pill" href="#home">All products</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link disabled" data-bs-toggle="pill" href="#menu1">Open</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link disabled" data-bs-toggle="pill" href="#menu2">Unfulfilled</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link disabled" data-bs-toggle="pill" href="#menu3">Unpaid</a>
+                                                    </li>
+                                                </ul> 
+                                                <!-- End Nav pills-->
+                                            </div>
+                                            <!-- End Nav Scroller -->
+                                        </div>
+                                        <!-- End Page Header -->
+
+                                        <!-- Tab panes -->
+                                        <div class="tab-content order-section">
+                                            <div id="home" class="container tab-pane active"><br>
+                                                  <!-- Card -->
+                                                    <div class="card">
+                                                        <!-- Header -->
+                                                        <div class="card-header card-header d-flex justify-content-between">
+                                                            <div class="mb-2 mb-md-0 border-bottom border-2">
+                                                                <form>
+                                                                <!-- Search -->
+                                                                <div class="input-group input-group-merge input-group-flush">
+                                                                    <div class="input-group-prepend input-group-text bg-transparent border-0">
+                                                                        <i class="fas fa-search"></i>
+                                                                    </div>
+                                                                    <input id="datatableSearch" type="search" class="form-control bg-transparent border-0" placeholder="Search users" aria-label="Search users">
+                                                                </div>
+                                                                <!-- End Search -->
+                                                                </form>
+                                                            </div>
+
+                                                            <div class="d-grid d-sm-flex gap-2">
+                                                                <!-- Dropdown -->
+                                                                <div class="dropdown">
+                                                                <button type="button" class="btn btn-white btn-sm dropdown-toggle w-100 border border-1" id="usersExportDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                    <i class="fas fa-download"></i> Export
+                                                                </button>
+
+                                                                <div class="dropdown-menu dropdown-menu-sm-end" aria-labelledby="usersExportDropdown">
+                                                                    <span class="dropdown-header">Options</span>
+                                                                    <a id="export-copy" class="dropdown-item" href="javascript:;">
+                                                                    <img class="avatar avatar-xss avatar-4x3 me-2" src="assets/svg/illustrations/copy-icon.svg" alt="Image Description">
+                                                                    Copy
+                                                                    </a>
+                                                                    <a id="export-print" class="dropdown-item" href="javascript:;">
+                                                                    <img class="avatar avatar-xss avatar-4x3 me-2" src="assets/svg/illustrations/print-icon.svg" alt="Image Description">
+                                                                    Print
+                                                                    </a>
+                                                                    <div class="dropdown-divider"></div>
+                                                                    <span class="dropdown-header">Download options</span>
+                                                                    <a id="export-excel" class="dropdown-item" href="javascript:;">
+                                                                    <img class="avatar avatar-xss avatar-4x3 me-2" src="assets/img/excel-icon.svg" alt="Image Description">
+                                                                    Excel
+                                                                    </a>
+                                                                    <a id="export-csv" class="dropdown-item" href="javascript:;">
+                                                                    <img class="avatar avatar-xss avatar-4x3 me-2" src="assets/svg/components/placeholder-csv-format.svg" alt="Image Description">
+                                                                    .CSV
+                                                                    </a>
+                                                                    <a id="export-pdf" class="dropdown-item" href="javascript:;">
+                                                                    <img class="avatar avatar-xss avatar-4x3 me-2" src="assets/img/pdf-icon.svg" alt="Image Description">
+                                                                    PDF
+                                                                    </a>
+                                                                </div>
+                                                                </div>
+                                                                <!-- End Dropdown -->
+                
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Header -->
+
+                                                        <!-- Table -->
+                                                        <div class="table-responsive datatable-custom">
+                                                            <table id="datatable" class="table table-hover table-borderless table-thead-bordered table-nowrap table-align-middle card-table" style="width: 100%" data-hs-datatables-options='{
+                                                                    "columnDefs": [{
+                                                                        "targets": [0],
+                                                                        "orderable": false
+                                                                        }],
+                                                                    "order": [],
+                                                                    "info": {
+                                                                        "totalQty": "#datatableWithPaginationInfoTotalQty"
+                                                                    },
+                                                                    "search": "#datatableSearch",
+                                                                    "entries": "#datatableEntries",
+                                                                    "pageLength": 12,
+                                                                    "isResponsive": false,
+                                                                    "isShowPaging": false,
+                                                                    "pagination": "datatablePagination"
+                                                                    }'>
+                                                                <thead class="thead-light">
+                                                                <tr>
+                                                                    <th class="table-column-pe-0">
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="checkbox" value="" id="datatableCheckAll">
+                                                                        <label class="form-check-label" for="datatableCheckAll"></label>
+                                                                    </div>
+                                                                    </th>
+                                                                    <th class="table-column-ps-0">User Id</th>
+                                                                    <th>Date</th> 
+                                                                    <th>Payment status</th>
+                                                                    <th>Amount</th>
+                                                                    <th>Transaction Id</th>
+                                                                    <th>Actions</th>
+                                                                </tr>
+                                                                </thead>
+
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td class="table-column-pe-0">
+                                                                    <div class="form-check">
+                                                                        <input type="checkbox" class="form-check-input" id="ordersCheck1">
+                                                                        <label class="form-check-label" for="ordersCheck1"></label>
+                                                                    </div>
+                                                                    </td>
+                                                                    <td class="table-column-ps-0">
+                                                                    <a href="ecommerce-order-details.html">#35463</a>
+                                                                    </td>
+                                                                    <td>Aug 17, 2020, 5:48 (ET)</td> 
+                                                                    <td>
+                                                                    <span class="badge bg-soft-success text-success">
+                                                                        <span class="legend-indicator bg-success"></span>Paid
+                                                                    </span>
+                                                                    </td> 
+                                                                    <td>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <img class="bank-card avatar-xss avatar-4x3 me-2" src="assets/img/mastercard.svg" alt="Image Description">
+                                                                        <span class="text-dark">&bull;&bull;&bull;&bull; 4242</span>
+                                                                    </div>
+                                                                    </td>
+                                                                    <td>$256.39</td>
+                                                                    <td>
+                                                                        <div class="btn-group" role="group">
+                                                                            <a class="btn btn-white btn-sm border border-1" href="ecommerce-order-details.html">
+                                                                                <i class="fas fa-eye"></i> View
+                                                                            </a>
+
+                                                                            <!-- Button Group -->
+                                                                            <div class="btn-group">
+                                                                                <button type="button" class="btn btn-white btn-icon btn-sm dropdown-toggle dropdown-toggle-empty  border border-1" id="ordersExportDropdown1" data-bs-toggle="dropdown" aria-expanded="false"></button>
+
+                                                                                <div class="dropdown-menu dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">
+                                                                                    <span class="dropdown-header text-dark">Options</span>
+                                                                                    <div class="dropdown-divider"></div>  
+                                                                                    <a class="js-export-copy dropdown-item" href="javascript:;"> 
+                                                                                        <i class="fas fa-lock"></i> Block
+                                                                                    </a>
+                                                                                    <a class="js-export-print dropdown-item" href="javascript:;"> 
+                                                                                        <i class="fas fa-money-check"></i> Repayment
+                                                                                    </a>
+                                                                                    <div class="dropdown-divider"></div>  
+                                                                                    <a class="dropdown-item" href="javascript:;">
+                                                                                        <i class="fas fa-trash"></i> Delete
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- End Unfold -->
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td class="table-column-pe-0">
+                                                                    <div class="form-check">
+                                                                        <input type="checkbox" class="form-check-input" id="ordersCheck2">
+                                                                        <label class="form-check-label" for="ordersCheck2"></label>
+                                                                    </div>
+                                                                    </td>
+                                                                    <td class="table-column-ps-0">
+                                                                    <a href="ecommerce-order-details.html">#23513</a>
+                                                                    </td>
+                                                                    <td>Aug 17, 2020, 2:01 (ET)</td> 
+                                                                    <td>
+                                                                    <span class="badge bg-soft-success text-success">
+                                                                        <span class="legend-indicator bg-success"></span>Paid
+                                                                    </span>
+                                                                    </td> 
+                                                                    <td>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <img class="bank-card avatar-xss avatar-4x3 me-2" src="assets/img/mastercard.svg" alt="Image Description">
+                                                                        <span class="text-dark">&bull;&bull;&bull;&bull; 2390</span>
+                                                                    </div>
+                                                                    </td>
+                                                                    <td>$2,125.00</td>
+                                                                    <td>
+                                                                        <div class="btn-group" role="group">
+                                                                            <a class="btn btn-white btn-sm border border-1" href="ecommerce-order-details.html">
+                                                                                <i class="fas fa-eye"></i> View
+                                                                            </a>
+
+                                                                            <!-- Button Group -->
+                                                                            <div class="btn-group">
+                                                                                <button type="button" class="btn btn-white btn-icon btn-sm dropdown-toggle dropdown-toggle-empty  border border-1" id="ordersExportDropdown1" data-bs-toggle="dropdown" aria-expanded="false"></button>
+
+                                                                                <div class="dropdown-menu dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">
+                                                                                    <span class="dropdown-header text-dark">Options</span>
+                                                                                    <div class="dropdown-divider"></div>  
+                                                                                    <a class="js-export-copy dropdown-item" href="javascript:;"> 
+                                                                                        <i class="fas fa-lock"></i> Block
+                                                                                    </a>
+                                                                                    <a class="js-export-print dropdown-item" href="javascript:;"> 
+                                                                                        <i class="fas fa-money-check"></i> Repayment
+                                                                                    </a>
+                                                                                    <div class="dropdown-divider"></div>  
+                                                                                    <a class="dropdown-item" href="javascript:;">
+                                                                                        <i class="fas fa-trash"></i> Delete
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- End Unfold -->
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td class="table-column-pe-0">
+                                                                    <div class="form-check">
+                                                                        <input type="checkbox" class="form-check-input" id="ordersCheck3">
+                                                                        <label class="form-check-label" for="ordersCheck3"></label>
+                                                                    </div>
+                                                                    </td>
+                                                                    <td class="table-column-ps-0">
+                                                                    <a href="ecommerce-order-details.html">#62311</a>
+                                                                    </td>
+                                                                    <td>Aug 17, 2020, 1:55 (ET)</td> 
+                                                                    <td>
+                                                                    <span class="badge bg-soft-success text-success">
+                                                                        <span class="legend-indicator bg-success"></span>Paid
+                                                                    </span>
+                                                                    </td> 
+                                                                    <td>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <img class="bank-card avatar-xss avatar-4x3 me-2" src="assets/img/paypal-icon.svg" alt="Image Description">
+                                                                        <span class="text-dark">&bull;&bull;&bull;&bull;@gmail.com</span>
+                                                                    </div>
+                                                                    </td>
+                                                                    <td>$532.99</td>
+                                                                    <td>
+                                                                        <div class="btn-group" role="group">
+                                                                            <a class="btn btn-white btn-sm border border-1" href="ecommerce-order-details.html">
+                                                                                <i class="fas fa-eye"></i> View
+                                                                            </a>
+
+                                                                            <!-- Button Group -->
+                                                                            <div class="btn-group">
+                                                                                <button type="button" class="btn btn-white btn-icon btn-sm dropdown-toggle dropdown-toggle-empty  border border-1" id="ordersExportDropdown1" data-bs-toggle="dropdown" aria-expanded="false"></button>
+
+                                                                                <div class="dropdown-menu dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">
+                                                                                    <span class="dropdown-header text-dark">Options</span>
+                                                                                    <div class="dropdown-divider"></div>  
+                                                                                    <a class="js-export-copy dropdown-item" href="javascript:;"> 
+                                                                                        <i class="fas fa-lock"></i> Block
+                                                                                    </a>
+                                                                                    <a class="js-export-print dropdown-item" href="javascript:;"> 
+                                                                                        <i class="fas fa-money-check"></i> Repayment
+                                                                                    </a>
+                                                                                    <div class="dropdown-divider"></div>  
+                                                                                    <a class="dropdown-item" href="javascript:;">
+                                                                                        <i class="fas fa-trash"></i> Delete
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- End Unfold -->
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td class="table-column-pe-0">
+                                                                    <div class="form-check">
+                                                                        <input type="checkbox" class="form-check-input" id="ordersCheck4">
+                                                                        <label class="form-check-label" for="ordersCheck4"></label>
+                                                                    </div>
+                                                                    </td>
+                                                                    <td class="table-column-ps-0">
+                                                                    <a href="ecommerce-order-details.html">#12453</a>
+                                                                    </td>
+                                                                    <td>Aug 17, 2020, 1:54 (ET)</td> 
+                                                                    <td>
+                                                                    <span class="badge bg-soft-warning text-warning">
+                                                                        <span class="legend-indicator bg-warning"></span>Pending
+                                                                    </span>
+                                                                    </td> 
+                                                                    <td>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <img class="bank-card avatar-xss avatar-4x3 me-2" src="assets/img/mastercard.svg" alt="Image Description">
+                                                                        <span class="text-dark">&bull;&bull;&bull;&bull; 3535</span>
+                                                                    </div>
+                                                                    </td>
+                                                                    <td>$1,035.02</td>
+                                                                    <td>
+                                                                        <div class="btn-group" role="group">
+                                                                            <a class="btn btn-white btn-sm border border-1" href="ecommerce-order-details.html">
+                                                                                <i class="fas fa-eye"></i> View
+                                                                            </a>
+
+                                                                            <!-- Button Group -->
+                                                                            <div class="btn-group">
+                                                                                <button type="button" class="btn btn-white btn-icon btn-sm dropdown-toggle dropdown-toggle-empty  border border-1" id="ordersExportDropdown1" data-bs-toggle="dropdown" aria-expanded="false"></button>
+
+                                                                                <div class="dropdown-menu dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">
+                                                                                    <span class="dropdown-header text-dark">Options</span>
+                                                                                    <div class="dropdown-divider"></div>  
+                                                                                    <a class="js-export-copy dropdown-item" href="javascript:;"> 
+                                                                                        <i class="fas fa-lock"></i> Block
+                                                                                    </a>
+                                                                                    <a class="js-export-print dropdown-item" href="javascript:;"> 
+                                                                                        <i class="fas fa-money-check"></i> Repayment
+                                                                                    </a>
+                                                                                    <div class="dropdown-divider"></div>  
+                                                                                    <a class="dropdown-item" href="javascript:;">
+                                                                                        <i class="fas fa-trash"></i> Delete
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- End Unfold -->
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td class="table-column-pe-0">
+                                                                    <div class="form-check">
+                                                                        <input type="checkbox" class="form-check-input" id="ordersCheck5">
+                                                                        <label class="form-check-label" for="ordersCheck5"></label>
+                                                                    </div>
+                                                                    </td>
+                                                                    <td class="table-column-ps-0">
+                                                                    <a href="ecommerce-order-details.html">#84223</a>
+                                                                    </td>
+                                                                    <td>Aug 17, 2020, 1:04 (ET)</td> 
+                                                                    <td>
+                                                                    <span class="badge bg-soft-success text-success">
+                                                                        <span class="legend-indicator bg-success"></span>Paid
+                                                                    </span>
+                                                                    </td> 
+                                                                    <td>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <img class="bank-card avatar-xss avatar-4x3 me-2" src="assets/img/paypal-icon.svg" alt="Image Description">
+                                                                        <span class="text-dark">&bull;&bull;&bull;&bull;@gmail.com</span>
+                                                                    </div>
+                                                                    </td>
+                                                                    <td>$68.53</td>
+                                                                    <td>
+                                                                        <div class="btn-group" role="group">
+                                                                            <a class="btn btn-white btn-sm border border-1" href="ecommerce-order-details.html">
+                                                                                <i class="fas fa-eye"></i> View
+                                                                            </a>
+
+                                                                            <!-- Button Group -->
+                                                                            <div class="btn-group">
+                                                                                <button type="button" class="btn btn-white btn-icon btn-sm dropdown-toggle dropdown-toggle-empty  border border-1" id="ordersExportDropdown1" data-bs-toggle="dropdown" aria-expanded="false"></button>
+
+                                                                                <div class="dropdown-menu dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">
+                                                                                    <span class="dropdown-header text-dark">Options</span>
+                                                                                    <div class="dropdown-divider"></div>  
+                                                                                    <a class="js-export-copy dropdown-item" href="javascript:;"> 
+                                                                                        <i class="fas fa-lock"></i> Block
+                                                                                    </a>
+                                                                                    <a class="js-export-print dropdown-item" href="javascript:;"> 
+                                                                                        <i class="fas fa-money-check"></i> Repayment
+                                                                                    </a>
+                                                                                    <div class="dropdown-divider"></div>  
+                                                                                    <a class="dropdown-item" href="javascript:;">
+                                                                                        <i class="fas fa-trash"></i> Delete
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- End Unfold -->
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td class="table-column-pe-0">
+                                                                    <div class="form-check">
+                                                                        <input type="checkbox" class="form-check-input" id="ordersCheck6">
+                                                                        <label class="form-check-label" for="ordersCheck6"></label>
+                                                                    </div>
+                                                                    </td>
+                                                                    <td class="table-column-ps-0">
+                                                                    <a href="ecommerce-order-details.html">#46542</a>
+                                                                    </td>
+                                                                    <td>Aug 17, 2020, 1:01 (ET)</td> 
+                                                                    <td>
+                                                                    <span class="badge bg-soft-success text-success">
+                                                                        <span class="legend-indicator bg-success"></span>Paid
+                                                                    </span>
+                                                                    </td> 
+                                                                    <td>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <img class="bank-card avatar-xss avatar-4x3 me-2" src="assets/img/paypal-icon.svg" alt="Image Description">
+                                                                        <span class="text-dark">&bull;&bull;&bull;&bull;@gmail.com</span>
+                                                                    </div>
+                                                                    </td>
+                                                                    <td>$100.00</td>
+                                                                    <td>
+                                                                        <div class="btn-group" role="group">
+                                                                            <a class="btn btn-white btn-sm border border-1" href="ecommerce-order-details.html">
+                                                                                <i class="fas fa-eye"></i> View
+                                                                            </a>
+
+                                                                            <!-- Button Group -->
+                                                                            <div class="btn-group">
+                                                                                <button type="button" class="btn btn-white btn-icon btn-sm dropdown-toggle dropdown-toggle-empty  border border-1" id="ordersExportDropdown1" data-bs-toggle="dropdown" aria-expanded="false"></button>
+
+                                                                                <div class="dropdown-menu dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">
+                                                                                    <span class="dropdown-header text-dark">Options</span>
+                                                                                    <div class="dropdown-divider"></div>  
+                                                                                    <a class="js-export-copy dropdown-item" href="javascript:;"> 
+                                                                                        <i class="fas fa-lock"></i> Block
+                                                                                    </a>
+                                                                                    <a class="js-export-print dropdown-item" href="javascript:;"> 
+                                                                                        <i class="fas fa-money-check"></i> Repayment
+                                                                                    </a>
+                                                                                    <div class="dropdown-divider"></div>  
+                                                                                    <a class="dropdown-item" href="javascript:;">
+                                                                                        <i class="fas fa-trash"></i> Delete
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- End Unfold -->
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td class="table-column-pe-0">
+                                                                    <div class="form-check">
+                                                                        <input type="checkbox" class="form-check-input" id="ordersCheck7">
+                                                                        <label class="form-check-label" for="ordersCheck7"></label>
+                                                                    </div>
+                                                                    </td>
+                                                                    <td class="table-column-ps-0">
+                                                                    <a class="text-danger" href="ecommerce-order-details.html">#35378</a>
+                                                                    <i class="bi-exclamation-diamond-fill text-warning"></i>
+                                                                    </td>
+                                                                    <td>Aug 17, 2020, 12:56 (ET)</td> 
+                                                                    <td>
+                                                                    <span class="badge bg-soft-warning text-warning">
+                                                                        <span class="legend-indicator bg-warning"></span>Pending
+                                                                    </span>
+                                                                    </td> 
+                                                                    <td>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <img class="bank-card avatar-xss avatar-4x3 me-2" src="assets/img/mastercard.svg" alt="Image Description">
+                                                                        <span class="text-dark">&bull;&bull;&bull;&bull; 9901</span>
+                                                                    </div>
+                                                                    </td>
+                                                                    <td class="text-danger">$89.46</td>
+                                                                    <td>
+                                                                        <div class="btn-group" role="group">
+                                                                            <a class="btn btn-white btn-sm border border-1" href="ecommerce-order-details.html">
+                                                                                <i class="fas fa-eye"></i> View
+                                                                            </a>
+
+                                                                            <!-- Button Group -->
+                                                                            <div class="btn-group">
+                                                                                <button type="button" class="btn btn-white btn-icon btn-sm dropdown-toggle dropdown-toggle-empty  border border-1" id="ordersExportDropdown1" data-bs-toggle="dropdown" aria-expanded="false"></button>
+
+                                                                                <div class="dropdown-menu dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">
+                                                                                    <span class="dropdown-header text-dark">Options</span>
+                                                                                    <div class="dropdown-divider"></div>  
+                                                                                    <a class="js-export-copy dropdown-item" href="javascript:;"> 
+                                                                                        <i class="fas fa-lock"></i> Block
+                                                                                    </a>
+                                                                                    <a class="js-export-print dropdown-item" href="javascript:;"> 
+                                                                                        <i class="fas fa-money-check"></i> Repayment
+                                                                                    </a>
+                                                                                    <div class="dropdown-divider"></div>  
+                                                                                    <a class="dropdown-item" href="javascript:;">
+                                                                                        <i class="fas fa-trash"></i> Delete
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- End Unfold -->
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td class="table-column-pe-0">
+                                                                    <div class="form-check">
+                                                                        <input type="checkbox" class="form-check-input" id="ordersCheck8">
+                                                                        <label class="form-check-label" for="ordersCheck8"></label>
+                                                                    </div>
+                                                                    </td>
+                                                                    <td class="table-column-ps-0">
+                                                                    <a class="text-danger" href="ecommerce-order-details.html">#24562</a>
+                                                                    <i class="bi-exclamation-diamond-fill text-warning"></i>
+                                                                    </td>
+                                                                    <td>Aug 17, 2020, 12:54 (ET)</td> 
+                                                                    <td>
+                                                                    <span class="badge bg-soft-warning text-warning">
+                                                                        <span class="legend-indicator bg-warning"></span>Pending
+                                                                    </span>
+                                                                    </td> 
+                                                                    <td>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <img class="bank-card avatar-xss avatar-4x3 me-2" src="assets/img/mastercard.svg" alt="Image Description">
+                                                                        <span class="text-dark">&bull;&bull;&bull;&bull; 2278</span>
+                                                                    </div>
+                                                                    </td>
+                                                                    <td class="text-danger">$3,535.46</td>
+                                                                    <td>
+                                                                        <div class="btn-group" role="group">
+                                                                            <a class="btn btn-white btn-sm border border-1" href="ecommerce-order-details.html">
+                                                                                <i class="fas fa-eye"></i> View
+                                                                            </a>
+
+                                                                            <!-- Button Group -->
+                                                                            <div class="btn-group">
+                                                                                <button type="button" class="btn btn-white btn-icon btn-sm dropdown-toggle dropdown-toggle-empty  border border-1" id="ordersExportDropdown1" data-bs-toggle="dropdown" aria-expanded="false"></button>
+
+                                                                                <div class="dropdown-menu dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">
+                                                                                    <span class="dropdown-header text-dark">Options</span>
+                                                                                    <div class="dropdown-divider"></div>  
+                                                                                    <a class="js-export-copy dropdown-item" href="javascript:;"> 
+                                                                                        <i class="fas fa-lock"></i> Block
+                                                                                    </a>
+                                                                                    <a class="js-export-print dropdown-item" href="javascript:;"> 
+                                                                                        <i class="fas fa-money-check"></i> Repayment
+                                                                                    </a>
+                                                                                    <div class="dropdown-divider"></div>  
+                                                                                    <a class="dropdown-item" href="javascript:;">
+                                                                                        <i class="fas fa-trash"></i> Delete
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- End Unfold -->
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td class="table-column-pe-0">
+                                                                        <div class="form-check">
+                                                                            <input type="checkbox" class="form-check-input" id="ordersCheck9">
+                                                                            <label class="form-check-label" for="ordersCheck9"></label>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="table-column-ps-0">
+                                                                    <a href="ecommerce-order-details.html">#78531</a>
+                                                                    </td>
+                                                                    <td>Aug 17, 2020, 12:48 (ET)</td> 
+                                                                    <td>
+                                                                    <span class="badge bg-soft-success text-success">
+                                                                        <span class="legend-indicator bg-success"></span>Paid
+                                                                    </span>
+                                                                    </td> 
+                                                                    <td>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <img class="bank-card avatar-xss avatar-4x3 me-2" src="assets/img/paypal-icon.svg" alt="Image Description">
+                                                                        <span class="text-dark">&bull;&bull;&bull;&bull;@gmail.com</span>
+                                                                    </div>
+                                                                    </td>
+                                                                    <td>$23.89</td>
+                                                                    <td>
+                                                                        <div class="btn-group" role="group">
+                                                                            <a class="btn btn-white btn-sm border border-1" href="ecommerce-order-details.html">
+                                                                                <i class="fas fa-eye"></i> View
+                                                                            </a>
+
+                                                                            <!-- Button Group -->
+                                                                            <div class="btn-group">
+                                                                                <button type="button" class="btn btn-white btn-icon btn-sm dropdown-toggle dropdown-toggle-empty  border border-1" id="ordersExportDropdown1" data-bs-toggle="dropdown" aria-expanded="false"></button>
+
+                                                                                <div class="dropdown-menu dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">
+                                                                                    <span class="dropdown-header text-dark">Options</span>
+                                                                                    <div class="dropdown-divider"></div>  
+                                                                                    <a class="js-export-copy dropdown-item" href="javascript:;"> 
+                                                                                        <i class="fas fa-lock"></i> Block
+                                                                                    </a>
+                                                                                    <a class="js-export-print dropdown-item" href="javascript:;"> 
+                                                                                        <i class="fas fa-money-check"></i> Repayment
+                                                                                    </a>
+                                                                                    <div class="dropdown-divider"></div>  
+                                                                                    <a class="dropdown-item" href="javascript:;">
+                                                                                        <i class="fas fa-trash"></i> Delete
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- End Unfold -->
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td class="table-column-pe-0">
+                                                                        <div class="form-check">
+                                                                            <input type="checkbox" class="form-check-input" id="ordersCheck10">
+                                                                            <label class="form-check-label" for="ordersCheck10"></label>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="table-column-ps-0">
+                                                                    <a href="ecommerce-order-details.html">#34634</a>
+                                                                    </td>
+                                                                    <td>Aug 17, 2020, 12:41 (ET)</td> 
+                                                                    <td>
+                                                                    <span class="badge bg-soft-success text-success">
+                                                                        <span class="legend-indicator bg-success"></span>Paid
+                                                                    </span>
+                                                                    </td> 
+                                                                    <td>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <img class="bank-card avatar-xss avatar-4x3 me-2" src="assets/img/paypal-icon.svg" alt="Image Description">
+                                                                        <span class="text-dark">&bull;&bull;&bull;&bull;@gmail.com</span>
+                                                                    </div>
+                                                                    </td>
+                                                                    <td>$77.00</td>
+                                                                    <td>
+                                                                        <div class="btn-group" role="group">
+                                                                            <a class="btn btn-white btn-sm border border-1" href="ecommerce-order-details.html">
+                                                                                <i class="fas fa-eye"></i> View
+                                                                            </a>
+
+                                                                            <!-- Button Group -->
+                                                                            <div class="btn-group">
+                                                                                <button type="button" class="btn btn-white btn-icon btn-sm dropdown-toggle dropdown-toggle-empty  border border-1" id="ordersExportDropdown1" data-bs-toggle="dropdown" aria-expanded="false"></button>
+
+                                                                                <div class="dropdown-menu dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">
+                                                                                    <span class="dropdown-header text-dark">Options</span>
+                                                                                    <div class="dropdown-divider"></div>  
+                                                                                    <a class="js-export-copy dropdown-item" href="javascript:;"> 
+                                                                                        <i class="fas fa-lock"></i> Block
+                                                                                    </a>
+                                                                                    <a class="js-export-print dropdown-item" href="javascript:;"> 
+                                                                                        <i class="fas fa-money-check"></i> Repayment
+                                                                                    </a>
+                                                                                    <div class="dropdown-divider"></div>  
+                                                                                    <a class="dropdown-item" href="javascript:;">
+                                                                                        <i class="fas fa-trash"></i> Delete
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- End Unfold -->
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td class="table-column-pe-0">
+                                                                    <div class="form-check">
+                                                                        <input type="checkbox" class="form-check-input" id="ordersCheck11">
+                                                                        <label class="form-check-label" for="ordersCheck11"></label>
+                                                                    </div>
+                                                                    </td>
+                                                                    <td class="table-column-ps-0">
+                                                                    <a class="text-danger" href="ecommerce-order-details.html">#93817</a>
+                                                                    <i class="bi-exclamation-diamond-fill text-warning"></i>
+                                                                    </td>
+                                                                    <td>Aug 17, 2020, 12:36 (ET)</td> 
+                                                                    <td>
+                                                                    <span class="badge bg-soft-warning text-warning">
+                                                                        <span class="legend-indicator bg-warning"></span>Pending
+                                                                    </span>
+                                                                    </td> 
+                                                                    <td>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <img class="bank-card avatar-xss avatar-4x3 me-2" src="assets/img/paypal-icon.svg" alt="Image Description">
+                                                                        <span class="text-dark">&bull;&bull;&bull;&bull;@gmail.com</span>
+                                                                    </div>
+                                                                    </td>
+                                                                    <td class="text-danger">$77.00</td>
+                                                                    <td>
+                                                                        <div class="btn-group" role="group">
+                                                                            <a class="btn btn-white btn-sm border border-1" href="ecommerce-order-details.html">
+                                                                                <i class="fas fa-eye"></i> View
+                                                                            </a>
+
+                                                                            <!-- Button Group -->
+                                                                            <div class="btn-group">
+                                                                                <button type="button" class="btn btn-white btn-icon btn-sm dropdown-toggle dropdown-toggle-empty  border border-1" id="ordersExportDropdown1" data-bs-toggle="dropdown" aria-expanded="false"></button>
+
+                                                                                <div class="dropdown-menu dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">
+                                                                                    <span class="dropdown-header text-dark">Options</span>
+                                                                                    <div class="dropdown-divider"></div>  
+                                                                                    <a class="js-export-copy dropdown-item" href="javascript:;"> 
+                                                                                        <i class="fas fa-lock"></i> Block
+                                                                                    </a>
+                                                                                    <a class="js-export-print dropdown-item" href="javascript:;"> 
+                                                                                        <i class="fas fa-money-check"></i> Repayment
+                                                                                    </a>
+                                                                                    <div class="dropdown-divider"></div>  
+                                                                                    <a class="dropdown-item" href="javascript:;">
+                                                                                        <i class="fas fa-trash"></i> Delete
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- End Unfold -->
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td class="table-column-pe-0">
+                                                                    <div class="form-check">
+                                                                        <input type="checkbox" class="form-check-input" id="ordersCheck12">
+                                                                        <label class="form-check-label" for="ordersCheck12"></label>
+                                                                    </div>
+                                                                    </td>
+                                                                    <td class="table-column-ps-0">
+                                                                    <a href="ecommerce-order-details.html">#43113</a>
+                                                                    </td>
+                                                                    <td>Aug 17, 2020, 12:25 (ET)</td> 
+                                                                    <td>
+                                                                    <span class="badge bg-soft-success text-success">
+                                                                        <span class="legend-indicator bg-success"></span>Paid
+                                                                    </span>
+                                                                    </td> 
+                                                                    <td>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <img class="bank-card avatar-xss avatar-4x3 me-2" src="assets/img/mastercard.svg" alt="Image Description">
+                                                                        <span class="text-dark">&bull;&bull;&bull;&bull; 5533</span>
+                                                                    </div>
+                                                                    </td>
+                                                                    <td>$1,421.47</td>
+                                                                    <td>
+                                                                        <div class="btn-group" role="group">
+                                                                            <a class="btn btn-white btn-sm border border-1" href="ecommerce-order-details.html">
+                                                                                <i class="fas fa-eye"></i> View
+                                                                            </a>
+
+                                                                            <!-- Button Group -->
+                                                                            <div class="btn-group">
+                                                                                <button type="button" class="btn btn-white btn-icon btn-sm dropdown-toggle dropdown-toggle-empty  border border-1" id="ordersExportDropdown1" data-bs-toggle="dropdown" aria-expanded="false"></button>
+
+                                                                                <div class="dropdown-menu dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">
+                                                                                    <span class="dropdown-header text-dark">Options</span>
+                                                                                    <div class="dropdown-divider"></div>  
+                                                                                    <a class="js-export-copy dropdown-item" href="javascript:;"> 
+                                                                                        <i class="fas fa-lock"></i> Block
+                                                                                    </a>
+                                                                                    <a class="js-export-print dropdown-item" href="javascript:;"> 
+                                                                                        <i class="fas fa-money-check"></i> Repayment
+                                                                                    </a>
+                                                                                    <div class="dropdown-divider"></div>  
+                                                                                    <a class="dropdown-item" href="javascript:;">
+                                                                                        <i class="fas fa-trash"></i> Delete
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- End Unfold -->
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td class="table-column-pe-0">
+                                                                    <div class="form-check">
+                                                                        <input type="checkbox" class="form-check-input" id="ordersCheck13">
+                                                                        <label class="form-check-label" for="ordersCheck13"></label>
+                                                                    </div>
+                                                                    </td>
+                                                                    <td class="table-column-ps-0">
+                                                                    <a href="ecommerce-order-details.html">#12412</a>
+                                                                    </td>
+                                                                    <td>Aug 16, 2020, 4:31 (ET)</td> 
+                                                                    <td>
+                                                                    <span class="badge bg-soft-success text-success">
+                                                                        <span class="legend-indicator bg-success"></span>Paid
+                                                                    </span>
+                                                                    </td> 
+                                                                    <td>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <img class="bank-card avatar-xss avatar-4x3 me-2" src="assets/img/mastercard.svg" alt="Image Description">
+                                                                        <span class="text-dark">&bull;&bull;&bull;&bull; 4440</span>
+                                                                    </div>
+                                                                    </td>
+                                                                    <td>$45.00</td>
+                                                                    <td>
+                                                                        <div class="btn-group" role="group">
+                                                                            <a class="btn btn-white btn-sm border border-1" href="ecommerce-order-details.html">
+                                                                                <i class="fas fa-eye"></i> View
+                                                                            </a>
+
+                                                                            <!-- Button Group -->
+                                                                            <div class="btn-group">
+                                                                                <button type="button" class="btn btn-white btn-icon btn-sm dropdown-toggle dropdown-toggle-empty  border border-1" id="ordersExportDropdown1" data-bs-toggle="dropdown" aria-expanded="false"></button>
+
+                                                                                <div class="dropdown-menu dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">
+                                                                                    <span class="dropdown-header text-dark">Options</span>
+                                                                                    <div class="dropdown-divider"></div>  
+                                                                                    <a class="js-export-copy dropdown-item" href="javascript:;"> 
+                                                                                        <i class="fas fa-lock"></i> Block
+                                                                                    </a>
+                                                                                    <a class="js-export-print dropdown-item" href="javascript:;"> 
+                                                                                        <i class="fas fa-money-check"></i> Repayment
+                                                                                    </a>
+                                                                                    <div class="dropdown-divider"></div>  
+                                                                                    <a class="dropdown-item" href="javascript:;">
+                                                                                        <i class="fas fa-trash"></i> Delete
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- End Unfold -->
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td class="table-column-pe-0">
+                                                                    <div class="form-check">
+                                                                        <input type="checkbox" class="form-check-input" id="ordersCheck14">
+                                                                        <label class="form-check-label" for="ordersCheck14"></label>
+                                                                    </div>
+                                                                    </td>
+                                                                    <td class="table-column-ps-0">
+                                                                    <a class="text-danger" href="ecommerce-order-details.html">#92271</a>
+                                                                    <i class="bi-exclamation-diamond-fill text-warning"></i>
+                                                                    </td>
+                                                                    <td>Aug 16, 2020, 3:26 (ET)</td> 
+                                                                    <td>
+                                                                    <span class="badge bg-soft-warning text-warning">
+                                                                        <span class="legend-indicator bg-warning"></span>Pending
+                                                                    </span>
+                                                                    </td> 
+                                                                    <td>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <img class="bank-card avatar-xss avatar-4x3 me-2" src="assets/img/mastercard.svg" alt="Image Description">
+                                                                        <span class="text-dark">&bull;&bull;&bull;&bull; 6182</span>
+                                                                    </div>
+                                                                    </td>
+                                                                    <td class="text-danger">$2,577.00</td>
+                                                                    <td>
+                                                                        <div class="btn-group" role="group">
+                                                                            <a class="btn btn-white btn-sm border border-1" href="ecommerce-order-details.html">
+                                                                                <i class="fas fa-eye"></i> View
+                                                                            </a>
+
+                                                                            <!-- Button Group -->
+                                                                            <div class="btn-group">
+                                                                                <button type="button" class="btn btn-white btn-icon btn-sm dropdown-toggle dropdown-toggle-empty  border border-1" id="ordersExportDropdown1" data-bs-toggle="dropdown" aria-expanded="false"></button>
+
+                                                                                <div class="dropdown-menu dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">
+                                                                                    <span class="dropdown-header text-dark">Options</span>
+                                                                                    <div class="dropdown-divider"></div>  
+                                                                                    <a class="js-export-copy dropdown-item" href="javascript:;"> 
+                                                                                        <i class="fas fa-lock"></i> Block
+                                                                                    </a>
+                                                                                    <a class="js-export-print dropdown-item" href="javascript:;"> 
+                                                                                        <i class="fas fa-money-check"></i> Repayment
+                                                                                    </a>
+                                                                                    <div class="dropdown-divider"></div>  
+                                                                                    <a class="dropdown-item" href="javascript:;">
+                                                                                        <i class="fas fa-trash"></i> Delete
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- End Unfold -->
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td class="table-column-pe-0">
+                                                                    <div class="form-check">
+                                                                        <input type="checkbox" class="form-check-input" id="ordersCheck15">
+                                                                        <label class="form-check-label" for="ordersCheck15"></label>
+                                                                    </div>
+                                                                    </td>
+                                                                    <td class="table-column-ps-0">
+                                                                    <a class="text-danger" href="ecommerce-order-details.html">#62555</a>
+                                                                    <i class="bi-exclamation-diamond-fill text-warning"></i>
+                                                                    </td>
+                                                                    <td>Aug 16, 2020, 2:54 (ET)</td> 
+                                                                    <td>
+                                                                    <span class="badge bg-soft-warning text-warning">
+                                                                        <span class="legend-indicator bg-warning"></span>Pending
+                                                                    </span>
+                                                                    </td> 
+                                                                    <td>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <img class="bank-card avatar-xss avatar-4x3 me-2" src="assets/img/paypal-icon.svg" alt="Image Description">
+                                                                        <span class="text-dark">&bull;&bull;&bull;&bull;@gmail.com</span>
+                                                                    </div>
+                                                                    </td>
+                                                                    <td class="text-danger">$63.46</td>
+                                                                    <td>
+                                                                        <div class="btn-group" role="group">
+                                                                            <a class="btn btn-white btn-sm border border-1" href="ecommerce-order-details.html">
+                                                                                <i class="fas fa-eye"></i> View
+                                                                            </a>
+
+                                                                            <!-- Button Group -->
+                                                                            <div class="btn-group">
+                                                                                <button type="button" class="btn btn-white btn-icon btn-sm dropdown-toggle dropdown-toggle-empty  border border-1" id="ordersExportDropdown1" data-bs-toggle="dropdown" aria-expanded="false"></button>
+
+                                                                                <div class="dropdown-menu dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">
+                                                                                    <span class="dropdown-header text-dark">Options</span>
+                                                                                    <div class="dropdown-divider"></div>  
+                                                                                    <a class="js-export-copy dropdown-item" href="javascript:;"> 
+                                                                                        <i class="fas fa-lock"></i> Block
+                                                                                    </a>
+                                                                                    <a class="js-export-print dropdown-item" href="javascript:;"> 
+                                                                                        <i class="fas fa-money-check"></i> Repayment
+                                                                                    </a>
+                                                                                    <div class="dropdown-divider"></div>  
+                                                                                    <a class="dropdown-item" href="javascript:;">
+                                                                                        <i class="fas fa-trash"></i> Delete
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- End Unfold -->
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td class="table-column-pe-0">
+                                                                    <div class="form-check">
+                                                                        <input type="checkbox" class="form-check-input" id="ordersCheck16">
+                                                                        <label class="form-check-label" for="ordersCheck16"></label>
+                                                                    </div>
+                                                                    </td>
+                                                                    <td class="table-column-ps-0">
+                                                                    <a href="ecommerce-order-details.html">#35331</a>
+                                                                    </td>
+                                                                    <td>Aug 16, 2020, 2:48 (ET)</td> 
+                                                                    <td>
+                                                                    <span class="badge bg-soft-success text-success">
+                                                                        <span class="legend-indicator bg-success"></span>Paid
+                                                                    </span>
+                                                                    </td> 
+                                                                    <td>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <img class="bank-card avatar-xss avatar-4x3 me-2" src="assets/img/paypal-icon.svg" alt="Image Description">
+                                                                        <span class="text-dark">&bull;&bull;&bull;&bull;@gmail.com</span>
+                                                                    </div>
+                                                                    </td>
+                                                                    <td>$4,639.00</td>
+                                                                    <td>
+                                                                        <div class="btn-group" role="group">
+                                                                            <a class="btn btn-white btn-sm border border-1" href="ecommerce-order-details.html">
+                                                                                <i class="fas fa-eye"></i> View
+                                                                            </a>
+
+                                                                            <!-- Button Group -->
+                                                                            <div class="btn-group">
+                                                                                <button type="button" class="btn btn-white btn-icon btn-sm dropdown-toggle dropdown-toggle-empty  border border-1" id="ordersExportDropdown1" data-bs-toggle="dropdown" aria-expanded="false"></button>
+
+                                                                                <div class="dropdown-menu dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">
+                                                                                    <span class="dropdown-header text-dark">Options</span>
+                                                                                    <div class="dropdown-divider"></div>  
+                                                                                    <a class="js-export-copy dropdown-item" href="javascript:;"> 
+                                                                                        <i class="fas fa-lock"></i> Block
+                                                                                    </a>
+                                                                                    <a class="js-export-print dropdown-item" href="javascript:;"> 
+                                                                                        <i class="fas fa-money-check"></i> Repayment
+                                                                                    </a>
+                                                                                    <div class="dropdown-divider"></div>  
+                                                                                    <a class="dropdown-item" href="javascript:;">
+                                                                                        <i class="fas fa-trash"></i> Delete
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- End Unfold -->
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td class="table-column-pe-0">
+                                                                    <div class="form-check">
+                                                                        <input type="checkbox" class="form-check-input" id="ordersCheck17">
+                                                                        <label class="form-check-label" for="ordersCheck17"></label>
+                                                                    </div>
+                                                                    </td>
+                                                                    <td class="table-column-ps-0">
+                                                                    <a href="ecommerce-order-details.html">#45321</a>
+                                                                    </td>
+                                                                    <td>Aug 16, 2020, 2:40 (ET)</td> 
+                                                                    <td>
+                                                                    <span class="badge bg-soft-success text-success">
+                                                                        <span class="legend-indicator bg-success"></span>Paid
+                                                                    </span>
+                                                                    </td> 
+                                                                    <td>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <img class="bank-card avatar-xss avatar-4x3 me-2" src="assets/img/paypal-icon.svg" alt="Image Description">
+                                                                        <span class="text-dark">&bull;&bull;&bull;&bull;@gmail.com</span>
+                                                                    </div>
+                                                                    </td>
+                                                                    <td>$5,253.00</td>
+                                                                    <td>
+                                                                        <div class="btn-group" role="group">
+                                                                            <a class="btn btn-white btn-sm border border-1" href="ecommerce-order-details.html">
+                                                                                <i class="fas fa-eye"></i> View
+                                                                            </a>
+
+                                                                            <!-- Button Group -->
+                                                                            <div class="btn-group">
+                                                                                <button type="button" class="btn btn-white btn-icon btn-sm dropdown-toggle dropdown-toggle-empty  border border-1" id="ordersExportDropdown1" data-bs-toggle="dropdown" aria-expanded="false"></button>
+
+                                                                                <div class="dropdown-menu dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">
+                                                                                    <span class="dropdown-header text-dark">Options</span>
+                                                                                    <div class="dropdown-divider"></div>  
+                                                                                    <a class="js-export-copy dropdown-item" href="javascript:;"> 
+                                                                                        <i class="fas fa-lock"></i> Block
+                                                                                    </a>
+                                                                                    <a class="js-export-print dropdown-item" href="javascript:;"> 
+                                                                                        <i class="fas fa-money-check"></i> Repayment
+                                                                                    </a>
+                                                                                    <div class="dropdown-divider"></div>  
+                                                                                    <a class="dropdown-item" href="javascript:;">
+                                                                                        <i class="fas fa-trash"></i> Delete
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- End Unfold -->
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td class="table-column-pe-0">
+                                                                    <div class="form-check">
+                                                                        <input type="checkbox" class="form-check-input" id="ordersCheck18">
+                                                                        <label class="form-check-label" for="ordersCheck18"></label>
+                                                                    </div>
+                                                                    </td>
+                                                                    <td class="table-column-ps-0">
+                                                                    <a href="ecommerce-order-details.html">#23541</a>
+                                                                    </td>
+                                                                    <td>Aug 16, 2020, 1:59 (ET)</td> 
+                                                                    <td>
+                                                                    <span class="badge bg-soft-success text-success">
+                                                                        <span class="legend-indicator bg-success"></span>Paid
+                                                                    </span>
+                                                                    </td> 
+                                                                    <td>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <img class="bank-card avatar-xss avatar-4x3 me-2" src="assets/img/mastercard.svg" alt="Image Description">
+                                                                        <span class="text-dark">&bull;&bull;&bull;&bull; 3091</span>
+                                                                    </div>
+                                                                    </td>
+                                                                    <td>$499.00</td>
+                                                                    <td>
+                                                                        <div class="btn-group" role="group">
+                                                                            <a class="btn btn-white btn-sm border border-1" href="ecommerce-order-details.html">
+                                                                                <i class="fas fa-eye"></i> View
+                                                                            </a>
+
+                                                                            <!-- Button Group -->
+                                                                            <div class="btn-group">
+                                                                                <button type="button" class="btn btn-white btn-icon btn-sm dropdown-toggle dropdown-toggle-empty  border border-1" id="ordersExportDropdown1" data-bs-toggle="dropdown" aria-expanded="false"></button>
+
+                                                                                <div class="dropdown-menu dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">
+                                                                                    <span class="dropdown-header text-dark">Options</span>
+                                                                                    <div class="dropdown-divider"></div>  
+                                                                                    <a class="js-export-copy dropdown-item" href="javascript:;"> 
+                                                                                        <i class="fas fa-lock"></i> Block
+                                                                                    </a>
+                                                                                    <a class="js-export-print dropdown-item" href="javascript:;"> 
+                                                                                        <i class="fas fa-money-check"></i> Repayment
+                                                                                    </a>
+                                                                                    <div class="dropdown-divider"></div>  
+                                                                                    <a class="dropdown-item" href="javascript:;">
+                                                                                        <i class="fas fa-trash"></i> Delete
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- End Unfold -->
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td class="table-column-pe-0">
+                                                                    <div class="form-check">
+                                                                        <input type="checkbox" class="form-check-input" id="ordersCheck19">
+                                                                        <label class="form-check-label" for="ordersCheck19"></label>
+                                                                    </div>
+                                                                    </td>
+                                                                    <td class="table-column-ps-0">
+                                                                    <a href="ecommerce-order-details.html">#68681</a>
+                                                                    </td>
+                                                                    <td>Aug 16, 2020, 1:55 (ET)</td> 
+                                                                    <td>
+                                                                    <span class="badge bg-soft-success text-success">
+                                                                        <span class="legend-indicator bg-success"></span>Paid
+                                                                    </span>
+                                                                    </td> 
+                                                                    <td>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <img class="bank-card avatar-xss avatar-4x3 me-2" src="assets/img/mastercard.svg" alt="Image Description">
+                                                                        <span class="text-dark">&bull;&bull;&bull;&bull; 8837</span>
+                                                                    </div>
+                                                                    </td>
+                                                                    <td>$171.00</td>
+                                                                    <td>
+                                                                        <div class="btn-group" role="group">
+                                                                            <a class="btn btn-white btn-sm border border-1" href="ecommerce-order-details.html">
+                                                                                <i class="fas fa-eye"></i> View
+                                                                            </a>
+
+                                                                            <!-- Button Group -->
+                                                                            <div class="btn-group">
+                                                                                <button type="button" class="btn btn-white btn-icon btn-sm dropdown-toggle dropdown-toggle-empty  border border-1" id="ordersExportDropdown1" data-bs-toggle="dropdown" aria-expanded="false"></button>
+
+                                                                                <div class="dropdown-menu dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">
+                                                                                    <span class="dropdown-header text-dark">Options</span>
+                                                                                    <div class="dropdown-divider"></div>  
+                                                                                    <a class="js-export-copy dropdown-item" href="javascript:;"> 
+                                                                                        <i class="fas fa-lock"></i> Block
+                                                                                    </a>
+                                                                                    <a class="js-export-print dropdown-item" href="javascript:;"> 
+                                                                                        <i class="fas fa-money-check"></i> Repayment
+                                                                                    </a>
+                                                                                    <div class="dropdown-divider"></div>  
+                                                                                    <a class="dropdown-item" href="javascript:;">
+                                                                                        <i class="fas fa-trash"></i> Delete
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- End Unfold -->
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td class="table-column-pe-0">
+                                                                    <div class="form-check">
+                                                                        <input type="checkbox" class="form-check-input" id="ordersCheck20">
+                                                                        <label class="form-check-label" for="ordersCheck20"></label>
+                                                                    </div>
+                                                                    </td>
+                                                                    <td class="table-column-ps-0">
+                                                                    <a href="ecommerce-order-details.html">#78323</a>
+                                                                    </td>
+                                                                    <td>Aug 16, 2020, 1:15 (ET)</td> 
+                                                                    <td>
+                                                                    <span class="badge bg-soft-warning text-warning">
+                                                                        <span class="legend-indicator bg-warning"></span>Pending
+                                                                    </span>
+                                                                    </td> 
+                                                                    <td>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <img class="bank-card avatar-xss avatar-4x3 me-2" src="assets/img/mastercard.svg" alt="Image Description">
+                                                                        <span class="text-dark">&bull;&bull;&bull;&bull; 3566</span>
+                                                                    </div>
+                                                                    </td>
+                                                                    <td>$348.55</td>
+                                                                    <td>
+                                                                        <div class="btn-group" role="group">
+                                                                            <a class="btn btn-white btn-sm border border-1" href="ecommerce-order-details.html">
+                                                                                <i class="fas fa-eye"></i> View
+                                                                            </a>
+
+                                                                            <!-- Button Group -->
+                                                                            <div class="btn-group">
+                                                                                <button type="button" class="btn btn-white btn-icon btn-sm dropdown-toggle dropdown-toggle-empty  border border-1" id="ordersExportDropdown1" data-bs-toggle="dropdown" aria-expanded="false"></button>
+
+                                                                                <div class="dropdown-menu dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">
+                                                                                    <span class="dropdown-header text-dark">Options</span>
+                                                                                    <div class="dropdown-divider"></div>  
+                                                                                    <a class="js-export-copy dropdown-item" href="javascript:;"> 
+                                                                                        <i class="fas fa-lock"></i> Block
+                                                                                    </a>
+                                                                                    <a class="js-export-print dropdown-item" href="javascript:;"> 
+                                                                                        <i class="fas fa-money-check"></i> Repayment
+                                                                                    </a>
+                                                                                    <div class="dropdown-divider"></div>  
+                                                                                    <a class="dropdown-item" href="javascript:;">
+                                                                                        <i class="fas fa-trash"></i> Delete
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- End Unfold -->
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <!-- End Table -->
+            
+                                                    </div>
+                                                <!-- End Card -->
+                                            </div>
+                                            <div id="menu1" class="container tab-pane fade"><br>
+                                                <h3>Menu 1</h3>
+                                                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                            </div>
+                                            <div id="menu2" class="container tab-pane fade"><br>
+                                                <h3>Menu 2</h3>
+                                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                                            </div>
+                                            <div id="menu3" class="container tab-pane fade"><br>
+                                                <h3>Menu 2</h3>
+                                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                                            </div>
+                                        </div>
+
+                                      
+                                        </div>
+                                        <!-- End Content -->
+ 
+                                        <!-- End Row -->
+                                        </div>
+
+                                        <!-- End Footer -->
+                                    </main>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <!-- Admin Structure End -->
+    
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+  <!-- DataTables -->
+  <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script> 
+
+  <!-- DataTables Select JS -->
+  <script src="https://cdn.datatables.net/select/1.3.4/js/dataTables.select.min.js"></script>
+
+  <!-- *Bootstrap Js* -->
+  <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- *Custom Js* -->
+  <script src="assets/js/main.js"></script>
+
+
+
+
+    
+</body>
+</html>

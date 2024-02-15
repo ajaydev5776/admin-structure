@@ -128,7 +128,7 @@
                                     <main id="main" class="main">
 
                                         <div class="pagetitle">
-                                          <h1>Dashboard</h1>
+                                          <h2>Dashboard</h2>
                                           <nav>
                                             <ol class="breadcrumb">
                                               <li class="breadcrumb-item"><a href="index.html" class="text-primary">Home</a></li>
@@ -243,14 +243,14 @@
                                                 <!-- End Col -->
  
 
-                                                <div class="col-md">
+                                                <div class="col-md ">
                                                   <form>
                                                     <!-- Search -->
-                                                    <div class="input-group input-group-merge input-group-flush">
-                                                      <div class="input-group-prepend input-group-text">
+                                                    <div class="input-group input-group-merge input-group-flush border-bottom border-2">
+                                                      <div class="input-group-prepend input-group-text bg-transparent border-0">
                                                         <i class="fas fa-search"></i>
                                                       </div>
-                                                      <input id="datatableSearch" type="search" class="form-control" placeholder="Search users" aria-label="Search users">
+                                                      <input id="datatableSearch" type="search" class="form-control bg-transparent border-0" placeholder="Search users" aria-label="Search users">
                                                     </div>
                                                     <!-- End Search -->
                                                   </form>
@@ -267,22 +267,7 @@
 
                                         <!-- Table -->
                                         <div class="table-responsive datatable-custom">
-                                          <table id="datatable" class="table table-borderless table-thead-bordered table-nowrap table-align-middle card-table" data-hs-datatables-options='{
-                                                  "columnDefs": [{
-                                                      "targets": [0, 1, 4],
-                                                      "orderable": false
-                                                    }],
-                                                  "order": [],
-                                                  "info": {
-                                                    "totalQty": "#datatableWithPaginationInfoTotalQty"
-                                                  },
-                                                  "search": "#datatableSearch",
-                                                  "entries": "#datatableEntries",
-                                                  "pageLength": 8,
-                                                  "isResponsive": false,
-                                                  "isShowPaging": false,
-                                                  "pagination": "datatablePagination"
-                                                }'>
+                                          <table id="datatable" class="table table-borderless table-thead-bordered table-nowrap table-align-middle card-table"'>
                                             <thead class="thead-light">
                                               <tr>
                                                 <th scope="col" class="table-column-pe-0">

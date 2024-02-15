@@ -32,3 +32,10 @@ li{
 a{
   text-decoration: none; 
 }
+
+.form-control:focus{
+  box-shadow: none;
+}
+.form-select:focus{
+  box-shadow: none;
+}
