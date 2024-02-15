@@ -22,9 +22,9 @@
     <!-- *Admin Structure Start* -->
     <div class="container-fluid vh-100 overflow-hidden">
         <div class="row h-100">
-            <div class="col-auto h-100">
+            <div class="col-auto h-100 asidemenu"  id="asidebar">
                 <!-- Aside Bar Start -->
-                <aside class="asidebar bg-white h-100 row flex-nowrap flex-column" id="asidebar">
+                <aside class="asidebar bg-white h-100 row flex-nowrap flex-column">
                     <div class="col-12 logopart"><a href="index.html" class="logo mx-3"><img src="assets/img/logo.svg" alt="log"></a></div>
                     <div class="col-12 h-100 flex-fill overflow-y-auto overflow-x-hidden">
                         <div class="asideitem p-3">
@@ -37,14 +37,16 @@
                                 <li><a href="forget-password.html" class="navitems"><span><img src="assets/img/icon/password.svg" alt="icon"></span>Forget Password</a></li> 
                             </ul>
                         </div>
-                        <button id="switch">hello</button>
+                        
                     </div>
                 </aside>
                 <!-- Aside Bar End -->
             </div>
-            <div class="col h-100 rightside">     
+            <div class="col h-100 rightside">  
+                 
                 <div class="row h-100 flex-column flex-nowrap">
                     <div class="col-12 header d-flex align-items-center bg-white">
+                        <button class="switch-icn bg-transparent" id="switch"><i class="fas fa-bars"></i></button>
                         <div class="search-bar">
                             <form class="search-form d-flex align-items-center w-100" method="POST" action="#">
                               <input type="text" name="query" placeholder="Search" title="Enter search keyword">
@@ -123,7 +125,7 @@
                     </div>
                     <div class="col-12 h-100 flex-fill overflow-y-auto">
                         <div class="innerbody_part h-100">
-                            <div class="card h-100 border-0 bg-transparent shadow-0">
+                            <div class="card h100 border-0 bg-transparent shadow-0">
                                 <div class="card-body h-100">
                                     <main id="main" class="main">
 
@@ -267,7 +269,7 @@
 
                                         <!-- Table -->
                                         <div class="table-responsive datatable-custom">
-                                          <table id="datatable" class="table table-borderless table-thead-bordered table-nowrap table-align-middle card-table"'>
+                                          <table id="datatable" class="table table-borderless table-thead-bordered table-nowrap table-align-middle align-middle card-table"'>
                                             <thead class="thead-light">
                                               <tr>
                                                 <th scope="col" class="table-column-pe-0">
@@ -276,12 +278,12 @@
                                                     <label class="form-check-label" for="datatableCheckAll"></label>
                                                   </div>
                                                 </th>
-                                                <th class="table-column-ps-0">Full name</th>
+                                                <th class="table-column-ps-0">User ID</th>
                                                 <th>Status</th>
                                                 <th>Type</th>
                                                 <th>Email</th>
                                                 <th>Signed up</th>
-                                                <th>User ID</th>
+                                                <th>Amount</th>
                                               </tr>
                                             </thead>
 
@@ -306,7 +308,9 @@
                                                   </a>
                                                 </td>
                                                 <td>
-                                                  <span class="legend-indicator bg-success"></span>Successful
+                                                  <span class="badge bg-soft-success text-success">
+                                                    <span class="legend-indicator bg-success"></span>Successful
+                                                  </span> 
                                                 </td>
                                                 <td>Unassigned</td>
                                                 <td>amanda@site.com</td>
@@ -334,7 +338,9 @@
                                                   </a>
                                                 </td>
                                                 <td>
-                                                  <span class="legend-indicator bg-success"></span>Successful
+                                                  <span class="badge bg-soft-success text-success">
+                                                    <span class="legend-indicator bg-success"></span>Successful
+                                                  </span> 
                                                 </td>
                                                 <td>Subscription</td>
                                                 <td>anne@site.com</td>
@@ -360,10 +366,13 @@
                                                       <h5 class="text-inherit mb-0">David Harrison</h5>
                                                     </div>
                                                   </a>
-                                                </td>
+                                                </td> 
                                                 <td>
-                                                  <span class="legend-indicator bg-danger"></span>Overdue
+                                                  <span class="badge bg-soft-danger text-danger">
+                                                    <span class="legend-indicator bg-danger"></span>Overdue
+                                                  </span>
                                                 </td>
+                                               
                                                 <td>Non-subscription</td>
                                                 <td>david@site.com</td>
                                                 <td>6 months ago</td>
@@ -390,7 +399,9 @@
                                                   </a>
                                                 </td>
                                                 <td>
-                                                  <span class="legend-indicator bg-warning"></span>Pending
+                                                  <span class="badge bg-soft-warning text-warning">
+                                                    <span class="legend-indicator bg-warning"></span>Pending
+                                                  </span>
                                                 </td>
                                                 <td>Subscription</td>
                                                 <td>finch@site.com</td>
@@ -418,8 +429,10 @@
                                                   </a>
                                                 </td>
                                                 <td>
-                                                  <span class="legend-indicator bg-success"></span>Successful
-                                                </td>
+                                                  <span class="badge bg-soft-success text-success">
+                                                    <span class="legend-indicator bg-success"></span>Successful
+                                                  </span> 
+                                                </td> 
                                                 <td>Subscription</td>
                                                 <td>bob@site.com</td>
                                                 <td>6 months ago</td>
@@ -445,8 +458,11 @@
                                                     </div>
                                                   </a>
                                                 </td>
+                                                
                                                 <td>
-                                                  <span class="legend-indicator bg-warning"></span>Pending
+                                                  <span class="badge bg-soft-warning text-warning">
+                                                    <span class="legend-indicator bg-warning"></span>Pending
+                                                  </span>
                                                 </td>
                                                 <td>Subscription</td>
                                                 <td>Ella@site.com</td>
@@ -474,7 +490,9 @@
                                                   </a>
                                                 </td>
                                                 <td>
-                                                  <span class="legend-indicator bg-success"></span>Successful
+                                                  <span class="badge bg-soft-success text-success">
+                                                    <span class="legend-indicator bg-success"></span>Successful
+                                                  </span> 
                                                 </td>
                                                 <td>Non-subscription</td>
                                                 <td>sam@site.com</td>
@@ -501,8 +519,10 @@
                                                     </div>
                                                   </a>
                                                 </td>
-                                                <td>
-                                                  <span class="legend-indicator bg-danger"></span>Overdue
+                                               <td>
+                                                  <span class="badge bg-soft-danger text-danger">
+                                                    <span class="legend-indicator bg-danger"></span>Overdue
+                                                  </span>
                                                 </td>
                                                 <td>Unassigned</td>
                                                 <td>costa@site.com</td>
@@ -530,7 +550,9 @@
                                                   </a>
                                                 </td>
                                                 <td>
-                                                  <span class="legend-indicator bg-warning"></span>Pending
+                                                  <span class="badge bg-soft-warning text-warning">
+                                                    <span class="legend-indicator bg-warning"></span>Pending
+                                                  </span>
                                                 </td>
                                                 <td>Unassigned</td>
                                                 <td>rachel@site.com</td>
@@ -558,7 +580,9 @@
                                                   </a>
                                                 </td>
                                                 <td>
-                                                  <span class="legend-indicator bg-warning"></span>Pending
+                                                  <span class="badge bg-soft-warning text-warning">
+                                                    <span class="legend-indicator bg-warning"></span>Pending
+                                                  </span>
                                                 </td>
                                                 <td>Subscription</td>
                                                 <td>brian@site.com</td>
@@ -586,7 +610,9 @@
                                                   </a>
                                                 </td>
                                                 <td>
-                                                  <span class="legend-indicator bg-warning"></span>Pending
+                                                  <span class="badge bg-soft-warning text-warning">
+                                                    <span class="legend-indicator bg-warning"></span>Pending
+                                                  </span>
                                                 </td>
                                                 <td>Subscription</td>
                                                 <td>linda@site.com</td>
@@ -614,7 +640,9 @@
                                                   </a>
                                                 </td>
                                                 <td>
-                                                  <span class="legend-indicator bg-success"></span>Successful
+                                                  <span class="badge bg-soft-success text-success">
+                                                    <span class="legend-indicator bg-success"></span>Successful
+                                                  </span> 
                                                 </td>
                                                 <td>Non-subscription</td>
                                                 <td>chris@site.com</td>
@@ -641,8 +669,10 @@
                                                     </div>
                                                   </a>
                                                 </td>
-                                                <td>
-                                                  <span class="legend-indicator bg-danger"></span>Overdue
+                                               <td>
+                                                  <span class="badge bg-soft-danger text-danger">
+                                                    <span class="legend-indicator bg-danger"></span>Overdue
+                                                  </span>
                                                 </td>
                                                 <td>Non-subscription</td>
                                                 <td>lewis@site.com</td>
@@ -670,7 +700,9 @@
                                                   </a>
                                                 </td>
                                                 <td>
-                                                  <span class="legend-indicator bg-success"></span>Successful
+                                                  <span class="badge bg-soft-success text-success">
+                                                    <span class="legend-indicator bg-success"></span>Successful
+                                                  </span> 
                                                 </td>
                                                 <td>Non-subscription</td>
                                                 <td>clarice@site.com</td>
@@ -698,7 +730,9 @@
                                                   </a>
                                                 </td>
                                                 <td>
-                                                  <span class="legend-indicator bg-success"></span>Successful
+                                                  <span class="badge bg-soft-success text-success">
+                                                    <span class="legend-indicator bg-success"></span>Successful
+                                                  </span> 
                                                 </td>
                                                 <td>Subscription</td>
                                                 <td>mark@site.com</td>
@@ -726,7 +760,9 @@
                                                   </a>
                                                 </td>
                                                 <td>
-                                                  <span class="legend-indicator bg-warning"></span>Pending
+                                                  <span class="badge bg-soft-warning text-warning">
+                                                    <span class="legend-indicator bg-warning"></span>Pending
+                                                  </span>
                                                 </td>
                                                 <td>Subscription</td>
                                                 <td>johnny@site.com</td>
@@ -754,7 +790,9 @@
                                                   </a>
                                                 </td>
                                                 <td>
-                                                  <span class="legend-indicator bg-warning"></span>Pending
+                                                  <span class="badge bg-soft-warning text-warning">
+                                                    <span class="legend-indicator bg-warning"></span>Pending
+                                                  </span>
                                                 </td>
                                                 <td>Subscription</td>
                                                 <td>phileas@site.com</td>

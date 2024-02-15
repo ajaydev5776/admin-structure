@@ -88,7 +88,6 @@ a {
 }
 
 .asidebar {
-  width: 280px;
   border-right: 1px solid #f8f9fa;
 }
 .asidebar .logopart {
@@ -139,6 +138,19 @@ a {
 }
 .asidebar .asideitem .navlist .navitems:hover img {
   filter: brightness(1);
+}
+
+.asidemenu {
+  width: 280px;
+  transition: all ease-in-out 0.5s;
+  -webkit-transition: all ease-in-out 0.5s;
+}
+.asidemenu.active {
+  width: 0px;
+  padding: 0;
+  opacity: 0;
+  transition: all ease-in-out 0.5s;
+  -webkit-transition: all ease-in-out 0.5s;
 }
 
 .rightside .navbar {
@@ -268,6 +280,7 @@ a {
 }
 .rightside .card table tbody tr td .text-inherit {
   font-size: 16px;
+  color: black;
 }
 .rightside .card table tbody tr td .legend-indicator {
   display: inline-block;
@@ -290,6 +303,9 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.rightside .card table .form-check-input:focus {
+  box-shadow: none;
 }
 .rightside .card tabletable.dataTable.display tbody > tr.odd.selected > .sorting_1, .rightside .card table table.dataTable.display tbody > tr.even.selected > .sorting_1 {
   background-color: white !important;
@@ -323,6 +339,18 @@ a {
 }
 .rightside .card .dataTables_wrapper .dataTables_paginate {
   padding-top: 20px !important;
+}
+.rightside .bg-soft-success {
+  background-color: rgba(0, 201, 167, 0.1) !important;
+}
+.rightside .bg-soft-warning {
+  background-color: rgba(245, 202, 153, 0.1) !important;
+}
+.rightside .bg-soft-danger {
+  background: rgb(255, 227, 231) !important;
+}
+.rightside .badge {
+  line-height: normal;
 }
 
 @media (max-width: 1199px) {
@@ -439,6 +467,7 @@ a {
   height: 7.875rem;
   border: 0.25rem solid #fff;
   margin: -6.3rem auto 0.5rem auto;
+  border-radius: 50%;
 }
 .profile-section .avatar-xxl .avatar-img {
   width: 7.875rem;

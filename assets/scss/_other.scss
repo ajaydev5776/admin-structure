@@ -101,12 +101,13 @@
         
     }
    
-    & .avatar-xxl{  
+    & .avatar-xxl{
         width: 7.875rem;
-        height: 7.875rem;   
+        height: 7.875rem;
         border: 0.25rem solid #fff;
         margin: -6.3rem auto 0.5rem auto;
-        & .avatar-img {
+        border-radius: 50%;
+        & .avatar-img{
             width: 7.875rem;
             border-radius: 50%;
             max-width: 100%;
