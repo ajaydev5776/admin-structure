@@ -29,13 +29,13 @@
                     <div class="col-12 h-100 flex-fill overflow-y-auto overflow-x-hidden">
                         <div class="asideitem p-3">
                             <ul class="navlist list-unstyled m-0 p-0">
-                                <li><a href="index.html" class="navitems"><span><img src="assets/img/icon/home.svg" alt="icon"></span>Dashboard</a></li>
-                                <li><a href="profile.html" class="navitems"><span><img src="assets/img/icon/profile.svg" alt="icon"></span>My Profile</a></li>
-                                <li><a href="order.html" class="navitems"><span><img src="assets/img/icon/order.svg" alt="icon"></span>Orders</a></li>
-                                <li><a href="sign-up.html" class="navitems"><span><img src="assets/img/icon/sign-up.svg" alt="icon"></span>Sign Up</a></li>
-                                <li><a href="login.html" class="navitems"><span><img src="assets/img/icon/login.svg" alt="icon"></span>Login</a></li>
-                                <li><a href="forget-password.html" class="navitems"><span><img src="assets/img/icon/password.svg" alt="icon"></span>Forget Password</a></li> 
-                            </ul>
+                                <li><a href="index.html" class="navitems"><i class="fas fa-home"></i> Dashboard</a></li>
+                                <li><a href="profile.html" class="navitems"><i class="far fa-user"></i> My Profile</a></li>
+                                <li><a href="order.html" class="navitems"><i class="fas fa-shopping-bag"></i> Orders</a></li>
+                                <li><a href="sign-up.html" class="navitems"><i class="fas fa-user-plus"></i> Sign Up</a></li>
+                                <li><a href="login.html" class="navitems"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                                <li><a href="forget-password.html" class="navitems"><i class="fas fa-key"></i> Forget Password</a></li> 
+                              </ul>
                         </div> 
                     </div>
                 </aside>
@@ -44,7 +44,7 @@
             <div class="col h-100 rightside">     
                 <div class="row h-100 flex-column flex-nowrap">
                     <div class="col-12 header d-flex align-items-center bg-white">
-                        <button class="switch-icn bg-transparent" id="switch"><i class="fas fa-bars"></i></button>
+                        <button class="switch-icn bg-white border-0" id="switch"><i class="fas fa-bars"></i></button>
                         <div class="search-bar">
                             <form class="search-form d-flex align-items-center w-100" method="POST" action="#">
                               <input type="text" name="query" placeholder="Search" title="Enter search keyword">
@@ -64,23 +64,15 @@
                     
                                 <li class="nav-item dropdown pe-3">
                         
-                                    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+                                    <a class="nav-link nav-profile position-relative text-dark d-inline-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
                                         <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
                                         <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
                                     </a><!-- End Profile Iamge Icon -->
                         
-                                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-                                        <li class="dropdown-header">
-                                            <h6>Kevin Anderson</h6>
-                                            <span>Web Designer</span>
-                                        </li>
+                                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile  overflow-hidden bg-white border-0">  
                                         <li>
-                                            <hr class="dropdown-divider">
-                                        </li>
-                        
-                                        <li>
-                                            <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                                                <i class="far fa-user"></i>
+                                            <a class="dropdown-item position-relative text-dark d-inline-flex align-items-center active" href="javascript:;">
+                                                <span class="profile-icn d-flex align-items-center justify-content-center"><i class="far fa-user"></i></span>
                                                 <span>My Profile</span>
                                             </a>
                                         </li>
@@ -89,8 +81,8 @@
                                         </li>
                         
                                         <li>
-                                            <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                                                <i class="fas fa-cog"></i>
+                                            <a class="dropdown-item position-relative text-dark d-inline-flex align-items-center" href="javascript:;">
+                                                <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-cog"></i></span>
                                                 <span>Account Settings</span>
                                             </a>
                                         </li>
@@ -99,8 +91,8 @@
                                         </li>
                             
                                         <li>
-                                            <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
-                                                <i class="far fa-question-circle"></i>
+                                            <a class="dropdown-item position-relative text-dark d-inline-flex align-items-center" href="javascript:;">
+                                                <span class="profile-icn d-flex align-items-center justify-content-center"><i class="far fa-question-circle"></i></span>
                                                 <span>Need Help?</span>
                                             </a>
                                         </li>
@@ -109,8 +101,8 @@
                                         </li>
                         
                                         <li>
-                                            <a class="dropdown-item d-flex align-items-center" href="#">
-                                                <i class="fas fa-sign-out-alt"></i>
+                                            <a class="dropdown-item position-relative text-dark d-inline-flex align-items-center" href="javascript:;">
+                                                <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-sign-out-alt"></i></span>
                                                 <span>Sign Out</span>
                                             </a>
                                         </li>
@@ -133,7 +125,7 @@
                                             <div class="page-header">
                                                 <div class="row align-items-center mb-3">
                                                     <div class="col-sm">
-                                                        <h2 class="page-header-title">Orders</h2>
+                                                        <h3 class="page-header-title">Order list</h3>
                                                     </div> 
                                                 </div>
                                                 <!-- End Row --> 
@@ -164,7 +156,7 @@
                                                   <!-- Card -->
                                                     <div class="card">
                                                         <!-- Header -->
-                                                        <div class="card-header card-header d-flex justify-content-between">
+                                                        <div class="card-header d-flex justify-content-between bg-white border-0">
                                                             <div class="mb-2 mb-md-0 border-bottom border-2">
                                                                 <form>
                                                                 <!-- Search -->
@@ -182,7 +174,7 @@
                                                                 <!-- Dropdown -->
                                                                 <div class="dropdown">
                                                                 <button type="button" class="btn btn-white btn-sm dropdown-toggle w-100 border border-1" id="usersExportDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                                                    <i class="fas fa-download"></i> Export
+                                                                    <i class="fas fa-download me-2"></i> Export
                                                                 </button>
 
                                                                 <div class="dropdown-menu dropdown-menu-sm-end" aria-labelledby="usersExportDropdown">
@@ -240,13 +232,13 @@
                                                                 <tbody>
                                                                     <tr>
                                                                         <td class="table-column-pe-0">
-                                                                        <div class="form-check">
-                                                                            <input type="checkbox" class="form-check-input" id="ordersCheck1">
-                                                                            <label class="form-check-label" for="ordersCheck1"></label>
-                                                                        </div>
+                                                                            <div class="form-check">
+                                                                                <input type="checkbox" class="form-check-input" id="ordersCheck1">
+                                                                                <label class="form-check-label" for="ordersCheck1"></label>
+                                                                            </div>
                                                                         </td>
                                                                         <td class="table-column-ps-0">
-                                                                            <a href="ecommerce-order-details.html">78Q53A6</a>
+                                                                            <a href="javascript:;" class="text-inherit">78Q53A6</a>
                                                                         </td>
                                                                         <td>Feb 15, 2024</td> 
                                                                         <td>
@@ -255,7 +247,7 @@
                                                                         </span>
                                                                         </td> 
                                                                         <td>
-                                                                            1000,500,100 ETC
+                                                                            1000
                                                                         </td>
                                                                         <td>T497209787352090</td>
                                                                         <td>
@@ -268,18 +260,18 @@
                                                                                 <div class="btn-group">
                                                                                     <button type="button" class="btn btn-white btn-icon btn-sm dropdown-toggle dropdown-toggle-empty  border border-1" id="ordersExportDropdown1" data-bs-toggle="dropdown" aria-expanded="false"></button>
 
-                                                                                    <div class="dropdown-menu dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">
-                                                                                        <span class="dropdown-header text-dark">Options</span>
-                                                                                        <div class="dropdown-divider"></div>  
-                                                                                        <a class="js-export-copy dropdown-item" href="javascript:;"> 
-                                                                                            <i class="fas fa-lock"></i> Block
+                                                                                    <div class="dropdown-menu view dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">  
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;"> 
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-lock"></i></span>
+                                                                                            <span>Block</span>
                                                                                         </a>
-                                                                                        <a class="js-export-print dropdown-item" href="javascript:;"> 
-                                                                                            <i class="fas fa-money-check"></i> Repayment
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;"> 
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-money-check"></i> </span>
+                                                                                            <span>Repayment</span> 
                                                                                         </a>
-                                                                                        <div class="dropdown-divider"></div>  
-                                                                                        <a class="dropdown-item" href="javascript:;">
-                                                                                            <i class="fas fa-trash"></i> Delete
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;">
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-trash"></i> </span>
+                                                                                            <span>Delete</span> 
                                                                                         </a>
                                                                                     </div>
                                                                                 </div>
@@ -296,7 +288,7 @@
                                                                         </div>
                                                                         </td>
                                                                         <td class="table-column-ps-0">
-                                                                            <a href="ecommerce-order-details.html">78Q53A6</a>
+                                                                            <a href="javascript:;" class="text-inherit">78Q53A6</a>
                                                                         </td>
                                                                         <td>Feb 15, 2024</td> 
                                                                         <td>
@@ -305,7 +297,7 @@
                                                                         </span>
                                                                         </td> 
                                                                         <td>
-                                                                            1000,500,100 ETC
+                                                                            500
                                                                         </td>
                                                                         <td>T497209787352090</td>
                                                                         <td>
@@ -318,18 +310,18 @@
                                                                                 <div class="btn-group">
                                                                                     <button type="button" class="btn btn-white btn-icon btn-sm dropdown-toggle dropdown-toggle-empty  border border-1" id="ordersExportDropdown1" data-bs-toggle="dropdown" aria-expanded="false"></button>
 
-                                                                                    <div class="dropdown-menu dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">
-                                                                                        <span class="dropdown-header text-dark">Options</span>
-                                                                                        <div class="dropdown-divider"></div>  
-                                                                                        <a class="js-export-copy dropdown-item" href="javascript:;"> 
-                                                                                            <i class="fas fa-lock"></i> Block
+                                                                                    <div class="dropdown-menu view dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">  
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;"> 
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-lock"></i></span>
+                                                                                            <span>Block</span>
                                                                                         </a>
-                                                                                        <a class="js-export-print dropdown-item" href="javascript:;"> 
-                                                                                            <i class="fas fa-money-check"></i> Repayment
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;"> 
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-money-check"></i> </span>
+                                                                                            <span>Repayment</span> 
                                                                                         </a>
-                                                                                        <div class="dropdown-divider"></div>  
-                                                                                        <a class="dropdown-item" href="javascript:;">
-                                                                                            <i class="fas fa-trash"></i> Delete
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;">
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-trash"></i> </span>
+                                                                                            <span>Delete</span> 
                                                                                         </a>
                                                                                     </div>
                                                                                 </div>
@@ -346,7 +338,7 @@
                                                                         </div>
                                                                         </td>
                                                                         <td class="table-column-ps-0">
-                                                                            <a href="ecommerce-order-details.html">78Q53A6</a>
+                                                                            <a href="javascript:;" class="text-inherit">78Q53A6</a>
                                                                         </td>
                                                                         <td>Feb 15, 2024</td> 
                                                                         <td>
@@ -355,7 +347,7 @@
                                                                         </span>
                                                                         </td> 
                                                                         <td>
-                                                                            1000,500,100 ETC
+                                                                            100
                                                                         </td>
                                                                         <td>T497209787352090</td>
                                                                         <td>
@@ -368,18 +360,18 @@
                                                                                 <div class="btn-group">
                                                                                     <button type="button" class="btn btn-white btn-icon btn-sm dropdown-toggle dropdown-toggle-empty  border border-1" id="ordersExportDropdown1" data-bs-toggle="dropdown" aria-expanded="false"></button>
 
-                                                                                    <div class="dropdown-menu dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">
-                                                                                        <span class="dropdown-header text-dark">Options</span>
-                                                                                        <div class="dropdown-divider"></div>  
-                                                                                        <a class="js-export-copy dropdown-item" href="javascript:;"> 
-                                                                                            <i class="fas fa-lock"></i> Block
+                                                                                    <div class="dropdown-menu view dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">  
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;"> 
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-lock"></i></span>
+                                                                                            <span>Block</span>
                                                                                         </a>
-                                                                                        <a class="js-export-print dropdown-item" href="javascript:;"> 
-                                                                                            <i class="fas fa-money-check"></i> Repayment
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;"> 
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-money-check"></i> </span>
+                                                                                            <span>Repayment</span> 
                                                                                         </a>
-                                                                                        <div class="dropdown-divider"></div>  
-                                                                                        <a class="dropdown-item" href="javascript:;">
-                                                                                            <i class="fas fa-trash"></i> Delete
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;">
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-trash"></i> </span>
+                                                                                            <span>Delete</span> 
                                                                                         </a>
                                                                                     </div>
                                                                                 </div>
@@ -396,7 +388,7 @@
                                                                         </div>
                                                                         </td>
                                                                         <td class="table-column-ps-0">
-                                                                        <a href="ecommerce-order-details.html">78Q53A6</a>
+                                                                            <a href="javascript:;" class="text-inherit">78Q53A6</a>
                                                                         </td>
                                                                         <td>Feb 15, 2024</td> 
                                                                         <td>
@@ -405,7 +397,7 @@
                                                                         </span>
                                                                         </td> 
                                                                         <td>
-                                                                            1000,500,100 ETC
+                                                                            1000
                                                                         </td>
                                                                         <td>T497209787352090</td>
                                                                         <td>
@@ -418,18 +410,18 @@
                                                                                 <div class="btn-group">
                                                                                     <button type="button" class="btn btn-white btn-icon btn-sm dropdown-toggle dropdown-toggle-empty  border border-1" id="ordersExportDropdown1" data-bs-toggle="dropdown" aria-expanded="false"></button>
 
-                                                                                    <div class="dropdown-menu dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">
-                                                                                        <span class="dropdown-header text-dark">Options</span>
-                                                                                        <div class="dropdown-divider"></div>  
-                                                                                        <a class="js-export-copy dropdown-item" href="javascript:;"> 
-                                                                                            <i class="fas fa-lock"></i> Block
+                                                                                    <div class="dropdown-menu view dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">  
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;"> 
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-lock"></i></span>
+                                                                                            <span>Block</span>
                                                                                         </a>
-                                                                                        <a class="js-export-print dropdown-item" href="javascript:;"> 
-                                                                                            <i class="fas fa-money-check"></i> Repayment
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;"> 
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-money-check"></i> </span>
+                                                                                            <span>Repayment</span> 
                                                                                         </a>
-                                                                                        <div class="dropdown-divider"></div>  
-                                                                                        <a class="dropdown-item" href="javascript:;">
-                                                                                            <i class="fas fa-trash"></i> Delete
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;">
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-trash"></i> </span>
+                                                                                            <span>Delete</span> 
                                                                                         </a>
                                                                                     </div>
                                                                                 </div>
@@ -446,7 +438,7 @@
                                                                         </div>
                                                                         </td>
                                                                         <td class="table-column-ps-0">
-                                                                            <a href="ecommerce-order-details.html">78Q53A6</a>
+                                                                            <a href="javascript:;" class="text-inherit">78Q53A6</a>
                                                                         </td>
                                                                         <td>Feb 15, 2024</td> 
                                                                         <td>
@@ -455,7 +447,7 @@
                                                                         </span>
                                                                         </td> 
                                                                         <td>
-                                                                            1000,500,100 ETC
+                                                                            500
                                                                         </td>
                                                                         <td>T497209787352090</td>
                                                                         <td>
@@ -468,18 +460,18 @@
                                                                                 <div class="btn-group">
                                                                                     <button type="button" class="btn btn-white btn-icon btn-sm dropdown-toggle dropdown-toggle-empty  border border-1" id="ordersExportDropdown1" data-bs-toggle="dropdown" aria-expanded="false"></button>
 
-                                                                                    <div class="dropdown-menu dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">
-                                                                                        <span class="dropdown-header text-dark">Options</span>
-                                                                                        <div class="dropdown-divider"></div>  
-                                                                                        <a class="js-export-copy dropdown-item" href="javascript:;"> 
-                                                                                            <i class="fas fa-lock"></i> Block
+                                                                                    <div class="dropdown-menu view dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">  
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;"> 
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-lock"></i></span>
+                                                                                            <span>Block</span>
                                                                                         </a>
-                                                                                        <a class="js-export-print dropdown-item" href="javascript:;"> 
-                                                                                            <i class="fas fa-money-check"></i> Repayment
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;"> 
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-money-check"></i> </span>
+                                                                                            <span>Repayment</span> 
                                                                                         </a>
-                                                                                        <div class="dropdown-divider"></div>  
-                                                                                        <a class="dropdown-item" href="javascript:;">
-                                                                                            <i class="fas fa-trash"></i> Delete
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;">
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-trash"></i> </span>
+                                                                                            <span>Delete</span> 
                                                                                         </a>
                                                                                     </div>
                                                                                 </div>
@@ -496,7 +488,7 @@
                                                                         </div>
                                                                         </td>
                                                                         <td class="table-column-ps-0">
-                                                                            <a href="ecommerce-order-details.html">78Q53A6</a>
+                                                                            <a href="javascript:;" class="text-inherit">78Q53A6</a>
                                                                         </td>
                                                                         <td>Feb 15, 2024</td> 
                                                                         <td>
@@ -505,7 +497,7 @@
                                                                         </span>
                                                                         </td> 
                                                                         <td>
-                                                                            1000,500,100 ETC
+                                                                            100
                                                                         </td>
                                                                         <td>T497209787352090</td>
                                                                         <td>
@@ -518,18 +510,18 @@
                                                                                 <div class="btn-group">
                                                                                     <button type="button" class="btn btn-white btn-icon btn-sm dropdown-toggle dropdown-toggle-empty  border border-1" id="ordersExportDropdown1" data-bs-toggle="dropdown" aria-expanded="false"></button>
 
-                                                                                    <div class="dropdown-menu dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">
-                                                                                        <span class="dropdown-header text-dark">Options</span>
-                                                                                        <div class="dropdown-divider"></div>  
-                                                                                        <a class="js-export-copy dropdown-item" href="javascript:;"> 
-                                                                                            <i class="fas fa-lock"></i> Block
+                                                                                    <div class="dropdown-menu view dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">  
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;"> 
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-lock"></i></span>
+                                                                                            <span>Block</span>
                                                                                         </a>
-                                                                                        <a class="js-export-print dropdown-item" href="javascript:;"> 
-                                                                                            <i class="fas fa-money-check"></i> Repayment
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;"> 
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-money-check"></i> </span>
+                                                                                            <span>Repayment</span> 
                                                                                         </a>
-                                                                                        <div class="dropdown-divider"></div>  
-                                                                                        <a class="dropdown-item" href="javascript:;">
-                                                                                            <i class="fas fa-trash"></i> Delete
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;">
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-trash"></i> </span>
+                                                                                            <span>Delete</span> 
                                                                                         </a>
                                                                                     </div>
                                                                                 </div>
@@ -546,7 +538,7 @@
                                                                         </div>
                                                                         </td>
                                                                         <td class="table-column-ps-0">
-                                                                        <a href="ecommerce-order-details.html">78Q53A6</a>
+                                                                            <a href="javascript:;" class="text-inherit">78Q53A6</a>
                                                                         </td>
                                                                         <td>Feb 15, 2024</td> 
                                                                         <td>
@@ -555,7 +547,7 @@
                                                                         </span>
                                                                         </td> 
                                                                         <td>
-                                                                            1000,500,100 ETC
+                                                                            1000
                                                                         </td>
                                                                         <td>T497209787352090</td>
                                                                         <td>
@@ -568,18 +560,18 @@
                                                                                 <div class="btn-group">
                                                                                     <button type="button" class="btn btn-white btn-icon btn-sm dropdown-toggle dropdown-toggle-empty  border border-1" id="ordersExportDropdown1" data-bs-toggle="dropdown" aria-expanded="false"></button>
 
-                                                                                    <div class="dropdown-menu dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">
-                                                                                        <span class="dropdown-header text-dark">Options</span>
-                                                                                        <div class="dropdown-divider"></div>  
-                                                                                        <a class="js-export-copy dropdown-item" href="javascript:;"> 
-                                                                                            <i class="fas fa-lock"></i> Block
+                                                                                    <div class="dropdown-menu view dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">  
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;"> 
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-lock"></i></span>
+                                                                                            <span>Block</span>
                                                                                         </a>
-                                                                                        <a class="js-export-print dropdown-item" href="javascript:;"> 
-                                                                                            <i class="fas fa-money-check"></i> Repayment
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;"> 
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-money-check"></i> </span>
+                                                                                            <span>Repayment</span> 
                                                                                         </a>
-                                                                                        <div class="dropdown-divider"></div>  
-                                                                                        <a class="dropdown-item" href="javascript:;">
-                                                                                            <i class="fas fa-trash"></i> Delete
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;">
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-trash"></i> </span>
+                                                                                            <span>Delete</span> 
                                                                                         </a>
                                                                                     </div>
                                                                                 </div>
@@ -596,7 +588,7 @@
                                                                         </div>
                                                                         </td>
                                                                         <td class="table-column-ps-0">
-                                                                        <a href="ecommerce-order-details.html">78Q53A6</a>
+                                                                            <a href="javascript:;" class="text-inherit">78Q53A6</a>
                                                                         </td>
                                                                         <td>Feb 15, 2024</td> 
                                                                         <td>
@@ -605,7 +597,7 @@
                                                                         </span>
                                                                         </td> 
                                                                         <td>
-                                                                            1000,500,100 ETC
+                                                                            500
                                                                         </td>
                                                                         <td>T497209787352090</td>
                                                                         <td>
@@ -618,18 +610,18 @@
                                                                                 <div class="btn-group">
                                                                                     <button type="button" class="btn btn-white btn-icon btn-sm dropdown-toggle dropdown-toggle-empty  border border-1" id="ordersExportDropdown1" data-bs-toggle="dropdown" aria-expanded="false"></button>
 
-                                                                                    <div class="dropdown-menu dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">
-                                                                                        <span class="dropdown-header text-dark">Options</span>
-                                                                                        <div class="dropdown-divider"></div>  
-                                                                                        <a class="js-export-copy dropdown-item" href="javascript:;"> 
-                                                                                            <i class="fas fa-lock"></i> Block
+                                                                                    <div class="dropdown-menu view dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">  
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;"> 
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-lock"></i></span>
+                                                                                            <span>Block</span>
                                                                                         </a>
-                                                                                        <a class="js-export-print dropdown-item" href="javascript:;"> 
-                                                                                            <i class="fas fa-money-check"></i> Repayment
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;"> 
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-money-check"></i> </span>
+                                                                                            <span>Repayment</span> 
                                                                                         </a>
-                                                                                        <div class="dropdown-divider"></div>  
-                                                                                        <a class="dropdown-item" href="javascript:;">
-                                                                                            <i class="fas fa-trash"></i> Delete
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;">
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-trash"></i> </span>
+                                                                                            <span>Delete</span> 
                                                                                         </a>
                                                                                     </div>
                                                                                 </div>
@@ -646,21 +638,18 @@
                                                                             </div>
                                                                         </td>
                                                                         <td class="table-column-ps-0">
-                                                                        <a href="ecommerce-order-details.html">#78531</a>
+                                                                            <a href="javascript:;" class="text-inherit">78Q53A6</a>
                                                                         </td>
-                                                                        <td>Aug 17, 2020, 12:48 (ET)</td> 
+                                                                        <td>Feb 15, 2024</td> 
                                                                         <td>
                                                                         <span class="badge bg-soft-success text-success">
                                                                             <span class="legend-indicator bg-success"></span>Paid
                                                                         </span>
                                                                         </td> 
                                                                         <td>
-                                                                        <div class="d-flex align-items-center">
-                                                                            <img class="bank-card avatar-xss avatar-4x3 me-2" src="assets/img/paypal-icon.svg" alt="Image Description">
-                                                                            <span class="text-dark">&bull;&bull;&bull;&bull;@gmail.com</span>
-                                                                        </div>
+                                                                            100
                                                                         </td>
-                                                                        <td>$23.89</td>
+                                                                        <td>T497209787352090</td>
                                                                         <td>
                                                                             <div class="btn-group" role="group">
                                                                                 <a class="btn btn-white btn-sm border border-1" href="ecommerce-order-details.html">
@@ -671,18 +660,18 @@
                                                                                 <div class="btn-group">
                                                                                     <button type="button" class="btn btn-white btn-icon btn-sm dropdown-toggle dropdown-toggle-empty  border border-1" id="ordersExportDropdown1" data-bs-toggle="dropdown" aria-expanded="false"></button>
 
-                                                                                    <div class="dropdown-menu dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">
-                                                                                        <span class="dropdown-header text-dark">Options</span>
-                                                                                        <div class="dropdown-divider"></div>  
-                                                                                        <a class="js-export-copy dropdown-item" href="javascript:;"> 
-                                                                                            <i class="fas fa-lock"></i> Block
+                                                                                    <div class="dropdown-menu view dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">  
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;"> 
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-lock"></i></span>
+                                                                                            <span>Block</span>
                                                                                         </a>
-                                                                                        <a class="js-export-print dropdown-item" href="javascript:;"> 
-                                                                                            <i class="fas fa-money-check"></i> Repayment
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;"> 
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-money-check"></i> </span>
+                                                                                            <span>Repayment</span> 
                                                                                         </a>
-                                                                                        <div class="dropdown-divider"></div>  
-                                                                                        <a class="dropdown-item" href="javascript:;">
-                                                                                            <i class="fas fa-trash"></i> Delete
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;">
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-trash"></i> </span>
+                                                                                            <span>Delete</span> 
                                                                                         </a>
                                                                                     </div>
                                                                                 </div>
@@ -699,7 +688,7 @@
                                                                         </div>
                                                                         </td>
                                                                         <td class="table-column-ps-0">
-                                                                            <a href="ecommerce-order-details.html">78Q53A6</a>
+                                                                            <a href="javascript:;" class="text-inherit">78Q53A6</a>
                                                                         </td>
                                                                         <td>Feb 15, 2024</td> 
                                                                         <td>
@@ -708,7 +697,7 @@
                                                                         </span>
                                                                         </td> 
                                                                         <td>
-                                                                            1000,500,100 ETC
+                                                                            1000
                                                                         </td>
                                                                         <td>T497209787352090</td>
                                                                         <td>
@@ -721,18 +710,18 @@
                                                                                 <div class="btn-group">
                                                                                     <button type="button" class="btn btn-white btn-icon btn-sm dropdown-toggle dropdown-toggle-empty  border border-1" id="ordersExportDropdown1" data-bs-toggle="dropdown" aria-expanded="false"></button>
 
-                                                                                    <div class="dropdown-menu dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">
-                                                                                        <span class="dropdown-header text-dark">Options</span>
-                                                                                        <div class="dropdown-divider"></div>  
-                                                                                        <a class="js-export-copy dropdown-item" href="javascript:;"> 
-                                                                                            <i class="fas fa-lock"></i> Block
+                                                                                    <div class="dropdown-menu view dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">  
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;"> 
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-lock"></i></span>
+                                                                                            <span>Block</span>
                                                                                         </a>
-                                                                                        <a class="js-export-print dropdown-item" href="javascript:;"> 
-                                                                                            <i class="fas fa-money-check"></i> Repayment
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;"> 
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-money-check"></i> </span>
+                                                                                            <span>Repayment</span> 
                                                                                         </a>
-                                                                                        <div class="dropdown-divider"></div>  
-                                                                                        <a class="dropdown-item" href="javascript:;">
-                                                                                            <i class="fas fa-trash"></i> Delete
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;">
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-trash"></i> </span>
+                                                                                            <span>Delete</span> 
                                                                                         </a>
                                                                                     </div>
                                                                                 </div>
@@ -749,7 +738,7 @@
                                                                         </div>
                                                                         </td>
                                                                         <td class="table-column-ps-0">
-                                                                        <a href="ecommerce-order-details.html">78Q53A6</a>
+                                                                            <a href="javascript:;" class="text-inherit">78Q53A6</a>
                                                                         </td>
                                                                         <td>Feb 15, 2024</td> 
                                                                         <td>
@@ -758,7 +747,7 @@
                                                                         </span>
                                                                         </td> 
                                                                         <td>
-                                                                            1000,500,100 ETC
+                                                                            500
                                                                         </td>
                                                                         <td>T497209787352090</td>
                                                                         <td>
@@ -771,18 +760,18 @@
                                                                                 <div class="btn-group">
                                                                                     <button type="button" class="btn btn-white btn-icon btn-sm dropdown-toggle dropdown-toggle-empty  border border-1" id="ordersExportDropdown1" data-bs-toggle="dropdown" aria-expanded="false"></button>
 
-                                                                                    <div class="dropdown-menu dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">
-                                                                                        <span class="dropdown-header text-dark">Options</span>
-                                                                                        <div class="dropdown-divider"></div>  
-                                                                                        <a class="js-export-copy dropdown-item" href="javascript:;"> 
-                                                                                            <i class="fas fa-lock"></i> Block
+                                                                                    <div class="dropdown-menu view dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">  
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;"> 
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-lock"></i></span>
+                                                                                            <span>Block</span>
                                                                                         </a>
-                                                                                        <a class="js-export-print dropdown-item" href="javascript:;"> 
-                                                                                            <i class="fas fa-money-check"></i> Repayment
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;"> 
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-money-check"></i> </span>
+                                                                                            <span>Repayment</span> 
                                                                                         </a>
-                                                                                        <div class="dropdown-divider"></div>  
-                                                                                        <a class="dropdown-item" href="javascript:;">
-                                                                                            <i class="fas fa-trash"></i> Delete
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;">
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-trash"></i> </span>
+                                                                                            <span>Delete</span> 
                                                                                         </a>
                                                                                     </div>
                                                                                 </div>
@@ -799,7 +788,7 @@
                                                                         </div>
                                                                         </td>
                                                                         <td class="table-column-ps-0">
-                                                                            <a href="ecommerce-order-details.html">78Q53A6</a>
+                                                                            <a href="javascript:;" class="text-inherit">78Q53A6</a>
                                                                         </td>
                                                                         <td>Feb 15, 2024</td> 
                                                                         <td>
@@ -808,7 +797,7 @@
                                                                         </span>
                                                                         </td> 
                                                                         <td>
-                                                                            1000,500,100 ETC
+                                                                            100
                                                                         </td>
                                                                         <td>T497209787352090</td>
                                                                         <td>
@@ -821,18 +810,18 @@
                                                                                 <div class="btn-group">
                                                                                     <button type="button" class="btn btn-white btn-icon btn-sm dropdown-toggle dropdown-toggle-empty  border border-1" id="ordersExportDropdown1" data-bs-toggle="dropdown" aria-expanded="false"></button>
 
-                                                                                    <div class="dropdown-menu dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">
-                                                                                        <span class="dropdown-header text-dark">Options</span>
-                                                                                        <div class="dropdown-divider"></div>  
-                                                                                        <a class="js-export-copy dropdown-item" href="javascript:;"> 
-                                                                                            <i class="fas fa-lock"></i> Block
+                                                                                    <div class="dropdown-menu view dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">  
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;"> 
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-lock"></i></span>
+                                                                                            <span>Block</span>
                                                                                         </a>
-                                                                                        <a class="js-export-print dropdown-item" href="javascript:;"> 
-                                                                                            <i class="fas fa-money-check"></i> Repayment
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;"> 
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-money-check"></i> </span>
+                                                                                            <span>Repayment</span> 
                                                                                         </a>
-                                                                                        <div class="dropdown-divider"></div>  
-                                                                                        <a class="dropdown-item" href="javascript:;">
-                                                                                            <i class="fas fa-trash"></i> Delete
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;">
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-trash"></i> </span>
+                                                                                            <span>Delete</span> 
                                                                                         </a>
                                                                                     </div>
                                                                                 </div>
@@ -849,7 +838,7 @@
                                                                         </div>
                                                                         </td>
                                                                         <td class="table-column-ps-0">
-                                                                            <a href="ecommerce-order-details.html">78Q53A6</a>
+                                                                            <a href="javascript:;" class="text-inherit">78Q53A6</a>
                                                                         </td>
                                                                         <td>Feb 15, 2024</td> 
                                                                         <td>
@@ -858,7 +847,7 @@
                                                                         </span>
                                                                         </td> 
                                                                         <td>
-                                                                            1000,500,100 ETC
+                                                                            1000
                                                                         </td>
                                                                         <td>T497209787352090</td>
                                                                         <td>
@@ -871,18 +860,18 @@
                                                                                 <div class="btn-group">
                                                                                     <button type="button" class="btn btn-white btn-icon btn-sm dropdown-toggle dropdown-toggle-empty  border border-1" id="ordersExportDropdown1" data-bs-toggle="dropdown" aria-expanded="false"></button>
 
-                                                                                    <div class="dropdown-menu dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">
-                                                                                        <span class="dropdown-header text-dark">Options</span>
-                                                                                        <div class="dropdown-divider"></div>  
-                                                                                        <a class="js-export-copy dropdown-item" href="javascript:;"> 
-                                                                                            <i class="fas fa-lock"></i> Block
+                                                                                    <div class="dropdown-menu view dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">  
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;"> 
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-lock"></i></span>
+                                                                                            <span>Block</span>
                                                                                         </a>
-                                                                                        <a class="js-export-print dropdown-item" href="javascript:;"> 
-                                                                                            <i class="fas fa-money-check"></i> Repayment
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;"> 
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-money-check"></i> </span>
+                                                                                            <span>Repayment</span> 
                                                                                         </a>
-                                                                                        <div class="dropdown-divider"></div>  
-                                                                                        <a class="dropdown-item" href="javascript:;">
-                                                                                            <i class="fas fa-trash"></i> Delete
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;">
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-trash"></i> </span>
+                                                                                            <span>Delete</span> 
                                                                                         </a>
                                                                                     </div>
                                                                                 </div>
@@ -899,7 +888,7 @@
                                                                         </div>
                                                                         </td>
                                                                         <td class="table-column-ps-0">
-                                                                        <a href="ecommerce-order-details.html">78Q53A6</a>
+                                                                            <a href="javascript:;" class="text-inherit">78Q53A6</a>
                                                                         </td>
                                                                         <td>Feb 15, 2024</td> 
                                                                         <td>
@@ -908,7 +897,7 @@
                                                                         </span>
                                                                         </td> 
                                                                         <td>
-                                                                            1000,500,100 ETC
+                                                                            500
                                                                         </td>
                                                                         <td>T497209787352090</td>
                                                                         <td>
@@ -921,18 +910,18 @@
                                                                                 <div class="btn-group">
                                                                                     <button type="button" class="btn btn-white btn-icon btn-sm dropdown-toggle dropdown-toggle-empty  border border-1" id="ordersExportDropdown1" data-bs-toggle="dropdown" aria-expanded="false"></button>
 
-                                                                                    <div class="dropdown-menu dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">
-                                                                                        <span class="dropdown-header text-dark">Options</span>
-                                                                                        <div class="dropdown-divider"></div>  
-                                                                                        <a class="js-export-copy dropdown-item" href="javascript:;"> 
-                                                                                            <i class="fas fa-lock"></i> Block
+                                                                                    <div class="dropdown-menu view dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">  
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;"> 
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-lock"></i></span>
+                                                                                            <span>Block</span>
                                                                                         </a>
-                                                                                        <a class="js-export-print dropdown-item" href="javascript:;"> 
-                                                                                            <i class="fas fa-money-check"></i> Repayment
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;"> 
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-money-check"></i> </span>
+                                                                                            <span>Repayment</span> 
                                                                                         </a>
-                                                                                        <div class="dropdown-divider"></div>  
-                                                                                        <a class="dropdown-item" href="javascript:;">
-                                                                                            <i class="fas fa-trash"></i> Delete
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;">
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-trash"></i> </span>
+                                                                                            <span>Delete</span> 
                                                                                         </a>
                                                                                     </div>
                                                                                 </div>
@@ -949,7 +938,7 @@
                                                                         </div>
                                                                         </td>
                                                                         <td class="table-column-ps-0">
-                                                                        <a href="ecommerce-order-details.html">78Q53A6</a>
+                                                                            <a href="javascript:;" class="text-inherit">78Q53A6</a>
                                                                         </td>
                                                                         <td>Feb 15, 2024</td> 
                                                                         <td>
@@ -958,7 +947,7 @@
                                                                         </span>
                                                                         </td> 
                                                                         <td>
-                                                                            1000,500,100 ETC
+                                                                            100
                                                                         </td>
                                                                         <td>T497209787352090</td>
                                                                         <td>
@@ -971,18 +960,18 @@
                                                                                 <div class="btn-group">
                                                                                     <button type="button" class="btn btn-white btn-icon btn-sm dropdown-toggle dropdown-toggle-empty  border border-1" id="ordersExportDropdown1" data-bs-toggle="dropdown" aria-expanded="false"></button>
 
-                                                                                    <div class="dropdown-menu dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">
-                                                                                        <span class="dropdown-header text-dark">Options</span>
-                                                                                        <div class="dropdown-divider"></div>  
-                                                                                        <a class="js-export-copy dropdown-item" href="javascript:;"> 
-                                                                                            <i class="fas fa-lock"></i> Block
+                                                                                    <div class="dropdown-menu view dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">  
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;"> 
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-lock"></i></span>
+                                                                                            <span>Block</span>
                                                                                         </a>
-                                                                                        <a class="js-export-print dropdown-item" href="javascript:;"> 
-                                                                                            <i class="fas fa-money-check"></i> Repayment
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;"> 
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-money-check"></i> </span>
+                                                                                            <span>Repayment</span> 
                                                                                         </a>
-                                                                                        <div class="dropdown-divider"></div>  
-                                                                                        <a class="dropdown-item" href="javascript:;">
-                                                                                            <i class="fas fa-trash"></i> Delete
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;">
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-trash"></i> </span>
+                                                                                            <span>Delete</span> 
                                                                                         </a>
                                                                                     </div>
                                                                                 </div>
@@ -999,7 +988,7 @@
                                                                         </div>
                                                                         </td>
                                                                         <td class="table-column-ps-0">
-                                                                            <a href="ecommerce-order-details.html">78Q53A6</a>
+                                                                            <a href="javascript:;" class="text-inherit">78Q53A6</a>
                                                                         </td>
                                                                         <td>Feb 15, 2024</td> 
                                                                         <td>
@@ -1008,7 +997,7 @@
                                                                         </span>
                                                                         </td> 
                                                                         <td>
-                                                                            1000,500,100 ETC
+                                                                            1000
                                                                         </td>
                                                                         <td>T497209787352090</td>
                                                                         <td>
@@ -1021,18 +1010,18 @@
                                                                                 <div class="btn-group">
                                                                                     <button type="button" class="btn btn-white btn-icon btn-sm dropdown-toggle dropdown-toggle-empty  border border-1" id="ordersExportDropdown1" data-bs-toggle="dropdown" aria-expanded="false"></button>
 
-                                                                                    <div class="dropdown-menu dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">
-                                                                                        <span class="dropdown-header text-dark">Options</span>
-                                                                                        <div class="dropdown-divider"></div>  
-                                                                                        <a class="js-export-copy dropdown-item" href="javascript:;"> 
-                                                                                            <i class="fas fa-lock"></i> Block
+                                                                                    <div class="dropdown-menu view dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">  
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;"> 
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-lock"></i></span>
+                                                                                            <span>Block</span>
                                                                                         </a>
-                                                                                        <a class="js-export-print dropdown-item" href="javascript:;"> 
-                                                                                            <i class="fas fa-money-check"></i> Repayment
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;"> 
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-money-check"></i> </span>
+                                                                                            <span>Repayment</span> 
                                                                                         </a>
-                                                                                        <div class="dropdown-divider"></div>  
-                                                                                        <a class="dropdown-item" href="javascript:;">
-                                                                                            <i class="fas fa-trash"></i> Delete
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;">
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-trash"></i> </span>
+                                                                                            <span>Delete</span> 
                                                                                         </a>
                                                                                     </div>
                                                                                 </div>
@@ -1049,7 +1038,7 @@
                                                                         </div>
                                                                         </td>
                                                                         <td class="table-column-ps-0">
-                                                                            <a href="ecommerce-order-details.html">78Q53A6</a>
+                                                                            <a href="javascript:;" class="text-inherit">78Q53A6</a>
                                                                         </td>
                                                                         <td>Feb 15, 2024</td> 
                                                                         <td>
@@ -1058,7 +1047,7 @@
                                                                         </span>
                                                                         </td> 
                                                                         <td>
-                                                                            1000,500,100 ETC
+                                                                            500
                                                                         </td>
                                                                         <td>T497209787352090</td>
                                                                         <td>
@@ -1071,18 +1060,18 @@
                                                                                 <div class="btn-group">
                                                                                     <button type="button" class="btn btn-white btn-icon btn-sm dropdown-toggle dropdown-toggle-empty  border border-1" id="ordersExportDropdown1" data-bs-toggle="dropdown" aria-expanded="false"></button>
 
-                                                                                    <div class="dropdown-menu dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">
-                                                                                        <span class="dropdown-header text-dark">Options</span>
-                                                                                        <div class="dropdown-divider"></div>  
-                                                                                        <a class="js-export-copy dropdown-item" href="javascript:;"> 
-                                                                                            <i class="fas fa-lock"></i> Block
+                                                                                    <div class="dropdown-menu view dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">  
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;"> 
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-lock"></i></span>
+                                                                                            <span>Block</span>
                                                                                         </a>
-                                                                                        <a class="js-export-print dropdown-item" href="javascript:;"> 
-                                                                                            <i class="fas fa-money-check"></i> Repayment
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;"> 
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-money-check"></i> </span>
+                                                                                            <span>Repayment</span> 
                                                                                         </a>
-                                                                                        <div class="dropdown-divider"></div>  
-                                                                                        <a class="dropdown-item" href="javascript:;">
-                                                                                            <i class="fas fa-trash"></i> Delete
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;">
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-trash"></i> </span>
+                                                                                            <span>Delete</span> 
                                                                                         </a>
                                                                                     </div>
                                                                                 </div>
@@ -1099,7 +1088,7 @@
                                                                         </div>
                                                                         </td>
                                                                         <td class="table-column-ps-0">
-                                                                            <a href="ecommerce-order-details.html">78Q53A6</a>
+                                                                            <a href="javascript:;" class="text-inherit">78Q53A6</a>
                                                                         </td>
                                                                         <td>Feb 15, 2024</td> 
                                                                         <td>
@@ -1108,7 +1097,7 @@
                                                                         </span>
                                                                         </td> 
                                                                         <td>
-                                                                            1000,500,100 ETC
+                                                                            100
                                                                         </td>
                                                                         <td>T497209787352090</td>
                                                                         <td>
@@ -1121,18 +1110,18 @@
                                                                                 <div class="btn-group">
                                                                                     <button type="button" class="btn btn-white btn-icon btn-sm dropdown-toggle dropdown-toggle-empty  border border-1" id="ordersExportDropdown1" data-bs-toggle="dropdown" aria-expanded="false"></button>
 
-                                                                                    <div class="dropdown-menu dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">
-                                                                                        <span class="dropdown-header text-dark">Options</span>
-                                                                                        <div class="dropdown-divider"></div>  
-                                                                                        <a class="js-export-copy dropdown-item" href="javascript:;"> 
-                                                                                            <i class="fas fa-lock"></i> Block
+                                                                                    <div class="dropdown-menu view dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">  
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;"> 
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-lock"></i></span>
+                                                                                            <span>Block</span>
                                                                                         </a>
-                                                                                        <a class="js-export-print dropdown-item" href="javascript:;"> 
-                                                                                            <i class="fas fa-money-check"></i> Repayment
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;"> 
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-money-check"></i> </span>
+                                                                                            <span>Repayment</span> 
                                                                                         </a>
-                                                                                        <div class="dropdown-divider"></div>  
-                                                                                        <a class="dropdown-item" href="javascript:;">
-                                                                                            <i class="fas fa-trash"></i> Delete
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;">
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-trash"></i> </span>
+                                                                                            <span>Delete</span> 
                                                                                         </a>
                                                                                     </div>
                                                                                 </div>
@@ -1149,7 +1138,7 @@
                                                                         </div>
                                                                         </td>
                                                                         <td class="table-column-ps-0">
-                                                                            <a href="ecommerce-order-details.html">78Q53A6</a>
+                                                                            <a href="javascript:;" class="text-inherit">78Q53A6</a>
                                                                         </td>
                                                                         <td>Feb 15, 2024</td> 
                                                                         <td>
@@ -1158,7 +1147,7 @@
                                                                         </span>
                                                                         </td> 
                                                                         <td>
-                                                                            1000,500,100 ETC
+                                                                            500
                                                                         </td>
                                                                         <td>T497209787352090</td>
                                                                         <td>
@@ -1171,18 +1160,18 @@
                                                                                 <div class="btn-group">
                                                                                     <button type="button" class="btn btn-white btn-icon btn-sm dropdown-toggle dropdown-toggle-empty  border border-1" id="ordersExportDropdown1" data-bs-toggle="dropdown" aria-expanded="false"></button>
 
-                                                                                    <div class="dropdown-menu dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">
-                                                                                        <span class="dropdown-header text-dark">Options</span>
-                                                                                        <div class="dropdown-divider"></div>  
-                                                                                        <a class="js-export-copy dropdown-item" href="javascript:;"> 
-                                                                                            <i class="fas fa-lock"></i> Block
+                                                                                    <div class="dropdown-menu view dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">  
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;"> 
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-lock"></i></span>
+                                                                                            <span>Block</span>
                                                                                         </a>
-                                                                                        <a class="js-export-print dropdown-item" href="javascript:;"> 
-                                                                                            <i class="fas fa-money-check"></i> Repayment
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;"> 
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-money-check"></i> </span>
+                                                                                            <span>Repayment</span> 
                                                                                         </a>
-                                                                                        <div class="dropdown-divider"></div>  
-                                                                                        <a class="dropdown-item" href="javascript:;">
-                                                                                            <i class="fas fa-trash"></i> Delete
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;">
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-trash"></i> </span>
+                                                                                            <span>Delete</span> 
                                                                                         </a>
                                                                                     </div>
                                                                                 </div>
@@ -1199,7 +1188,7 @@
                                                                         </div>
                                                                         </td>
                                                                         <td class="table-column-ps-0">
-                                                                        <a href="ecommerce-order-details.html">78Q53A6</a>
+                                                                            <a href="javascript:;" class="text-inherit">78Q53A6</a>
                                                                         </td>
                                                                         <td>Feb 15, 2024</td> 
                                                                         <td>
@@ -1208,7 +1197,7 @@
                                                                         </span>
                                                                         </td> 
                                                                         <td>
-                                                                            1000,500,100 ETC
+                                                                            1000
                                                                         </td>
                                                                         <td>T497209787352090</td>
                                                                         <td>
@@ -1221,18 +1210,18 @@
                                                                                 <div class="btn-group">
                                                                                     <button type="button" class="btn btn-white btn-icon btn-sm dropdown-toggle dropdown-toggle-empty  border border-1" id="ordersExportDropdown1" data-bs-toggle="dropdown" aria-expanded="false"></button>
 
-                                                                                    <div class="dropdown-menu dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">
-                                                                                        <span class="dropdown-header text-dark">Options</span>
-                                                                                        <div class="dropdown-divider"></div>  
-                                                                                        <a class="js-export-copy dropdown-item" href="javascript:;"> 
-                                                                                            <i class="fas fa-lock"></i> Block
+                                                                                    <div class="dropdown-menu view dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">  
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;"> 
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-lock"></i></span>
+                                                                                            <span>Block</span>
                                                                                         </a>
-                                                                                        <a class="js-export-print dropdown-item" href="javascript:;"> 
-                                                                                            <i class="fas fa-money-check"></i> Repayment
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;"> 
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-money-check"></i> </span>
+                                                                                            <span>Repayment</span> 
                                                                                         </a>
-                                                                                        <div class="dropdown-divider"></div>  
-                                                                                        <a class="dropdown-item" href="javascript:;">
-                                                                                            <i class="fas fa-trash"></i> Delete
+                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center" href="javascript:;">
+                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-trash"></i> </span>
+                                                                                            <span>Delete</span> 
                                                                                         </a>
                                                                                     </div>
                                                                                 </div>
@@ -1260,16 +1249,8 @@
                                                 <h3>Menu 2</h3>
                                                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
                                             </div>
-                                        </div>
-
-                                      
-                                        </div>
-                                        <!-- End Content -->
- 
-                                        <!-- End Row -->
-                                        </div>
-
-                                        <!-- End Footer -->
+                                        </div> 
+                                        <!-- End Content --> 
                                     </main>
                                 </div>
                             </div>
