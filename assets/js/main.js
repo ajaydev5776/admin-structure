@@ -1,8 +1,12 @@
-const switchbtn = document.querySelector('#switch')
+const switchcasebtn = document.querySelector('#switch')
 const asidebar = document.querySelector('#asidebar')
+const switchcancle = document.querySelector('#switchcancle')
 
-switchbtn.addEventListener('click', () =>{
+switchcasebtn.addEventListener('click', () =>{
     asidebar.classList.toggle('active')
+})
+switchcancle.addEventListener('click', () =>{
+    asidebar.classList.remove('active')
 })
 
 

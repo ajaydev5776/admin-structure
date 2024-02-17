@@ -15,7 +15,23 @@
 
 @include media-breakpoint-down(xl) {}
 
-@include media-breakpoint-down(lg) {}
+@include media-breakpoint-down(lg) {
+    .asidemenu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        z-index: 3;
+        transform: translateX(-102%);
+        &.active{
+            transform: unset;
+            width: 280px;
+            opacity: 1;
+            visibility: visible;
+            padding: 0px 1rem;
+        }
+    }
+}
 
 @include media-breakpoint-down(md) {}
 
