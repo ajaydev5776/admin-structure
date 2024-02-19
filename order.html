@@ -25,18 +25,22 @@
             <div class="col-auto h-100 asidemenu"  id="asidebar">
                 <!-- Aside Bar Start -->
                 <aside class="asidebar bg-white h-100 row flex-nowrap flex-column">
-                    <div class="col-12 logopart"><a href="index.html" class="logo mx-3"><img src="assets/img/logo.svg" alt="log"></a></div>
+                    <div class="col-12 logopart">
+                      <a href="index.html" class="logo mx-3"><img src="assets/img/logo.svg" alt="log"></a>
+                      <button class="switch-icn bg-white border-0 ms-auto d-lg-none d-block" id="switchcancle"><i class="fas fa-times"></i></button>
+                    </div>
                     <div class="col-12 h-100 flex-fill overflow-y-auto overflow-x-hidden">
                         <div class="asideitem p-3">
                             <ul class="navlist list-unstyled m-0 p-0">
-                                <li><a href="index.html" class="navitems"><i class="fas fa-home"></i> Dashboard</a></li>
-                                <li><a href="profile.html" class="navitems"><i class="far fa-user"></i> My Profile</a></li>
-                                <li><a href="order.html" class="navitems"><i class="fas fa-shopping-bag"></i> Orders</a></li>
-                                <li><a href="sign-up.html" class="navitems"><i class="fas fa-user-plus"></i> Sign Up</a></li>
-                                <li><a href="login.html" class="navitems"><i class="fas fa-sign-in-alt"></i> Login</a></li>
-                                <li><a href="forget-password.html" class="navitems"><i class="fas fa-key"></i> Forget Password</a></li> 
-                              </ul>
-                        </div> 
+                              <li><a href="index.html" class="navitems"><i class="fas fa-home"></i> Dashboard</a></li>
+                              <li><a href="profile.html" class="navitems"><i class="far fa-user"></i> My Profile</a></li>
+                              <li><a href="order.html" class="navitems"><i class="fas fa-shopping-bag"></i> Orders</a></li>
+                              <li><a href="sign-up.html" class="navitems"><i class="fas fa-user-plus"></i> Sign Up</a></li>
+                              <li><a href="login.html" class="navitems"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                              <li><a href="forget-password.html" class="navitems"><i class="fas fa-key"></i> Forget Password</a></li> 
+                            </ul>
+                        </div>
+                        
                     </div>
                 </aside>
                 <!-- Aside Bar End -->
@@ -44,8 +48,11 @@
             <div class="col h-100 rightside">     
                 <div class="row h-100 flex-column flex-nowrap">
                     <div class="col-12 header d-flex align-items-center bg-white">
+                        <div class=" logopart d-lg-none d-block">
+                            <a href="index.html" class="logo mx-3"><img src="assets/img/logo.svg" alt="log"></a> 
+                        </div>
                         <button class="switch-icn bg-white border-0" id="switch"><i class="fas fa-bars"></i></button>
-                        <div class="search-bar">
+                        <div class="search-bar d-lg-block d-none">
                             <form class="search-form d-flex align-items-center w-100" method="POST" action="#">
                               <input type="text" name="query" placeholder="Search" title="Enter search keyword">
                               <button type="submit" title="Search"><i class="fas fa-search"></i></button>
@@ -55,7 +62,7 @@
                         <nav class="header-nav ms-auto">
                             <ul class="d-flex align-items-center">
                     
-                                <li class="nav-item d-block d-lg-none">
+                                <li class="nav-item d-block d-lg-none me-4">
                                     <a class="nav-link nav-icon search-bar-toggle " href="#">
                                         <i class="fas fa-search"></i>
                                     </a>
@@ -116,7 +123,7 @@
                     <div class="col-12 h-100 flex-fill overflow-y-auto">
                         <div class="innerbody_part h-100">
                             <div class="card h100 border-0 bg-transparent shadow-0">
-                                <div class="card-body h-100">
+                                <div class="card-body h-100 px-0">
                                     
                                     <main id="content" role="main" class="main">
                                         <!-- Content -->
@@ -214,8 +221,8 @@
                                                             <table id="datatable" class="table table-hover table-borderless table-thead-bordered table-nowrap align-middle card-table w-100">
                                                                 <thead class="thead-light">
                                                                     <tr>
-                                                                        <th class="table-column-pe-0">
-                                                                        <div class="form-check">
+                                                                        <th class="table-column-pe-0 check">
+                                                                        <div class="form-check ">
                                                                             <input class="form-check-input" type="checkbox" value="" id="datatableCheckAll">
                                                                             <label class="form-check-label" for="datatableCheckAll"></label>
                                                                         </div>

@@ -24,7 +24,10 @@
             <div class="col-auto h-100 asidemenu"  id="asidebar">
                 <!-- Aside Bar Start -->
                 <aside class="asidebar bg-white h-100 row flex-nowrap flex-column">
-                  <div class="col-12 logopart"><a href="index.html" class="logo mx-3"><img src="assets/img/logo.svg" alt="log"></a></div>
+                  <div class="col-12 logopart">
+                    <a href="index.html" class="logo mx-3"><img src="assets/img/logo.svg" alt="log"></a>
+                    <button class="switch-icn bg-white border-0 ms-auto d-lg-none d-block" id="switchcancle"><i class="fas fa-times"></i></button>
+                  </div>
                   <div class="col-12 h-100 flex-fill overflow-y-auto overflow-x-hidden">
                       <div class="asideitem p-3">
                           <ul class="navlist list-unstyled m-0 p-0">
@@ -38,515 +41,518 @@
                       </div>
                       
                   </div>
-                </aside>
+              </aside>
                 <!-- Aside Bar End -->
             </div>
             <div class="col h-100 rightside">     
                 <div class="row h-100 flex-column flex-nowrap">
-                    <div class="col-12 header d-flex align-items-center bg-white">
-                      <button class="switch-icn bg-white border-0" id="switch"><i class="fas fa-bars"></i></button>
-                      <div class="search-bar">
-                          <form class="search-form d-flex align-items-center w-100" method="POST" action="#">
-                            <input type="text" name="query" placeholder="Search" title="Enter search keyword">
-                            <button type="submit" title="Search"><i class="fas fa-search"></i></button>
-                          </form>
-                      </div><!-- End Search Bar -->
-                    
-                      <nav class="header-nav ms-auto">
-                          <ul class="d-flex align-items-center">
-                  
-                              <li class="nav-item d-block d-lg-none">
-                                  <a class="nav-link nav-icon search-bar-toggle " href="#">
-                                      <i class="fas fa-search"></i>
-                                  </a>
-                              </li><!-- End Search Icon-->
-                  
-                  
-                              <li class="nav-item dropdown pe-3">
-                      
-                                  <a class="nav-link nav-profile position-relative text-dark d-inline-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                                      <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-                                      <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
-                                  </a><!-- End Profile Iamge Icon -->
-                      
-                                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile  overflow-hidden bg-white border-0">  
-                                      <li>
-                                          <a class="dropdown-item position-relative text-dark d-inline-flex align-items-center active" href="javascript:;">
-                                              <span class="profile-icn d-flex align-items-center justify-content-center"><i class="far fa-user"></i></span>
-                                              <span>My Profile</span>
-                                          </a>
-                                      </li>
-                                      <li>
-                                          <hr class="dropdown-divider">
-                                      </li>
-                      
-                                      <li>
-                                          <a class="dropdown-item position-relative text-dark d-inline-flex align-items-center" href="javascript:;">
-                                              <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-cog"></i></span>
-                                              <span>Account Settings</span>
-                                          </a>
-                                      </li>
-                                      <li>
-                                          <hr class="dropdown-divider">
-                                      </li>
-                          
-                                      <li>
-                                          <a class="dropdown-item position-relative text-dark d-inline-flex align-items-center" href="javascript:;">
-                                              <span class="profile-icn d-flex align-items-center justify-content-center"><i class="far fa-question-circle"></i></span>
-                                              <span>Need Help?</span>
-                                          </a>
-                                      </li>
-                                      <li>
-                                          <hr class="dropdown-divider">
-                                      </li>
-                      
-                                      <li>
-                                          <a class="dropdown-item position-relative text-dark d-inline-flex align-items-center" href="javascript:;">
-                                              <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-sign-out-alt"></i></span>
-                                              <span>Sign Out</span>
-                                          </a>
-                                      </li>
-                      
-                                  </ul><!-- End Profile Dropdown Items -->
-                              </li><!-- End Profile Nav -->
-                  
-                          </ul>
-                      </nav><!-- End Icons Navigation -->
+                  <div class="col-12 header d-flex align-items-center bg-white">
+                    <div class=" logopart d-lg-none d-block">
+                        <a href="index.html" class="logo mx-3"><img src="assets/img/logo.svg" alt="log"></a> 
                     </div>
-                    <div class="col-12 h-100 flex-fill overflow-y-auto">
-                        <div class="innerbody_part h-100">
-                            <div class="card h100 border-0 bg-transparent shadow-0">
-                                <div class="card-body h-100">
-                                    
-                                    <main id="content" role="main" class="main">
-                                        <!-- Content -->
-                                        <div class="content container-fluid profile-section">
-                                            <!-- Page Header -->
-                                            <div class="page-header">
-                                              <div class="row align-items-center mb-3">
-                                                  <div class="col-sm">
-                                                      <h3 class="page-header-title">My profile</h3>
-                                                  </div> 
-                                              </div>
-                                              <!-- End Row -->  
-                                            </div> 
+                    <button class="switch-icn bg-white border-0" id="switch"><i class="fas fa-bars"></i></button>
+                    <div class="search-bar d-lg-block d-none">
+                        <form class="search-form d-flex align-items-center w-100" method="POST" action="#">
+                          <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+                          <button type="submit" title="Search"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div><!-- End Search Bar -->
+                  
+                    <nav class="header-nav ms-auto">
+                        <ul class="d-flex align-items-center">
+                
+                            <li class="nav-item d-block d-lg-none me-4">
+                                <a class="nav-link nav-icon search-bar-toggle " href="#">
+                                    <i class="fas fa-search"></i>
+                                </a>
+                            </li><!-- End Search Icon-->
+                
+                
+                            <li class="nav-item dropdown pe-3">
+                    
+                                <a class="nav-link nav-profile position-relative text-dark d-inline-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+                                    <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+                                    <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+                                </a><!-- End Profile Iamge Icon -->
+                    
+                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile  overflow-hidden bg-white border-0">  
+                                    <li>
+                                        <a class="dropdown-item position-relative text-dark d-inline-flex align-items-center active" href="javascript:;">
+                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="far fa-user"></i></span>
+                                            <span>My Profile</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                    
+                                    <li>
+                                        <a class="dropdown-item position-relative text-dark d-inline-flex align-items-center" href="javascript:;">
+                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-cog"></i></span>
+                                            <span>Account Settings</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                        
+                                    <li>
+                                        <a class="dropdown-item position-relative text-dark d-inline-flex align-items-center" href="javascript:;">
+                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="far fa-question-circle"></i></span>
+                                            <span>Need Help?</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                    
+                                    <li>
+                                        <a class="dropdown-item position-relative text-dark d-inline-flex align-items-center" href="javascript:;">
+                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-sign-out-alt"></i></span>
+                                            <span>Sign Out</span>
+                                        </a>
+                                    </li>
+                    
+                                </ul><!-- End Profile Dropdown Items -->
+                            </li><!-- End Profile Nav -->
+                
+                        </ul>
+                    </nav><!-- End Icons Navigation -->
+                  </div>
+                  <div class="col-12 h-100 flex-fill overflow-y-auto">
+                      <div class="innerbody_part h-100">
+                          <div class="card h100 border-0 bg-transparent shadow-0">
+                              <div class="card-body h-100 px-0">
+                                  
+                                  <main id="content" role="main" class="main">
+                                      <!-- Content -->
+                                      <div class="content container-fluid profile-section">
+                                          <!-- Page Header -->
+                                          <div class="page-header">
+                                            <div class="row align-items-center mb-3">
+                                                <div class="col-sm">
+                                                    <h3 class="page-header-title">My profile</h3>
+                                                </div> 
+                                            </div>
+                                            <!-- End Row -->  
+                                          </div> 
 
-                                            <div class="row">
-                                                <div class="col-lg-3">
-                                                  <!-- Navbar -->
-                                                  <div class="navbar-expand-lg navbar-vertical mb-3 mb-lg-5 bg-white">
-                                                    <!-- Navbar Toggle --> 
-                                                    <div class="d-grid">
-                                                      <button type="button" class="navbar-toggler btn btn-white mb-3" data-bs-toggle="collapse" data-bs-target="#navbarVerticalNavMenu" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navbarVerticalNavMenu">
-                                                        <span class="d-flex justify-content-between align-items-center">
-                                                          <span class="text-dark">Menu</span>
-                                        
-                                                          <span class="navbar-toggler-default">
-                                                            <i class="bi-list"></i>
-                                                          </span>
-                                        
-                                                          <span class="navbar-toggler-toggled">
-                                                            <i class="bi-x"></i>
-                                                          </span>
+                                          <div class="row">
+                                              <div class="col-xl-3 col-lg-4">
+                                                <!-- Navbar -->
+                                                <div class="navbar-expand-lg navbar-vertical mb-3 mb-lg-5 bg-white">
+                                                  <!-- Navbar Toggle --> 
+                                                  <div class="d-grid">
+                                                    <button type="button" class="navbar-toggler btn btn-white " data-bs-toggle="collapse" data-bs-target="#navbarVerticalNavMenu" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navbarVerticalNavMenu">
+                                                      <span class="d-flex justify-content-between align-items-center">
+                                                        <span class="text-dark">Menu</span>
+                                      
+                                                        <span class="navbar-toggler-default">
+                                                          <i class="fas fa-bars"></i>
                                                         </span>
-                                                      </button>
-                                                    </div> 
-                                                    <!-- End Navbar Toggle -->
-                                        
-                                                    <!-- Navbar Collapse -->
-                                                    <div id="navbarVerticalNavMenu" class="collapse navbar-collapse">
-                                                      <ul id="navbarSettings" class="js-sticky-block js-scrollspy card card-navbar-nav nav nav-tabs nav-lg nav-vertical w-100 border-0">
-                                                        <li class="nav-item py-1">
-                                                          <a class="nav-link text-dark active border-0" href="#content">
-                                                            <i class="far fa-user"></i> Basic information
-                                                          </a>
-                                                        </li> 
-                                                        <li class="nav-item py-1">
-                                                          <a class="nav-link text-dark border-0" href="#passwordSection">
-                                                            <i class="fas fa-key"></i> Password
-                                                          </a>
-                                                        </li>    
-                                                        <li class="nav-item py-1">
-                                                          <a class="nav-link text-dark border-0" href="#paymentSection">
-                                                            <i class="fas fa-money-check"></i> Payment method
-                                                          </a>
-                                                        </li>  
-                                                        <li class="nav-item py-1">
-                                                          <a class="nav-link text-dark border-0" href="#deleteAccountSection">
-                                                            <i class="fas fa-trash"></i> Delete account
-                                                          </a>
-                                                        </li>
-                                                      </ul>
-                                                    </div>
-                                                    <!-- End Navbar Collapse -->
+                                      
+                                                        <span class="navbar-toggler-toggled">
+                                                          <i class="fas fa-times"></i>
+                                                        </span>
+                                                      </span>
+                                                    </button>
+                                                  </div> 
+                                                  <!-- End Navbar Toggle -->
+                                      
+                                                  <!-- Navbar Collapse -->
+                                                  <div id="navbarVerticalNavMenu" class="collapse navbar-collapse">
+                                                    <ul id="navbarSettings" class="js-sticky-block js-scrollspy card card-navbar-nav nav nav-tabs nav-lg nav-vertical w-100 border-0">
+                                                      <li class="nav-item py-1">
+                                                        <a class="nav-link text-dark active border-0" href="#content">
+                                                          <i class="far fa-user"></i> Basic information
+                                                        </a>
+                                                      </li> 
+                                                      <li class="nav-item py-1">
+                                                        <a class="nav-link text-dark border-0" href="#passwordSection">
+                                                          <i class="fas fa-key"></i> Password
+                                                        </a>
+                                                      </li>    
+                                                      <li class="nav-item py-1">
+                                                        <a class="nav-link text-dark border-0" href="#paymentSection">
+                                                          <i class="fas fa-money-check"></i> Payment method
+                                                        </a>
+                                                      </li>  
+                                                      <li class="nav-item py-1">
+                                                        <a class="nav-link text-dark border-0" href="#deleteAccountSection">
+                                                          <i class="fas fa-trash"></i> Delete account
+                                                        </a>
+                                                      </li>
+                                                    </ul>
                                                   </div>
-                                                  <!-- End Navbar -->
+                                                  <!-- End Navbar Collapse -->
                                                 </div>
-                                        
-                                                <div class="col-lg-9">
-                                                  <div class="d-grid gap-3 gap-lg-5 position-relative">
-                                                    <!-- Card -->
-                                                    <div class="card overflow-hidden">
-                                                      <!-- Profile Cover -->
-                                                      <div class="profile-cover position-relative">
-                                                        <div class="profile-cover-img-wrapper position-absolute top-0">
-                                                          <img id="profileCoverImg" class="profile-cover-img w-100" src="assets/img/profile-bg.jpg" alt="Image Description">
-                                        
-                                                          <!-- Custom File Cover -->
-                                                          <div class="profile-cover-content profile-cover-uploader position-absolute mb-0 overflow-hidden p-3">
-                                                            <input type="file" class="js-file-attach profile-cover-uploader-input position-absolute top-0 h-100 w-100" id="profileCoverUplaoder">
-                                                            <label class="profile-cover-uploader-label btn btn-sm bg-white" for="profileCoverUplaoder">
-                                                                <i class="fas fa-camera"></i>
-                                                                <span class="d-none d-sm-inline-block ms-1">Upload header</span>
-                                                            </label>
-                                                          </div>
-                                                          <!-- End Custom File Cover -->
+                                                <!-- End Navbar -->
+                                              </div>
+                                      
+                                              <div class="col-xl-9 col-lg-8">
+                                                <div class="d-grid gap-3 gap-lg-5 position-relative">
+                                                  <!-- Card -->
+                                                  <div class="card overflow-hidden">
+                                                    <!-- Profile Cover -->
+                                                    <div class="profile-cover position-relative">
+                                                      <div class="profile-cover-img-wrapper position-absolute top-0">
+                                                        <img id="profileCoverImg" class="profile-cover-img w-100" src="assets/img/profile-bg.jpg" alt="Image Description">
+                                      
+                                                        <!-- Custom File Cover -->
+                                                        <div class="profile-cover-content profile-cover-uploader position-absolute mb-0 overflow-hidden p-3">
+                                                          <input type="file" class="js-file-attach profile-cover-uploader-input position-absolute top-0 h-100 w-100" id="profileCoverUplaoder">
+                                                          <label class="profile-cover-uploader-label btn btn-sm bg-white" for="profileCoverUplaoder">
+                                                              <i class="fas fa-camera"></i>
+                                                              <span class="d-none d-sm-inline-block ms-1">Upload header</span>
+                                                          </label>
                                                         </div>
+                                                        <!-- End Custom File Cover -->
                                                       </div>
-                                                      <!-- End Profile Cover -->
-                                        
-                                                      <!-- Avatar -->
-                                                      <label class="avatar avatar-xxl avatar-circle avatar-uploader profile-cover-avatar position-relative bg-white d-flex" for="editAvatarUploaderModal">
-                                                        <img id="editAvatarImgModal" class="avatar-img" src="assets/img/user-img.jpg" alt="Image Description">
-                                        
-                                                        <input type="file" class="js-file-attach avatar-uploader-input position-absolute h-100 w-100" id="editAvatarUploaderModal">
-                                        
-                                                        <span class="avatar-uploader-trigger shadow-sm p-2 d-flex align-items-center justify-content-center bg-white position-absolute">
-                                                            <i class="fas fa-pen"></i>
-                                                        </span>
-                                                      </label>
-                                                      <!-- End Avatar -->
-                                        
-                                                      <!-- Body -->
+                                                    </div>
+                                                    <!-- End Profile Cover -->
+                                      
+                                                    <!-- Avatar -->
+                                                    <label class="avatar avatar-xxl avatar-circle avatar-uploader profile-cover-avatar position-relative bg-white d-flex" for="editAvatarUploaderModal">
+                                                      <img id="editAvatarImgModal" class="avatar-img" src="assets/img/user-img.jpg" alt="Image Description">
+                                      
+                                                      <input type="file" class="js-file-attach avatar-uploader-input position-absolute h-100 w-100" id="editAvatarUploaderModal">
+                                      
+                                                      <span class="avatar-uploader-trigger shadow-sm p-2 d-flex align-items-center justify-content-center bg-white position-absolute">
+                                                          <i class="fas fa-pen"></i>
+                                                      </span>
+                                                    </label>
+                                                    <!-- End Avatar -->
+                                      
+                                                    <!-- Body -->
+                                                    <div class="card-body">
+                                                      <div class="row">
+                                                        <div class="col-xl-5 col-lg-8 col-sm-5">
+                                                          <span class="d-block mb-2">Who can see your profile photo? <i class="bi-question-circle" data-bs-toggle="tooltip" data-bs-placement="top" title="Your visibility setting only applies to your profile photo. Your header image is always visible to anyone."></i></span>
+                                      
+                                                          <!-- Select -->
+                                                          <select class="form-select">
+                                                              <option><i class="fas fa-globe"></i> Anyone</option>
+                                                              <option><i class="fas fa-lock"></i> Only you</option> 
+                                                          </select> 
+                                                          <!-- End Select -->
+                                                        </div>
+                                                        <!-- End Col -->
+                                                      </div>
+                                                      <!-- End Row -->
+                                                    </div>
+                                                    <!-- End Body -->
+                                                  </div>
+                                                  <!-- End Card -->
+                                      
+                                                  <!-- Card -->
+                                                  <div id="content" class="card overflow-hidden">
+                                                    <div class="card-header bg-white">
+                                                      <h5 class="card-title my-2">Basic information</h5>
+                                                    </div>
+                                      
+                                                    <!-- Body -->
+                                                    <div class="card-body">
+                                                      <!-- Form -->
+                                                      <form>
+                                                        <!-- Form -->
+                                                        <div class="row mb-4">
+                                                          <label for="NameLabel" class="col-sm-3 col-form-label form-label">Full name</label>
+                                      
+                                                          <div class="col-sm-9">
+                                                            <input type="text" class="form-control" name="Name" id="NameLabel" placeholder="Enter Your name" aria-label="Your name"> 
+                                                          </div>
+                                                        </div>
+                                                        <!-- End Form -->
+                                      
+                                                        <!-- Form -->
+                                                        <div class="row mb-4">
+                                                          <label for="emailLabel" class="col-sm-3 col-form-label form-label">Email</label>
+                                      
+                                                          <div class="col-sm-9">
+                                                            <input type="email" class="form-control" name="email" id="signinSrEmail" placeholder="email@address.com" aria-label="email@address.com">
+                                                          </div>
+                                                        </div>
+                                                        <!-- End Form -->
+                                      
+                                                        <!-- Form -->
+                                                        <div class="row mb-4">
+                                                          <label for="phoneLabel" class="col-sm-3 col-form-label form-label">Phone <span class="">(Optional)</span></label>
+                                      
+                                                          <div class="col-sm-9">
+                                                            <input type="text" class="form-control" name="phone" id="phoneLabel" placeholder="+91 8928345678" aria-label="+91 8928345678">
+                                                          </div>
+                                                        </div>
+                                                        <!-- End Form -->
+                                      
+                                                        <!-- Form -->
+                                                        <div class="row mb-4">
+                                                          <label for="organizationLabel" class="col-sm-3 col-form-label form-label">Organization</label>
+                                      
+                                                          <div class="col-sm-9">
+                                                            <input type="text" class="form-control" name="organization" id="organizationLabel" placeholder="Your organization" aria-label="Your organization">
+                                                          </div>
+                                                        </div>
+                                                        <!-- End Form -->
+                                      
+                                                        <!-- Form -->
+                                                        <div class="row mb-4">
+                                                          <label for="departmentLabel" class="col-sm-3 col-form-label form-label">Department</label>
+                                      
+                                                          <div class="col-sm-9">
+                                                            <input type="text" class="form-control" name="department" id="departmentLabel" placeholder="Your department" aria-label="Your department">
+                                                          </div>
+                                                        </div>
+                                                        <!-- End Form -->
+                                      
+                                                        <!-- Form -->
+                                                        <div class="row mb-4">
+                                                          <label for="locationLabel" class="col-sm-3 col-form-label form-label">Location</label>
+                                      
+                                                          <div class="col-sm-9"> 
+                                      
+                                                            <div class="mb-3">
+                                                              <input type="text" class="form-control" name="addres" id="addresLabel" placeholder="Your Address" aria-label="Your Address">
+                                                            </div> 
+                                                          </div>
+                                                        </div>
+                                                        <!-- End Form --> 
+                                      
+                                                        <div class="d-flex justify-content-end">
+                                                          <button type="submit" class="btn btn-primary">Save changes</button>
+                                                        </div>
+                                                      </form>
+                                                      <!-- End Form -->
+                                                    </div>
+                                                    <!-- End Body -->
+                                                  </div>
+                                                  <!-- End Card --> 
+                                      
+                                                  <!-- Card -->
+                                                  <div id="passwordSection" class="card overflow-hidden">
+                                                    <div class="card-header bg-white">
+                                                      <h5 class="card-title my-2">Change your password</h5>
+                                                    </div>
+                                      
+                                                    <!-- Body -->
+                                                    <div class="card-body">
+                                                      <!-- Form -->
+                                                      <form id="changePasswordForm">
+                                                        <!-- Form -->
+                                                        <div class="row mb-4">
+                                                          <label for="currentPasswordLabel" class="col-sm-3 col-form-label form-label">Current password</label>
+                                      
+                                                          <div class="col-sm-9">
+                                                            <input type="password" class="form-control" name="currentPassword" id="currentPasswordLabel" placeholder="Enter current password" aria-label="Enter current password">
+                                                          </div>
+                                                        </div>
+                                                        <!-- End Form -->
+                                      
+                                                        <!-- Form -->
+                                                        <div class="row mb-4">
+                                                          <label for="newPassword" class="col-sm-3 col-form-label form-label">New password</label>
+                                      
+                                                          <div class="col-sm-9">
+                                                            <input type="password" class="form-control" name="newPassword" id="newPassword" placeholder="Enter new password" aria-label="Enter new password">
+                                                          </div>
+                                                        </div>
+                                                        <!-- End Form -->
+                                      
+                                                        <!-- Form -->
+                                                        <div class="row mb-4">
+                                                          <label for="confirmNewPasswordLabel" class="col-sm-3 col-form-label form-label">Confirm new password</label>
+                                      
+                                                          <div class="col-sm-9">
+                                                            <div class="mb-3">
+                                                              <input type="password" class="form-control" name="confirmNewPassword" id="confirmNewPasswordLabel" placeholder="Confirm your new password" aria-label="Confirm your new password">
+                                                            </div>
+                                      
+                                                            <h6>Password requirements:</h6>
+                                      
+                                                            <div class="content">Ensure that these requirements are met:</div>
+                                      
+                                                            <ul class="mx-5 content">
+                                                              <li class="list-style-disc">Minimum 8 characters long - the more, the better</li>
+                                                              <li>At least one lowercase character</li>
+                                                              <li>At least one uppercase character</li>
+                                                              <li>At least one number, symbol, or whitespace character</li>
+                                                            </ul>
+                                                          </div>
+                                                        </div>
+                                                        <!-- End Form -->
+                                      
+                                                        <div class="d-flex justify-content-end">
+                                                          <button type="submit" class="btn btn-primary">Save Changes</button>
+                                                        </div>
+                                                      </form>
+                                                      <!-- End Form -->
+                                                    </div>
+                                                    <!-- End Body -->
+                                                  </div>
+                                                  <!-- End Card -->  
+                                                  
+                                                  <!-- Card -->
+                                                  <div id="paymentSection" class="card overflow-hidden">
+                                                    <div class="card-header bg-white">
+                                                      <h5 class="card-header-title my-2">Payment method</h5>
+                                                    </div>
+                                      
+                                                    <!-- Body -->
                                                       <div class="card-body">
+                                                        <div class="mb-4">
+                                                          <div class="content">Cards will be charged either at the end of the month or whenever your balance exceeds the usage threshold. All major credit / debit cards accepted.</div>
+                                                        </div>
+
+                                                        <!-- List Group -->
+                                                        <ul class="list-group mb-5">
+                                                          <!-- Item -->
+                                                          <li class="list-group-item">
+                                                            <div class="mb-2">
+                                                              <h6>Maria Williams <span class="badge small bg-primary ms-1">Primary</span></h6>
+                                                            </div>
+
+                                                            <!-- Media -->
+                                                            <div class="d-flex">
+                                                              <div class="flex-shrink-0">
+                                                                <img class="avatar avatar-sm" src="assets/img/mastercard.svg" class="img-fluid" alt="Image Description">
+                                                              </div>
+
+                                                              <div class="flex-grow-1 ms-3">
+                                                                <div class="row">
+                                                                  <div class="col-sm mb-3 mb-sm-0">
+                                                                    <span class="d-block text-dark">MasterCard &bull;&bull;&bull;&bull; 4242</span>
+                                                                    <small class="d-block content">Checking - Expires 12/22</small>
+                                                                  </div>
+                                                                  <!-- End Col -->
+                                                                  <!-- Button trigger modal -->
+                                                                  
+                                                                  
+                                                                  
+
+                                                                  <div class="col-sm-auto">
+                                                                    <div class="d-flex gap-3">
+                                                                      <button type="button" class="btn content btn-white btn-sm border border-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                                        <i class="fas fa-pen me-2"></i> Edit
+                                                                      </button>
+                                                                      <button type="button" class="btn content btn-white btn-sm border border-1">
+                                                                        <i class="fas fa-trash me-2"></i> Delete
+                                                                      </button>
+                                                                    </div>
+                                                                  </div>
+                                                                  <!-- End Col -->
+                                                                </div>
+                                                                <!-- End Row -->
+                                                              </div>
+                                                            </div>
+                                                            <!-- End Media -->
+                                                          </li>
+                                                          <!-- End Item -->
+
+                                                          <!-- Item -->
+                                                          <li class="list-group-item">
+                                                            <div class="mb-2">
+                                                              <h6>Maria Williams <span class="text-danger small ms-1">Expired</span></h6>
+                                                            </div>
+
+                                                            <!-- Media -->
+                                                            <div class="d-flex">
+                                                              <div class="flex-shrink-0">
+                                                                <img class="avatar avatar-sm" src="assets/img/visa.svg" class="img-fluid" alt="Image Description">
+                                                              </div>
+
+                                                              <div class="flex-grow-1 ms-3">
+                                                                <div class="row">
+                                                                  <div class="col-sm mb-3 mb-sm-0">
+                                                                    <span class="d-block text-dark">Visa &bull;&bull;&bull;&bull; 9016</span>
+                                                                    <small class="d-block content ">Debit - Expires 04/20</small>
+                                                                  </div>
+                                                                  <!-- End Col -->
+
+                                                                  <div class="col-sm-auto">
+                                                                    <div class="d-flex gap-3">
+                                                                      <button type="button" class="btn content btn-white btn-sm border border-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                                        <i class="fas fa-pen me-2"></i> Edit
+                                                                      </button>
+                                                                      <button type="button" class="btn content btn-white btn-sm border border-1">
+                                                                        <i class="fas fa-trash me-2"></i> Delete
+                                                                      </button>
+                                                                    </div>
+                                                                  </div>
+                                                                  <!-- End Col -->
+                                                                </div>
+                                                                <!-- End Row -->
+                                                              </div>
+                                                            </div>
+                                                            <!-- End Media -->
+                                                          </li>
+                                                          <!-- End Item -->
+                                                        </ul>
+                                                        <!-- End List Group -->
+
                                                         <div class="row">
-                                                          <div class="col-sm-5">
-                                                            <span class="d-block mb-2">Who can see your profile photo? <i class="bi-question-circle" data-bs-toggle="tooltip" data-bs-placement="top" title="Your visibility setting only applies to your profile photo. Your header image is always visible to anyone."></i></span>
-                                        
-                                                            <!-- Select -->
-                                                            <select class="form-select">
-                                                                <option><i class="fas fa-globe"></i> Anyone</option>
-                                                                <option><i class="fas fa-lock"></i> Only you</option> 
-                                                            </select> 
-                                                            <!-- End Select -->
+                                                          <div class="col-lg-6">
+                                                            <!-- Card -->
+                                                            <button type="button" class="btn btn-white w-100 border-0" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                                                              <a class="card card-dashed text-center w-100 p-5" href="javascript:;">
+                                                                <div class="card-body card-dashed-body py-8">
+                                                                  <img class="avatar avatar-lg avatar-4x3 mb-2" src="assets/img/oc-add-card.svg" alt="Image Description" data-hs-theme-appearance="default"> 
+                                                                  <div><i class="fas fa-plus"></i> Add a new card</div>
+                                                                </div>
+                                                              </a>
+                                                            </button>
+                                                            
+                                                            <!-- End Card -->
                                                           </div>
                                                           <!-- End Col -->
                                                         </div>
                                                         <!-- End Row -->
                                                       </div>
-                                                      <!-- End Body -->
-                                                    </div>
-                                                    <!-- End Card -->
-                                        
-                                                    <!-- Card -->
-                                                    <div id="content" class="card overflow-hidden">
-                                                      <div class="card-header bg-white">
-                                                        <h5 class="card-title my-2">Basic information</h5>
-                                                      </div>
-                                        
-                                                      <!-- Body -->
-                                                      <div class="card-body">
-                                                        <!-- Form -->
-                                                        <form>
-                                                          <!-- Form -->
-                                                          <div class="row mb-4">
-                                                            <label for="NameLabel" class="col-sm-3 col-form-label form-label">Full name</label>
-                                        
-                                                            <div class="col-sm-9">
-                                                              <input type="text" class="form-control" name="Name" id="NameLabel" placeholder="Enter Your name" aria-label="Your name"> 
-                                                            </div>
-                                                          </div>
-                                                          <!-- End Form -->
-                                        
-                                                          <!-- Form -->
-                                                          <div class="row mb-4">
-                                                            <label for="emailLabel" class="col-sm-3 col-form-label form-label">Email</label>
-                                        
-                                                            <div class="col-sm-9">
-                                                              <input type="email" class="form-control" name="email" id="signinSrEmail" placeholder="email@address.com" aria-label="email@address.com">
-                                                            </div>
-                                                          </div>
-                                                          <!-- End Form -->
-                                        
-                                                          <!-- Form -->
-                                                          <div class="row mb-4">
-                                                            <label for="phoneLabel" class="col-sm-3 col-form-label form-label">Phone <span class="">(Optional)</span></label>
-                                        
-                                                            <div class="col-sm-9">
-                                                              <input type="text" class="form-control" name="phone" id="phoneLabel" placeholder="+91 8928345678" aria-label="+91 8928345678">
-                                                            </div>
-                                                          </div>
-                                                          <!-- End Form -->
-                                        
-                                                          <!-- Form -->
-                                                          <div class="row mb-4">
-                                                            <label for="organizationLabel" class="col-sm-3 col-form-label form-label">Organization</label>
-                                        
-                                                            <div class="col-sm-9">
-                                                              <input type="text" class="form-control" name="organization" id="organizationLabel" placeholder="Your organization" aria-label="Your organization">
-                                                            </div>
-                                                          </div>
-                                                          <!-- End Form -->
-                                        
-                                                          <!-- Form -->
-                                                          <div class="row mb-4">
-                                                            <label for="departmentLabel" class="col-sm-3 col-form-label form-label">Department</label>
-                                        
-                                                            <div class="col-sm-9">
-                                                              <input type="text" class="form-control" name="department" id="departmentLabel" placeholder="Your department" aria-label="Your department">
-                                                            </div>
-                                                          </div>
-                                                          <!-- End Form -->
-                                        
-                                                          <!-- Form -->
-                                                          <div class="row mb-4">
-                                                            <label for="locationLabel" class="col-sm-3 col-form-label form-label">Location</label>
-                                        
-                                                            <div class="col-sm-9"> 
-                                        
-                                                              <div class="mb-3">
-                                                                <input type="text" class="form-control" name="addres" id="addresLabel" placeholder="Your Address" aria-label="Your Address">
-                                                              </div> 
-                                                            </div>
-                                                          </div>
-                                                          <!-- End Form --> 
-                                        
-                                                          <div class="d-flex justify-content-end">
-                                                            <button type="submit" class="btn btn-primary">Save changes</button>
-                                                          </div>
-                                                        </form>
-                                                        <!-- End Form -->
-                                                      </div>
-                                                      <!-- End Body -->
-                                                    </div>
-                                                    <!-- End Card --> 
-                                        
-                                                    <!-- Card -->
-                                                    <div id="passwordSection" class="card overflow-hidden">
-                                                      <div class="card-header bg-white">
-                                                        <h5 class="card-title my-2">Change your password</h5>
-                                                      </div>
-                                        
-                                                      <!-- Body -->
-                                                      <div class="card-body">
-                                                        <!-- Form -->
-                                                        <form id="changePasswordForm">
-                                                          <!-- Form -->
-                                                          <div class="row mb-4">
-                                                            <label for="currentPasswordLabel" class="col-sm-3 col-form-label form-label">Current password</label>
-                                        
-                                                            <div class="col-sm-9">
-                                                              <input type="password" class="form-control" name="currentPassword" id="currentPasswordLabel" placeholder="Enter current password" aria-label="Enter current password">
-                                                            </div>
-                                                          </div>
-                                                          <!-- End Form -->
-                                        
-                                                          <!-- Form -->
-                                                          <div class="row mb-4">
-                                                            <label for="newPassword" class="col-sm-3 col-form-label form-label">New password</label>
-                                        
-                                                            <div class="col-sm-9">
-                                                              <input type="password" class="form-control" name="newPassword" id="newPassword" placeholder="Enter new password" aria-label="Enter new password">
-                                                            </div>
-                                                          </div>
-                                                          <!-- End Form -->
-                                        
-                                                          <!-- Form -->
-                                                          <div class="row mb-4">
-                                                            <label for="confirmNewPasswordLabel" class="col-sm-3 col-form-label form-label">Confirm new password</label>
-                                        
-                                                            <div class="col-sm-9">
-                                                              <div class="mb-3">
-                                                                <input type="password" class="form-control" name="confirmNewPassword" id="confirmNewPasswordLabel" placeholder="Confirm your new password" aria-label="Confirm your new password">
-                                                              </div>
-                                        
-                                                              <h6>Password requirements:</h6>
-                                        
-                                                              <div class="content">Ensure that these requirements are met:</div>
-                                        
-                                                              <ul class="mx-5 content">
-                                                                <li class="list-style-disc">Minimum 8 characters long - the more, the better</li>
-                                                                <li>At least one lowercase character</li>
-                                                                <li>At least one uppercase character</li>
-                                                                <li>At least one number, symbol, or whitespace character</li>
-                                                              </ul>
-                                                            </div>
-                                                          </div>
-                                                          <!-- End Form -->
-                                        
-                                                          <div class="d-flex justify-content-end">
-                                                            <button type="submit" class="btn btn-primary">Save Changes</button>
-                                                          </div>
-                                                        </form>
-                                                        <!-- End Form -->
-                                                      </div>
-                                                      <!-- End Body -->
-                                                    </div>
-                                                    <!-- End Card -->  
-                                                    
-                                                    <!-- Card -->
-                                                    <div id="paymentSection" class="card overflow-hidden">
-                                                      <div class="card-header bg-white">
-                                                        <h5 class="card-header-title my-2">Payment method</h5>
-                                                      </div>
-                                        
-                                                      <!-- Body -->
-                                                        <div class="card-body">
-                                                          <div class="mb-4">
-                                                            <div class="content">Cards will be charged either at the end of the month or whenever your balance exceeds the usage threshold. All major credit / debit cards accepted.</div>
-                                                          </div>
-
-                                                          <!-- List Group -->
-                                                          <ul class="list-group mb-5">
-                                                            <!-- Item -->
-                                                            <li class="list-group-item">
-                                                              <div class="mb-2">
-                                                                <h6>Maria Williams <span class="badge small bg-primary ms-1">Primary</span></h6>
-                                                              </div>
-
-                                                              <!-- Media -->
-                                                              <div class="d-flex">
-                                                                <div class="flex-shrink-0">
-                                                                  <img class="avatar avatar-sm" src="assets/img/mastercard.svg" class="img-fluid" alt="Image Description">
-                                                                </div>
-
-                                                                <div class="flex-grow-1 ms-3">
-                                                                  <div class="row">
-                                                                    <div class="col-sm mb-3 mb-sm-0">
-                                                                      <span class="d-block text-dark">MasterCard &bull;&bull;&bull;&bull; 4242</span>
-                                                                      <small class="d-block content">Checking - Expires 12/22</small>
-                                                                    </div>
-                                                                    <!-- End Col -->
-                                                                    <!-- Button trigger modal -->
-                                                                    
-                                                                    
-                                                                   
-
-                                                                    <div class="col-sm-auto">
-                                                                      <div class="d-flex gap-3">
-                                                                        <button type="button" class="btn content btn-white btn-sm border border-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                                          <i class="fas fa-pen me-2"></i> Edit
-                                                                        </button>
-                                                                        <button type="button" class="btn content btn-white btn-sm border border-1">
-                                                                          <i class="fas fa-trash me-2"></i> Delete
-                                                                        </button>
-                                                                      </div>
-                                                                    </div>
-                                                                    <!-- End Col -->
-                                                                  </div>
-                                                                  <!-- End Row -->
-                                                                </div>
-                                                              </div>
-                                                              <!-- End Media -->
-                                                            </li>
-                                                            <!-- End Item -->
-
-                                                            <!-- Item -->
-                                                            <li class="list-group-item">
-                                                              <div class="mb-2">
-                                                                <h6>Maria Williams <span class="text-danger small ms-1">Expired</span></h6>
-                                                              </div>
-
-                                                              <!-- Media -->
-                                                              <div class="d-flex">
-                                                                <div class="flex-shrink-0">
-                                                                  <img class="avatar avatar-sm" src="assets/img/visa.svg" class="img-fluid" alt="Image Description">
-                                                                </div>
-
-                                                                <div class="flex-grow-1 ms-3">
-                                                                  <div class="row">
-                                                                    <div class="col-sm mb-3 mb-sm-0">
-                                                                      <span class="d-block text-dark">Visa &bull;&bull;&bull;&bull; 9016</span>
-                                                                      <small class="d-block content ">Debit - Expires 04/20</small>
-                                                                    </div>
-                                                                    <!-- End Col -->
-
-                                                                    <div class="col-sm-auto">
-                                                                      <div class="d-flex gap-3">
-                                                                        <button type="button" class="btn content btn-white btn-sm border border-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                                          <i class="fas fa-pen me-2"></i> Edit
-                                                                        </button>
-                                                                        <button type="button" class="btn content btn-white btn-sm border border-1">
-                                                                          <i class="fas fa-trash me-2"></i> Delete
-                                                                        </button>
-                                                                      </div>
-                                                                    </div>
-                                                                    <!-- End Col -->
-                                                                  </div>
-                                                                  <!-- End Row -->
-                                                                </div>
-                                                              </div>
-                                                              <!-- End Media -->
-                                                            </li>
-                                                            <!-- End Item -->
-                                                          </ul>
-                                                          <!-- End List Group -->
-
-                                                          <div class="row">
-                                                            <div class="col-lg-6">
-                                                              <!-- Card -->
-                                                              <button type="button" class="btn btn-white w-100 border-0" data-bs-toggle="modal" data-bs-target="#exampleModal1">
-                                                                <a class="card card-dashed text-center w-100 p-5" href="javascript:;">
-                                                                  <div class="card-body card-dashed-body py-8">
-                                                                    <img class="avatar avatar-lg avatar-4x3 mb-2" src="assets/img/oc-add-card.svg" alt="Image Description" data-hs-theme-appearance="default"> 
-                                                                    <div><i class="fas fa-plus"></i> Add a new card</div>
-                                                                  </div>
-                                                                </a>
-                                                              </button>
-                                                              
-                                                              <!-- End Card -->
-                                                            </div>
-                                                            <!-- End Col -->
-                                                          </div>
-                                                          <!-- End Row -->
-                                                        </div>
-                                                      <!-- End Body -->
-                                                    </div>
-                                                    <!-- End Card --> 
-                                         
-                                        
-                                                    <!-- Card -->
-                                                    <div id="deleteAccountSection" class="card overflow-hidden">
-                                                      <div class="card-header bg-white">
-                                                        <h5 class="card-title my-2">Delete your account</h5>
-                                                      </div>
-                                        
-                                                      <!-- Body -->
-                                                      <div class="card-body">
-                                                        <p class="card-text content">When you delete your account, you lose access to Front account services, and we permanently delete your personal data. You can cancel the deletion for 14 days.</p>
-                                        
-                                                        <div class="mb-4">
-                                                          <!-- Form Check -->
-                                                          <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" value="" id="deleteAccountCheckbox">
-                                                            <label class="form-check-label content" for="deleteAccountCheckbox">
-                                                              Confirm that I want to delete my account.
-                                                            </label>
-                                                          </div>
-                                                          <!-- End Form Check -->
-                                                        </div>
-                                        
-                                                        <div class="d-flex justify-content-end gap-3">
-                                                          <a class="btn content btn-white border border-1" href="#">Learn more</a>
-                                                          <button type="submit" class="btn btn-danger">Delete</button>
-                                                        </div>
-                                                      </div>
-                                                      <!-- End Body -->
-                                                    </div>
-                                                    <!-- End Card -->
+                                                    <!-- End Body -->
                                                   </div>
+                                                  <!-- End Card --> 
                                         
-                                                  <!-- Sticky Block End Point -->
-                                                  <div id="stickyBlockEndPoint"></div>
+                                      
+                                                  <!-- Card -->
+                                                  <div id="deleteAccountSection" class="card overflow-hidden">
+                                                    <div class="card-header bg-white">
+                                                      <h5 class="card-title my-2">Delete your account</h5>
+                                                    </div>
+                                      
+                                                    <!-- Body -->
+                                                    <div class="card-body">
+                                                      <p class="card-text content">When you delete your account, you lose access to Front account services, and we permanently delete your personal data. You can cancel the deletion for 14 days.</p>
+                                      
+                                                      <div class="mb-4">
+                                                        <!-- Form Check -->
+                                                        <div class="form-check">
+                                                          <input class="form-check-input" type="checkbox" value="" id="deleteAccountCheckbox">
+                                                          <label class="form-check-label content" for="deleteAccountCheckbox">
+                                                            Confirm that I want to delete my account.
+                                                          </label>
+                                                        </div>
+                                                        <!-- End Form Check -->
+                                                      </div>
+                                      
+                                                      <div class="d-flex justify-content-end gap-3">
+                                                        <a class="btn content btn-white border border-1" href="#">Learn more</a>
+                                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                                      </div>
+                                                    </div>
+                                                    <!-- End Body -->
+                                                  </div>
+                                                  <!-- End Card -->
                                                 </div>
+                                      
+                                                <!-- Sticky Block End Point -->
+                                                <div id="stickyBlockEndPoint"></div>
                                               </div>
-                                              <!-- End Row -->
-                                        </div>    
-                                    </main>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                                            </div>
+                                            <!-- End Row -->
+                                      </div>    
+                                  </main>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
                 </div>
             </div>
         </div>
@@ -559,7 +565,7 @@
           <div class="modal-content">
             <!-- Header -->
             <div class="modal-header">
-              <h4 class="modal-title" id="accountEditCardModalLabel">Edit card</h4>
+              <h5 class="modal-title" id="accountEditCardModalLabel">Edit card</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <!-- End Header -->
@@ -632,7 +638,7 @@
           <div class="modal-content">
             <!-- Header -->
             <div class="modal-header">
-              <h4 class="modal-title" id="accountAddCardModalLabel">Add card</h4>
+              <h5 class="modal-title" id="accountAddCardModalLabel">Add card</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <!-- End Header -->
