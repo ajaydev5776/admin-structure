@@ -246,8 +246,15 @@
                                       
                                                   <!-- Card -->
                                                   <div id="content" class="card overflow-hidden">
-                                                    <div class="card-header bg-white">
-                                                      <h5 class="card-title my-2">Basic information</h5>
+                                                    <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                                                      <div class="col">
+                                                        <h5 class="card-title my-2">Basic information</h5>
+                                                      </div>
+                                                      <div class="col-auto">
+                                                        <button type="button" class="editBtn border-0 bg-transparent" class="editBtn" id="enableinput">
+                                                          <img src="assets/img/edit.svg" alt="edit">
+                                                        </button>
+                                                      </div>
                                                     </div>
                                       
                                                     <!-- Body -->
@@ -318,7 +325,7 @@
                                                         <!-- End Form --> 
                                       
                                                         <div class="d-flex justify-content-end">
-                                                          <button type="submit" class="btn btn-primary">Save changes</button>
+                                                          <button type="submit" class="btn btn-primary themebtn" id="disableinput">Save changes</button>
                                                         </div>
                                                       </form>
                                                       <!-- End Form -->

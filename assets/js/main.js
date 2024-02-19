@@ -9,6 +9,40 @@ switchcancle.addEventListener('click', () =>{
     asidebar.classList.remove('active')
 })
 
+ 
+    
+let  enableinput = document.getElementById('enableinput');
+let  disableinput = document.getElementById('disableinput');
+disableinput.onclick = function(){
+    var form = document.getElementById('userdetails');
+    var inputs = form.getElementsByTagName('input');
+
+    for (var i = 0; i < inputs.length; i++) {
+        if (inputs[i].type !== 'button') {
+            inputs[i].disabled = true;
+        }
+    }
+    enableinput.classList.remove('active')
+}
+enableinput.onclick = function(){
+    var form = document.getElementById('userdetails');
+    var inputs = form.getElementsByTagName('input');
+    for (var i = 0; i < inputs.length; i++) {
+        if (inputs[i].type !== 'button') {
+            inputs[i].disabled = false;
+        }
+    }
+    enableinput.classList.add('active')
+}
+
+// In your Javascript (external .js resource or <script> tag)
+    $(document).ready(function() {
+        $('.js-example-basic-single').select2();
+    });
+    // $(document).ready(function() {
+    //     $('.nondropdownselect').select2();
+    // }); 
+
 
 function togglePasswordVisibility() {
     var passwordInput = document.getElementById("yourPassword");
