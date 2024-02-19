@@ -45,6 +45,8 @@ function togglePasswordVisibility() {
     $('#datatable').DataTable({
       "dom": '<"top"if>rt<"bottom"lp><"clear">',
       "searching": false, // Hide search bar
+      // responsive: true,
+      // scrollX: true,
     });
   });
 
