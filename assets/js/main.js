@@ -40,7 +40,7 @@ function togglePasswordVisibility() {
   const checkboxAll = document.getElementById('datatableCheckAll');
   const checkboxes = document.querySelectorAll('.form-check-input');
 
-  checkboxAll.addEventListener('change', function () {
+  checkboxAll.addEventListener('change', function() {
     checkboxes.forEach((checkbox) => {
       checkbox.checked = checkboxAll.checked;
     });

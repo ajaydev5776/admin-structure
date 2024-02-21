@@ -32,7 +32,7 @@
                       <div class="asideitem p-3">
                           <ul class="navlist list-unstyled m-0 p-0">
                             <li><a href="index.html" class="navitems"><i class="fas fa-home"></i> Dashboard</a></li>
-                            <li><a href="profile.html" class="navitems"><i class="far fa-user"></i> My Profile</a></li>
+                            <li><a href="profile.html" class="navitems active"><i class="far fa-user"></i> My Profile</a></li>
                             <li><a href="order.html" class="navitems"><i class="fas fa-shopping-bag"></i> Orders</a></li>
                             <li><a href="sign-up.html" class="navitems"><i class="fas fa-user-plus"></i> Sign Up</a></li>
                             <li><a href="login.html" class="navitems"><i class="fas fa-sign-in-alt"></i> Login</a></li>
@@ -87,7 +87,7 @@
                                     </li>
                     
                                     <li>
-                                        <a class="dropdown-item position-relative text-dark d-inline-flex align-items-center" href="javascript:;">
+                                        <a class="dropdown-item position-relative text-dark d-inline-flex align-items-center" href="profile.html#paymentSection">
                                             <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-cog"></i></span>
                                             <span>Account Settings</span>
                                         </a>
@@ -659,7 +659,7 @@
                   <ul class="nav nav-pills bg-light w-100 justify-content-around" role="tablist">
                     <li class="nav-item w-50">
                       <a class="nav-link active text-center m-2" data-bs-toggle="pill" href="#home">
-                        Credit or Debit car
+                        Credit or Debit card
                       </a>
                     </li>
                     <li class="nav-item w-50">
@@ -804,6 +804,15 @@
   <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- *Custom Js* -->
   <script src="assets/js/main.js"></script> 
-    
+    <script>
+        $(document).ready(function(){
+      $('.nav-link').click(function(){
+        // Remove active class from all nav-links
+        $('.nav-link').removeClass('active');
+        // Add active class to the clicked nav-link
+        $(this).addClass('active');
+      });
+    });
+    </script>
 </body>
 </html>

@@ -38,7 +38,7 @@
                     width: 20px;
                     height: 20px; 
                 }
-                &:hover {
+                &:hover, &.active {
                     color: $theme1;
                     background-color: $gray-100; 
                     color: $blue;
@@ -70,6 +70,8 @@
         height: 70px;
     }
     & .header{
+        position: relative;
+        z-index: 200;
         height: 70px;
         
         & .search-bar {
@@ -243,6 +245,9 @@
                         border-top: 1px solid $gray-300;
                         border-bottom: 1px solid $gray-300;
                         white-space: nowrap;
+                        &:first-child{
+                            padding-right: 10px !important;
+                        }
                     }
                 }
             }
@@ -288,9 +293,11 @@
                         }
                         
                         & .view{
+                            flex-direction: column;
                             & .dropdown-item { 
                                 font-size: 14px;  
                                 padding: 10px 20px; 
+                                transition: all ease-in-out 0.3s;
                                 gap: 10px;
                                 & .profile-icn{
                                     height: 20px;
@@ -300,6 +307,21 @@
                                         line-height: 0;
                                     }
                                 }
+                                &.delete{
+                                    &:hover{
+                                        background-color: rgba($danger, 0.1);
+                                        color: $danger !important;
+                                    }
+                                }
+                                &.payment{
+                                    &:hover{
+                                        background-color: rgba($success, 0.1);
+                                        color: $success !important;
+                                    }
+                                }
+                            }
+                            &.show{
+                                display: flex;
                             }
                         }
                     }
@@ -337,6 +359,9 @@
                     margin-bottom: 20px;
                     margin-left: 15px;
                     color: $gray-600;
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
                 }
             }
             & .dataTables_info{
@@ -344,11 +369,17 @@
             } 
             & .dataTables_paginate{
                 padding-top: 20px !important;
+                margin-right: 15px;
                 color: $gray-600;
                 & .paginate_button{
                     padding: 5px 15px;
+                    border: 0px !important;
                     &.disabled{
                         color: $gray-400 !important;
+                        &:hover{
+                            color: $gray-400 !important;
+                            background-color: $white;
+                        }
                     }
                     &.current{
                         background: $blue;
@@ -357,7 +388,7 @@
                     }
                     &:hover{
                         background: $blue;
-                        border: 0; 
+                        // border: 0; 
                         color: $white !important; 
                     }
                 } 
