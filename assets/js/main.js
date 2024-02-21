@@ -11,29 +11,29 @@ switchcancle.addEventListener('click', () =>{
 
  
     
-let  enableinput = document.getElementById('enableinput');
-let  disableinput = document.getElementById('disableinput');
-disableinput.onclick = function(){
-    var form = document.getElementById('userdetails');
-    var inputs = form.getElementsByTagName('input');
+// let  enableinput = document.getElementById('enableinput');
+// let  disableinput = document.getElementById('disableinput');
+// disableinput.onclick = function(){
+//     var form = document.getElementById('userdetails');
+//     var inputs = form.getElementsByTagName('input');
 
-    for (var i = 0; i < inputs.length; i++) {
-        if (inputs[i].type !== 'button') {
-            inputs[i].disabled = true;
-        }
-    }
-    enableinput.classList.remove('active')
-}
-enableinput.onclick = function(){
-    var form = document.getElementById('userdetails');
-    var inputs = form.getElementsByTagName('input');
-    for (var i = 0; i < inputs.length; i++) {
-        if (inputs[i].type !== 'button') {
-            inputs[i].disabled = false;
-        }
-    }
-    enableinput.classList.add('active')
-}
+//     for (var i = 0; i < inputs.length; i++) {
+//         if (inputs[i].type !== 'button') {
+//             inputs[i].disabled = true;
+//         }
+//     }
+//     enableinput.classList.remove('active')
+// }
+// enableinput.onclick = function(){
+//     var form = document.getElementById('userdetails');
+//     var inputs = form.getElementsByTagName('input');
+//     for (var i = 0; i < inputs.length; i++) {
+//         if (inputs[i].type !== 'button') {
+//             inputs[i].disabled = false;
+//         }
+//     }
+//     enableinput.classList.add('active')
+// }
 
 // In your Javascript (external .js resource or <script> tag)
     $(document).ready(function() {
