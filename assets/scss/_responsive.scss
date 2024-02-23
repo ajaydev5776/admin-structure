@@ -75,8 +75,10 @@
 
 @include media-breakpoint-down(sm) {
     .logo{
+        height: 35px;
+        display: flex;
         & img{
-            width: 100px;
+            height: 100%;
         }
     }
     .asidemenu{
