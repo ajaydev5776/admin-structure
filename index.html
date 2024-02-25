@@ -32,9 +32,10 @@
                     <div class="col-12 h-100 flex-fill overflow-y-auto overflow-x-hidden">
                         <div class="asideitem p-3">
                             <ul class="navlist list-unstyled m-0 p-0">
-                              <li><a href="index.html" class="navitems active"><i class="fas fa-home"></i> Dashboard</a></li>
+                              <li><a href="javascript:;" class="navitems active"><i class="fas fa-home"></i> Dashboard</a></li>
                               <li><a href="profile.html" class="navitems"><i class="far fa-user"></i> My Profile</a></li>
                               <li><a href="order.html" class="navitems"><i class="fas fa-shopping-bag"></i> Orders</a></li>
+                              <li><a href="all-bids.html" class="navitems"><i class="fas fa-shopping-bag"></i> All Bids</a></li>
                               <li><a href="sign-up.html" class="navitems"><i class="fas fa-user-plus"></i> Sign Up</a></li>
                               <li><a href="login.html" class="navitems"><i class="fas fa-sign-in-alt"></i> Login</a></li>
                               <li><a href="forget-password.html" class="navitems"><i class="fas fa-key"></i> Forget Password</a></li> 
@@ -97,16 +98,6 @@
                                         <li>
                                             <hr class="dropdown-divider">
                                         </li>
-                            
-                                        <li>
-                                            <a class="dropdown-item position-relative text-dark d-inline-flex align-items-center" href="javascript:;">
-                                                <span class="profile-icn d-flex align-items-center justify-content-center"><i class="far fa-question-circle"></i></span>
-                                                <span>Need Help?</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <hr class="dropdown-divider">
-                                        </li>
                         
                                         <li>
                                             <a class="dropdown-item position-relative text-dark d-inline-flex align-items-center" href="javascript:;">
@@ -142,8 +133,8 @@
                                     
                                             <!-- Left side columns -->
                                             <div class="col-lg-12">
-                                              <div class="row"> 
-                                                <div class="col-xxl-3 col-lg-3 col-md-6 col-12 mb-xxl-0 mb-xl-0 mb-lg-0 mb-4">
+                                              <div class="row row-gap-4"> 
+                                                <div class="col-xxl-3 col-md-6 col-12">
                                                   <div class="card info-card border-0 h-100">  
                                                     <div class="card-body d-flex justify-content-between align-items-center">
                                                       <div>
@@ -160,7 +151,7 @@
                                                     </div> 
                                                   </div>
                                                 </div>  
-                                                <div class="col-xxl-3 col-lg-3 col-md-6 col-12 mb-xxl-0 mb-xl-0 mb-lg-0 mb-4">
+                                                <div class="col-xxl-3 col-md-6 col-12">
                                                   <div class="card info-card border-0 h-100">  
                                                     <div class="card-body d-flex justify-content-between align-items-center">
                                                       <div>
@@ -177,12 +168,12 @@
                                                     </div>  
                                                   </div>
                                                 </div>  
-                                                <div class="col-xxl-3 col-lg-3 col-md-6 col-12 mb-xxl-0 mb-xl-0 mb-lg-0 mb-md-2 mb-4">
+                                                <div class="col-xxl-3 col-md-6 col-12">
                                                   <div class="card info-card border-0 h-100">
                                                     <div class="card-body d-flex justify-content-between align-items-center">
                                                       <div>
-                                                        <div class="card-title">Avg. Click Rate</div>
-                                                        <div class="numb fw-bold">56.8%</div>
+                                                        <div class="card-title">Pending Payment Users</div>
+                                                        <div class="numb fw-bold">129</div>
                                                       </div>
                                                       <div>
                                                         <div class="avatar-sm flex-shrink-0">
@@ -194,11 +185,11 @@
                                                     </div>   
                                                   </div>
                                                 </div> 
-                                                <div class="col-xxl-3 col-lg-3 col-md-6 col-12 mb-xxl-0 mb-xl-0 mb-lg-0 mb-2">
+                                                <div class="col-xxl-3 col-md-6 col-12">
                                                   <div class="card info-card border-0 h-100">  
                                                     <div class="card-body d-flex justify-content-between align-items-center">
                                                       <div>
-                                                        <div class="card-title">Pageviews</div>
+                                                        <div class="card-title">Total Request</div>
                                                         <div class="numb fw-bold">92,913</div>
                                                       </div>
                                                       <div>
@@ -221,32 +212,37 @@
                                     </main><!-- End #main -->
                                 
                                       <!-- Card -->
-                                      <div class="card my-3 mt-lg-5 mb-lg-4">
+                                      <div class="card my-3  my-lg-4">
                                         <!-- Header -->
                                         <div class="card-header bg-white border-0 py-md-3 py-3">
                                           <div class="row justify-content-between align-items-center flex-grow-1">
-                                            <div class="col-lg-4 col-md-2">
+                                            <div class="col-lg4 col-md2 col">
                                               <div class="d-flex justify-content-between align-items-center">
                                                 <h4 class="card-header-title">Users</h4>
-
-                                                <!-- Datatable Info -->
-                                                <div id="datatableCounterInfo" style="display: none;">
-                                                  <div class="d-flex align-items-center">
-                                                    <span class="fs-6 me-3">
-                                                      <span id="datatableCounter">0</span>
-                                                      Selected
-                                                    </span>
-                                                    <a class="btn btn-outline-danger btn-sm" href="javascript:;">
-                                                      <i class="tio-delete-outlined"></i> Delete
-                                                    </a>
-                                                  </div>
+                                              </div>
+                                            </div>
+                                            <div class="col-auto">
+                                              <div class="row gx-2">
+                                                <div class="col-auto">
+                                                  <a class="btn btn-outline-success btn-sm" href="javascript:;" data-bs-toggle="modal" data-bs-target="#confermetionpayment">
+                                                    <i class="tio-delete-outlined"></i> All Payment
+                                                  </a>
                                                 </div>
-                                                <!-- End Datatable Info -->
+                                                <div class="col-auto">
+                                                  <a class="btn btn-outline-warning btn-sm" href="javascript:;" data-bs-toggle="modal" data-bs-target="#blockuser">
+                                                    <i class="tio-delete-outlined"></i> Block
+                                                  </a>
+                                                </div>
+                                                <div class="col-auto">
+                                                  <a class="btn btn-outline-danger btn-sm" href="javascript:;" data-bs-toggle="modal" data-bs-target="#deleteuser">
+                                                    <i class="tio-delete-outlined"></i> Delete
+                                                  </a>
+                                                </div>
                                               </div>
                                             </div>
                                             <!-- End Col -->
 
-                                            <div class="col-lg-8 col-md-10">
+                                            <div class="col-lg-8 col-md-10 d-none">
                                               <!-- Filter -->
                                               <div class="row align-items-sm-center">
                                                 <div class="col-sm-auto mb-md-0 mb-3">
@@ -271,15 +267,12 @@
                                                   </div>
                                                   <!-- End Row -->
                                                 </div>
-                                                <div class="col-sm-auto mb-md-0 mb-3">
+                                                <!-- <div class="col-sm-auto mb-md-0 mb-3">
                                                   <div class="row align-items-center gx-0">
                                                     <div class="col">
                                                       <span class="text-secondary me-2">Status:</span>
                                                     </div>
-                                                    <!-- End Col -->
-
                                                     <div class="col-auto">
-                                                      <!-- Select -->
                                                       <div class="tom-select-custom tom-select-custom-end">
                                                         <select class="js-select js-datatable-filter form-select form-select-sm form-select-borderless" data-target-column-index="2" data-target-table="datatable" autocomplete="off">
                                                           <option value="null" selected>All</option>
@@ -288,12 +281,9 @@
                                                           <option value="pending">Pending</option>
                                                         </select>
                                                       </div>
-                                                      <!-- End Select -->
                                                     </div>
-                                                    <!-- End Col -->
                                                   </div>
-                                                  <!-- End Row -->
-                                                </div>
+                                                </div> -->
                                                 <!-- End Col -->
  
 
@@ -330,7 +320,7 @@
                                                     <label class="form-check-label" for="datatableCheckAll"></label>
                                                   </div>
                                                 </th>
-                                                <th class="">User ID</th>
+                                                <th>User ID</th>
                                                 <th>Date</th>
                                                 <th>Transaction Id</th> 
                                                 <th>Amount</th>
@@ -341,13 +331,13 @@
 
                                             <tbody>
                                               <tr>
-                                                <td class="">
+                                                <td>
                                                   <div class="form-check justify-content-center d-flex">
                                                     <input class="form-check-input" type="checkbox" value="" id="usersDataCheck2">
                                                     <label class="form-check-label" for="usersDataCheck2"></label>
                                                   </div>
                                                 </td>
-                                                <td class=""><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
+                                                <td><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
                                                 <td>Feb 15, 2024</td>
                                                 <td>T497209787352090</td>
                                                 <td>500</td>
@@ -356,13 +346,13 @@
                                               </tr>
 
                                               <tr>
-                                                <td class="">
+                                                <td>
                                                   <div class="form-check justify-content-center d-flex">
                                                     <input class="form-check-input" type="checkbox" value="" id="usersDataCheck3">
                                                     <label class="form-check-label" for="usersDataCheck3"></label>
                                                   </div>
                                                 </td>
-                                                <td class=""><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
+                                                <td><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
                                                 <td>Feb 15, 2024</td>
                                                 <td>T497209787352090</td>
                                                 <td>500</td>
@@ -371,13 +361,13 @@
                                               </tr>
 
                                               <tr>
-                                                <td class="">
+                                                <td>
                                                   <div class="form-check justify-content-center d-flex">
                                                     <input class="form-check-input" type="checkbox" value="" id="usersDataCheck4">
                                                     <label class="form-check-label" for="usersDataCheck4"></label>
                                                   </div>
                                                 </td>
-                                                <td class=""><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
+                                                <td><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
                                                 <td>Feb 15, 2024</td>
                                                 <td>T497209787352090</td>
                                                 <td>500</td>
@@ -386,13 +376,13 @@
                                               </tr>
 
                                               <tr>
-                                                <td class="">
+                                                <td>
                                                   <div class="form-check justify-content-center d-flex">
                                                     <input class="form-check-input" type="checkbox" value="" id="usersDataCheck5">
                                                     <label class="form-check-label" for="usersDataCheck5"></label>
                                                   </div>
                                                 </td>
-                                                <td class=""><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
+                                                <td><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
                                                 <td>Feb 15, 2024</td>
                                                 <td>T497209787352090</td>
                                                 <td>500</td>
@@ -401,13 +391,13 @@
                                               </tr>
 
                                               <tr>
-                                                <td class="">
+                                                <td>
                                                   <div class="form-check justify-content-center d-flex">
                                                     <input class="form-check-input" type="checkbox" value="" id="usersDataCheck6">
                                                     <label class="form-check-label" for="usersDataCheck6"></label>
                                                   </div>
                                                 </td>
-                                                <td class=""><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
+                                                <td><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
                                                 <td>Feb 15, 2024</td>
                                                 <td>T497209787352090</td>
                                                 <td>500</td>
@@ -416,13 +406,13 @@
                                               </tr>
 
                                               <tr>
-                                                <td class="">
+                                                <td>
                                                   <div class="form-check justify-content-center d-flex">
                                                     <input class="form-check-input" type="checkbox" value="" id="usersDataCheck7">
                                                     <label class="form-check-label" for="usersDataCheck7"></label>
                                                   </div>
                                                 </td>
-                                                <td class=""><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
+                                                <td><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
                                                 <td>Feb 15, 2024</td>
                                                 <td>T497209787352090</td>
                                                 <td>500</td>
@@ -431,13 +421,13 @@
                                               </tr>
 
                                               <tr>
-                                                <td class="">
+                                                <td>
                                                   <div class="form-check justify-content-center d-flex">
                                                     <input class="form-check-input" type="checkbox" value="" id="usersDataCheck8">
                                                     <label class="form-check-label" for="usersDataCheck8"></label>
                                                   </div>
                                                 </td>
-                                                <td class=""><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
+                                                <td><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
                                                 <td>Feb 15, 2024</td>
                                                 <td>T497209787352090</td>
                                                 <td>500</td>
@@ -446,13 +436,13 @@
                                               </tr>
 
                                               <tr>
-                                                <td class="">
+                                                <td>
                                                   <div class="form-check justify-content-center d-flex">
                                                     <input class="form-check-input" type="checkbox" value="" id="usersDataCheck9">
                                                     <label class="form-check-label" for="usersDataCheck9"></label>
                                                   </div>
                                                 </td>
-                                                <td class=""><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
+                                                <td><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
                                                 <td>Feb 15, 2024</td>
                                                 <td>T497209787352090</td>
                                                 <td>500</td>
@@ -461,13 +451,13 @@
                                               </tr>
 
                                               <tr>
-                                                <td class="">
+                                                <td>
                                                   <div class="form-check justify-content-center d-flex">
                                                     <input class="form-check-input" type="checkbox" value="" id="usersDataCheck10">
                                                     <label class="form-check-label" for="usersDataCheck10"></label>
                                                   </div>
                                                 </td>
-                                                <td class=""><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
+                                                <td><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
                                                 <td>Feb 15, 2024</td>
                                                 <td>T497209787352090</td>
                                                 <td>500</td>
@@ -476,13 +466,13 @@
                                               </tr>
 
                                               <tr>
-                                                <td class="">
+                                                <td>
                                                   <div class="form-check justify-content-center d-flex">
                                                     <input class="form-check-input" type="checkbox" value="" id="usersDataCheck11">
                                                     <label class="form-check-label" for="usersDataCheck11"></label>
                                                   </div>
                                                 </td>
-                                                <td class=""><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
+                                                <td><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
                                                 <td>Feb 15, 2024</td>
                                                 <td>T497209787352090</td>
                                                 <td>500</td>
@@ -491,13 +481,13 @@
                                               </tr>
 
                                               <tr>
-                                                <td class="">
+                                                <td>
                                                   <div class="form-check justify-content-center d-flex">
                                                     <input class="form-check-input" type="checkbox" value="" id="usersDataCheck12">
                                                     <label class="form-check-label" for="usersDataCheck12"></label>
                                                   </div>
                                                 </td>
-                                                <td class=""><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
+                                                <td><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
                                                 <td>Feb 15, 2024</td>
                                                 <td>T497209787352090</td>
                                                 <td>500</td>
@@ -506,13 +496,13 @@
                                               </tr>
 
                                               <tr>
-                                                <td class="">
+                                                <td>
                                                   <div class="form-check justify-content-center d-flex">
                                                     <input class="form-check-input" type="checkbox" value="" id="usersDataCheck13">
                                                     <label class="form-check-label" for="usersDataCheck13"></label>
                                                   </div>
                                                 </td>
-                                                <td class=""><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
+                                                <td><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
                                                 <td>Feb 15, 2024</td>
                                                 <td>T497209787352090</td>
                                                 <td>500</td>
@@ -521,13 +511,13 @@
                                               </tr>
 
                                               <tr>
-                                                <td class="">
+                                                <td>
                                                   <div class="form-check justify-content-center d-flex">
                                                     <input class="form-check-input" type="checkbox" value="" id="usersDataCheck14">
                                                     <label class="form-check-label" for="usersDataCheck14"></label>
                                                   </div>
                                                 </td>
-                                                <td class=""><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
+                                                <td><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
                                                 <td>Feb 15, 2024</td>
                                                 <td>T497209787352090</td>
                                                 <td>500</td>
@@ -536,13 +526,13 @@
                                               </tr>
 
                                               <tr>
-                                                <td class="">
+                                                <td>
                                                   <div class="form-check justify-content-center d-flex">
                                                     <input class="form-check-input" type="checkbox" value="" id="usersDataCheck15">
                                                     <label class="form-check-label" for="usersDataCheck15"></label>
                                                   </div>
                                                 </td>
-                                                <td class=""><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
+                                                <td><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
                                                 <td>Feb 15, 2024</td>
                                                 <td>T497209787352090</td>
                                                 <td>500</td>
@@ -551,13 +541,13 @@
                                               </tr>
 
                                               <tr>
-                                                <td class="">
+                                                <td>
                                                   <div class="form-check justify-content-center d-flex">
                                                     <input class="form-check-input" type="checkbox" value="" id="usersDataCheck16">
                                                     <label class="form-check-label" for="usersDataCheck16"></label>
                                                   </div>
                                                 </td>
-                                                <td class=""><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
+                                                <td><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
                                                 <td>Feb 15, 2024</td>
                                                 <td>T497209787352090</td>
                                                 <td>500</td>
@@ -566,13 +556,13 @@
                                               </tr>
 
                                               <tr>
-                                                <td class="">
+                                                <td>
                                                   <div class="form-check justify-content-center d-flex">
                                                     <input class="form-check-input" type="checkbox" value="" id="usersDataCheck17">
                                                     <label class="form-check-label" for="usersDataCheck17"></label>
                                                   </div>
                                                 </td>
-                                                <td class=""><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
+                                                <td><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
                                                 <td>Feb 15, 2024</td>
                                                 <td>T497209787352090</td>
                                                 <td>500</td>
@@ -580,13 +570,13 @@
                                               </tr>
 
                                               <tr>
-                                                <td class="">
+                                                <td>
                                                   <div class="form-check justify-content-center d-flex">
                                                     <input class="form-check-input" type="checkbox" value="" id="usersDataCheck18">
                                                     <label class="form-check-label" for="usersDataCheck18"></label>
                                                   </div>
                                                 </td>
-                                                <td class=""><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
+                                                <td><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
                                                 <td>Feb 15, 2024</td>
                                                 <td>T497209787352090</td>
                                                 <td>500</td>
@@ -608,6 +598,69 @@
         </div>
     </div> 
     <!-- Admin Structure End -->
+
+    <!-- modal Payment -->
+    <div class="modal fade" id="confermetionpayment" tabindex="-1" aria-labelledby="confermetionpaymentLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <!-- Body -->
+          <div class="modal-body py-4">
+            <div class="row row-gap-4">
+              <div class="col-auto mx-auto"><div class=""><i class="fas fa-exclamation-circle fs-80 text-success"></i></div></div>
+              <div class="col-12 text-center"><h3 class="m-0">Are You Sure?</h3></div>
+              <p class="fs-6 text-center m-0">Role Users will be payment. Do you confirm that?</p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-white" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Confirm</button>
+          </div>
+          <!-- End Body -->
+        </div>
+      </div>
+    </div>
+
+    <!-- modal Block User -->
+    <div class="modal fade" id="blockuser" tabindex="-1" aria-labelledby="blockuserLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <!-- Body -->
+          <div class="modal-body py-4">
+            <div class="row row-gap-4">
+              <div class="col-auto mx-auto"><div class=""><i class="fas fa-ban fs-80 text-warning"></i></div></div>
+              <div class="col-12 text-center"><h3 class="m-0">Are You Sure?</h3></div>
+              <p class="fs-6 text-center m-0">Role Users will be user blocked. Do you confirm that?</p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-white" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Confirm</button>
+          </div>
+          <!-- End Body -->
+        </div>
+      </div>
+    </div>
+
+    <!-- modal Delete User -->
+    <div class="modal fade" id="deleteuser" tabindex="-1" aria-labelledby="deleteuserLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <!-- Body -->
+          <div class="modal-body py-4">
+            <div class="row row-gap-4">
+              <div class="col-auto mx-auto"><div class=""><i class="far fa-times-circle fs-80 text-danger"></i></div></div>
+              <div class="col-12 text-center"><h3 class="m-0">Are You Sure?</h3></div>
+              <p class="fs-6 text-center m-0">Role Users will be user deleted. Do you confirm that?</p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-white" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Confirm</button>
+          </div>
+          <!-- End Body -->
+        </div>
+      </div>
+    </div>
     
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>

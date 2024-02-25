@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>All Bids</title>
     <!-- *Bootstrap Css* -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- *Custom Css* -->
@@ -34,8 +34,8 @@
                             <ul class="navlist list-unstyled m-0 p-0">
                               <li><a href="index.html" class="navitems"><i class="fas fa-home"></i> Dashboard</a></li>
                               <li><a href="profile.html" class="navitems"><i class="far fa-user"></i> My Profile</a></li>
-                              <li><a href="javascript:;" class="navitems active"><i class="fas fa-shopping-bag"></i> Orders</a></li>
-                              <li><a href="all-bids.html" class="navitems"><i class="fas fa-shopping-bag"></i> All Bids</a></li>
+                              <li><a href="order.html" class="navitems"><i class="fas fa-shopping-bag"></i> Orders</a></li>
+                              <li><a href="javascript:;" class="navitems active"><i class="fas fa-shopping-bag"></i> All Bids</a></li>
                               <li><a href="sign-up.html" class="navitems"><i class="fas fa-user-plus"></i> Sign Up</a></li>
                               <li><a href="login.html" class="navitems"><i class="fas fa-sign-in-alt"></i> Login</a></li>
                               <li><a href="forget-password.html" class="navitems"><i class="fas fa-key"></i> Forget Password</a></li> 
@@ -54,7 +54,7 @@
                         </div>
                         <button class="switch-icn bg-white border-0" id="switch"><i class="fas fa-bars"></i></button>
                         <div class="search-bar d-lg-block d-none">
-                            <form class="search-form d-flex align-items-center w-100" method="POST" action="#">
+                            <form class="search-form d-flex align-items-center w-20,260" method="POST" action="#">
                               <input type="text" name="query" placeholder="Search" title="Enter search keyword">
                               <button type="submit" title="Search"><i class="fas fa-search"></i></button>
                             </form>
@@ -113,7 +113,7 @@
                     </div>
                     <div class="col-12 h-100 flex-fill overflow-y-auto">
                         <div class="innerbody_part h-100">
-                            <div class="card h100 border-0 bg-transparent shadow-0">
+                            <div class="card h20,260 border-0 bg-transparent shadow-0">
                                 <div class="card-body h-100">
                                     
                                     <main id="content" role="main" class="main">
@@ -123,10 +123,12 @@
                                             <div class="page-header">
                                                 <div class="row align-items-center mb-3">
                                                     <div class="col-sm">
-                                                        <h3 class="page-header-title">Order list</h3>
+                                                        <h3 class="page-header-title">All Bids History</h3>
                                                     </div> 
                                                 </div>
                                                 <!-- End Row --> 
+                                                <!-- Nav pills -->
+                                               
                                             </div>
                                             <!-- End Nav Scroller -->
                                         </div>
@@ -154,36 +156,13 @@
                                                                         </form>
                                                                     </div>
                                                                 </div>
-                                                                <div class="col-md col-12">
+                                                                <div class="col">
                                                                     <div class="row g-2 justify-content-md-end">
-                                                                        <div class="col-auto">
-                                                                            <a class="d-inline-flex align-items-center gap-2 btn btn-sm btn-outline-success" href="javascript:;" data-bs-toggle="modal" data-bs-target="#confermetionpayment"> 
-                                                                                <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-money-check"></i> </span>
-                                                                                <span>Repayment</span> 
-                                                                            </a>
-                                                                        </div>
-                                                                        <div class="col-auto">
-                                                                            <div class="row align-items-center gx-0 h-100">
-                                                                              <div class="col">
-                                                                                <span class="text-secondary me-2">Status:</span>
-                                                                              </div>
-                                                                              <div class="col-auto h-100">
-                                                                                <div class="tom-select-custom tom-select-custom-end h-100">
-                                                                                  <select class="js-select js-datatable-filter form-select form-select-sm form-select-borderless h-100" data-target-column-index="2" data-target-table="datatable" autocomplete="off">
-                                                                                    <option value="null" selected>All</option>
-                                                                                    <option value="successful">Successful</option>
-                                                                                    <option value="overdue">Overdue</option>
-                                                                                    <option value="pending">Pending</option>
-                                                                                  </select>
-                                                                                </div>
-                                                                              </div>
-                                                                            </div>
-                                                                          </div>
                                                                           <!-- <div class="col-auto">
                                                                               <button type="button" class="btn btn-outline-dark btn-sm text-nowrap" data-bs-toggle="modal" data-bs-target="#filter">Filter</button>
                                                                           </div> -->
                                                                           <div class="col-auto">
-                                                                              <a id="export-pdf" class="btn btn-white btn-sm d-flex align-items-center w-100 border border-1" href="javascript:;" data-bs-toggle="modal" data-bs-target="#filter">
+                                                                              <a id="export-pdf" class="btn btn-white btn-sm d-flex align-items-center w-20,260 border border-1" href="javascript:;" data-bs-toggle="modal" data-bs-target="#filter">
                                                                                   <img class="avatar avatar-xss avatar-4x3 me-2" src="assets/img/pdf-icon.svg" class="img-fluid" alt="Image Description">
                                                                                   PDF
                                                                               </a>
@@ -198,7 +177,7 @@
 
                                                         <!-- Table -->
                                                         <div class="table-responsive datatable-custom">
-                                                            <table id="datatable" class="table table-hover table-borderless table-thead-bordered table-nowrap align-middle card-table w-100">
+                                                            <table id="datatable" class="table table-hover table-borderless table-thead-bordered table-nowrap align-middle card-table w-20,260">
                                                                 <thead class="thead-light">
                                                                     <tr>
                                                                         <th class=" check">
@@ -207,15 +186,14 @@
                                                                             <label class="form-check-label" for="datatableCheckAll"></label>
                                                                         </div>
                                                                         </th>
-                                                                        <th>User Id</th>
+                                                                        <th>Period Id</th>
                                                                         <th>Date</th> 
-                                                                        <th>Transaction Id</th>
-                                                                        <th>Amount</th>
-                                                                        <th>Payment status</th>
+                                                                        <th>Time</th>
+                                                                        <th>Bid Amount</th>
+                                                                        <th>Total User</th>
                                                                         <!-- <th>Actions</th> -->
                                                                     </tr>
                                                                 </thead>
-
                                                                 <tbody>
                                                                     <tr>
                                                                         <td>
@@ -224,34 +202,11 @@
                                                                                 <label class="form-check-label" for="ordersCheck1"></label>
                                                                             </div>
                                                                         </td>
-                                                                        <td><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
+                                                                        <td><a href="javascript:;" class="text-inherit">12345678912</a></td>
                                                                         <td>Feb 15, 2024</td> 
-                                                                        <td>T497209787352090</td>
-                                                                        <td>1000</td>
-                                                                        <td><span class="badge bg-soft-success text-success"><span class="legend-indicator bg-success"></span>Paid</span></td> 
-<!-- <td
-                                                                            <div class="btn-group" role="group">
-                                                                                <div class="btn-group">
-                                                                                    <button type="button" class="btn btn-white btn-icon btn-sm dropdown-toggle dropdown-toggle-empty  border border-1" id="ordersExportDropdown1" data-bs-toggle="dropdown" aria-expanded="false">
-                                                                                        <i class="fas fa-eye"></i> View
-                                                                                    </button>
-                                                                                    <div class="dropdown-menu view dropdown-menu-end mt-1" aria-labelledby="ordersExportDropdown1">  
-                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center block" href="javascript:;"> 
-                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-lock"></i></span>
-                                                                                            <span>Block</span>
-                                                                                        </a>
-                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center payment" href="javascript:;"> 
-                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-money-check"></i> </span>
-                                                                                            <span>Repayment</span> 
-                                                                                        </a>
-                                                                                        <a class="dropdown-item text-dark d-inline-flex align-items-center delete" href="javascript:;">
-                                                                                            <span class="profile-icn d-flex align-items-center justify-content-center"><i class="fas fa-trash"></i> </span>
-                                                                                            <span>Delete</span> 
-                                                                                        </a>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </td> -->
+                                                                        <td>11:55:00 AM</td>
+                                                                        <td>43,286</td>
+                                                                        <td>50,568</td>
                                                                     </tr>
 
                                                                     <tr>
@@ -261,11 +216,11 @@
                                                                                 <label class="form-check-label" for="ordersCheck1"></label>
                                                                             </div>
                                                                         </td>
-                                                                        <td><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
+                                                                        <td><a href="javascript:;" class="text-inherit">12345678912</a></td>
                                                                         <td>Feb 15, 2024</td> 
-                                                                        <td>T497209787352090</td>
-                                                                        <td>500</td>
-                                                                        <td><span class="badge bg-soft-success text-success"><span class="legend-indicator bg-success"></span>Paid</span></td> 
+                                                                        <td>11:50:00 AM</td>
+                                                                        <td>1,05,765</td>
+                                                                        <td>50,568</td>
                                                                     </tr>
 
                                                                     <tr>
@@ -275,11 +230,11 @@
                                                                                 <label class="form-check-label" for="ordersCheck1"></label>
                                                                             </div>
                                                                         </td>
-                                                                        <td><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
+                                                                        <td><a href="javascript:;" class="text-inherit">12345678912</a></td>
                                                                         <td>Feb 15, 2024</td> 
-                                                                        <td>T497209787352090</td>
-                                                                        <td>100</td>
-                                                                        <td><span class="badge bg-soft-success text-success"><span class="legend-indicator bg-success"></span>Paid</span></td> 
+                                                                        <td>11:45:00 AM</td>
+                                                                        <td>20,260</td>
+                                                                        <td>50,568</td>
                                                                     </tr>
 
                                                                     <tr>
@@ -289,11 +244,11 @@
                                                                                 <label class="form-check-label" for="ordersCheck20"></label>
                                                                             </div>
                                                                         </td>
-                                                                        <td><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
+                                                                        <td><a href="javascript:;" class="text-inherit">12345678912</a></td>
                                                                         <td>Feb 15, 2024</td> 
-                                                                        <td>T497209787352090</td>
-                                                                        <td>1000</td>
-                                                                        <td><span class="badge bg-soft-warning text-warning"><span class="legend-indicator bg-warning"></span>Pending</span></td> 
+                                                                        <td>11:40:00 AM</td>
+                                                                        <td>43,286</td>
+                                                                        <td>50,568</td>
                                                                     </tr>
 
                                                                     <tr>
@@ -303,11 +258,11 @@
                                                                                 <label class="form-check-label" for="ordersCheck1"></label>
                                                                             </div>
                                                                         </td>
-                                                                        <td><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
+                                                                        <td><a href="javascript:;" class="text-inherit">12345678912</a></td>
                                                                         <td>Feb 15, 2024</td> 
-                                                                        <td>T497209787352090</td>
-                                                                        <td>500</td>
-                                                                        <td><span class="badge bg-soft-success text-success"><span class="legend-indicator bg-success"></span>Paid</span></td> 
+                                                                        <td>11:35:00 AM</td>
+                                                                        <td>1,05,765</td>
+                                                                        <td>50,568</td>
                                                                     </tr>
 
                                                                     <tr>
@@ -317,11 +272,11 @@
                                                                                 <label class="form-check-label" for="ordersCheck1"></label>
                                                                             </div>
                                                                         </td>
-                                                                        <td><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
+                                                                        <td><a href="javascript:;" class="text-inherit">12345678912</a></td>
                                                                         <td>Feb 15, 2024</td> 
-                                                                        <td>T497209787352090</td>
-                                                                        <td>100</td>
-                                                                        <td><span class="badge bg-soft-success text-success"><span class="legend-indicator bg-success"></span>Paid</span></td> 
+                                                                        <td>11:30:00 AM</td>
+                                                                        <td>20,260</td>
+                                                                        <td>50,568</td>
                                                                     </tr>
 
                                                                     <tr>
@@ -331,11 +286,11 @@
                                                                                 <label class="form-check-label" for="ordersCheck20"></label>
                                                                             </div>
                                                                         </td>
-                                                                        <td><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
+                                                                        <td><a href="javascript:;" class="text-inherit">12345678912</a></td>
                                                                         <td>Feb 15, 2024</td> 
-                                                                        <td>T497209787352090</td>
-                                                                        <td>1000</td>
-                                                                        <td><span class="badge bg-soft-warning text-warning"><span class="legend-indicator bg-warning"></span>Pending</span></td> 
+                                                                        <td>11:25:00 AM</td>
+                                                                        <td>43,286</td>
+                                                                        <td>50,568</td>
                                                                     </tr>
 
                                                                     <tr>
@@ -345,11 +300,11 @@
                                                                                 <label class="form-check-label" for="ordersCheck20"></label>
                                                                             </div>
                                                                         </td>
-                                                                        <td><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
+                                                                        <td><a href="javascript:;" class="text-inherit">12345678912</a></td>
                                                                         <td>Feb 15, 2024</td> 
-                                                                        <td>T497209787352090</td>
-                                                                        <td>500</td>
-                                                                        <td><span class="badge bg-soft-warning text-warning"><span class="legend-indicator bg-warning"></span>Pending</span></td> 
+                                                                        <td>11:55:00 AM</td>
+                                                                        <td>1,05,765</td>
+                                                                        <td>50,568</td>
                                                                     </tr>
 
                                                                     <tr>
@@ -359,11 +314,11 @@
                                                                                 <label class="form-check-label" for="ordersCheck9"></label>
                                                                             </div>
                                                                         </td>
-                                                                        <td><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
+                                                                        <td><a href="javascript:;" class="text-inherit">12345678912</a></td>
                                                                         <td>Feb 15, 2024</td> 
-                                                                        <td>T497209787352090</td>
-                                                                        <td>100</td>
-                                                                        <td><span class="badge bg-soft-success text-success"><span class="legend-indicator bg-success"></span>Paid</span></td> 
+                                                                        <td>11:55:00 AM</td>
+                                                                        <td>20,260</td>
+                                                                        <td>50,568</td>
                                                                     </tr>
 
                                                                     <tr>
@@ -373,11 +328,11 @@
                                                                                 <label class="form-check-label" for="ordersCheck1"></label>
                                                                             </div>
                                                                         </td>
-                                                                        <td><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
+                                                                        <td><a href="javascript:;" class="text-inherit">12345678912</a></td>
                                                                         <td>Feb 15, 2024</td> 
-                                                                        <td>T497209787352090</td>
-                                                                        <td>1000</td>
-                                                                        <td><span class="badge bg-soft-success text-success"><span class="legend-indicator bg-success"></span>Paid</span></td> 
+                                                                        <td>11:55:00 AM</td>
+                                                                        <td>43,286</td>
+                                                                        <td>50,568</td>
                                                                     </tr>
 
                                                                     <tr>
@@ -387,11 +342,11 @@
                                                                                 <label class="form-check-label" for="ordersCheck20"></label>
                                                                             </div>
                                                                         </td>
-                                                                        <td><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
+                                                                        <td><a href="javascript:;" class="text-inherit">12345678912</a></td>
                                                                         <td>Feb 15, 2024</td> 
-                                                                        <td>T497209787352090</td>
-                                                                        <td>500</td>
-                                                                        <td><span class="badge bg-soft-warning text-warning"><span class="legend-indicator bg-warning"></span>Pending</span></td> 
+                                                                        <td>11:55:00 AM</td>
+                                                                        <td>1,05,765</td>
+                                                                        <td>50,568</td>
                                                                     </tr>
 
                                                                     <tr>
@@ -401,11 +356,11 @@
                                                                                 <label class="form-check-label" for="ordersCheck1"></label>
                                                                             </div>
                                                                         </td>
-                                                                        <td><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
+                                                                        <td><a href="javascript:;" class="text-inherit">12345678912</a></td>
                                                                         <td>Feb 15, 2024</td> 
-                                                                        <td>T497209787352090</td>
-                                                                        <td>100</td>
-                                                                        <td><span class="badge bg-soft-success text-success"><span class="legend-indicator bg-success"></span>Paid</span></td> 
+                                                                        <td>11:55:00 AM</td>
+                                                                        <td>20,260</td>
+                                                                        <td>50,568</td>
                                                                     </tr>
 
                                                                     <tr>
@@ -415,11 +370,11 @@
                                                                                 <label class="form-check-label" for="ordersCheck1"></label>
                                                                             </div>
                                                                         </td>
-                                                                        <td><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
+                                                                        <td><a href="javascript:;" class="text-inherit">12345678912</a></td>
                                                                         <td>Feb 15, 2024</td> 
-                                                                        <td>T497209787352090</td>
-                                                                        <td>1000</td>
-                                                                        <td><span class="badge bg-soft-success text-success"><span class="legend-indicator bg-success"></span>Paid</span></td> 
+                                                                        <td>11:55:00 AM</td>
+                                                                        <td>43,286</td>
+                                                                        <td>50,568</td>
                                                                     </tr>
 
                                                                     <tr>
@@ -429,11 +384,11 @@
                                                                                 <label class="form-check-label" for="ordersCheck20"></label>
                                                                             </div>
                                                                         </td>
-                                                                        <td><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
+                                                                        <td><a href="javascript:;" class="text-inherit">12345678912</a></td>
                                                                         <td>Feb 15, 2024</td> 
-                                                                        <td>T497209787352090</td>
-                                                                        <td>500</td>
-                                                                        <td><span class="badge bg-soft-warning text-warning"><span class="legend-indicator bg-warning"></span>Pending</span></td> 
+                                                                        <td>11:55:00 AM</td>
+                                                                        <td>1,05,765</td>
+                                                                        <td>50,568</td>
                                                                     </tr>
 
                                                                     <tr>
@@ -443,11 +398,11 @@
                                                                                 <label class="form-check-label" for="ordersCheck20"></label>
                                                                             </div>
                                                                         </td>
-                                                                        <td><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
+                                                                        <td><a href="javascript:;" class="text-inherit">12345678912</a></td>
                                                                         <td>Feb 15, 2024</td> 
-                                                                        <td>T497209787352090</td>
-                                                                        <td>100</td>
-                                                                        <td><span class="badge bg-soft-warning text-warning"><span class="legend-indicator bg-warning"></span>Pending</span></td> 
+                                                                        <td>11:55:00 AM</td>
+                                                                        <td>20,260</td>
+                                                                        <td>50,568</td>
                                                                     </tr>
 
                                                                     <tr>
@@ -457,11 +412,11 @@
                                                                                 <label class="form-check-label" for="ordersCheck1"></label>
                                                                             </div>
                                                                         </td>
-                                                                        <td><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
+                                                                        <td><a href="javascript:;" class="text-inherit">12345678912</a></td>
                                                                         <td>Feb 15, 2024</td> 
-                                                                        <td>T497209787352090</td>
-                                                                        <td>1000</td>
-                                                                        <td><span class="badge bg-soft-success text-success"><span class="legend-indicator bg-success"></span>Paid</span></td> 
+                                                                        <td>11:55:00 AM</td>
+                                                                        <td>43,286</td>
+                                                                        <td>50,568</td>
                                                                     </tr>
 
                                                                     <tr>
@@ -471,11 +426,11 @@
                                                                                 <label class="form-check-label" for="ordersCheck1"></label>
                                                                             </div>
                                                                         </td>
-                                                                        <td><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
+                                                                        <td><a href="javascript:;" class="text-inherit">12345678912</a></td>
                                                                         <td>Feb 15, 2024</td> 
-                                                                        <td>T497209787352090</td>
-                                                                        <td>500</td>
-                                                                        <td><span class="badge bg-soft-success text-success"><span class="legend-indicator bg-success"></span>Paid</span></td> 
+                                                                        <td>11:55:00 AM</td>
+                                                                        <td>1,05,765</td>
+                                                                        <td>50,568</td>
                                                                     </tr>
 
                                                                     <tr>
@@ -485,11 +440,11 @@
                                                                                 <label class="form-check-label" for="ordersCheck1"></label>
                                                                             </div>
                                                                         </td>
-                                                                        <td><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
+                                                                        <td><a href="javascript:;" class="text-inherit">12345678912</a></td>
                                                                         <td>Feb 15, 2024</td> 
-                                                                        <td>T497209787352090</td>
-                                                                        <td>100</td>
-                                                                        <td><span class="badge bg-soft-success text-success"><span class="legend-indicator bg-success"></span>Paid</span></td> 
+                                                                        <td>11:55:00 AM</td>
+                                                                        <td>20,260</td>
+                                                                        <td>50,568</td>
                                                                     </tr>
 
                                                                     <tr>
@@ -499,11 +454,11 @@
                                                                                 <label class="form-check-label" for="ordersCheck1"></label>
                                                                             </div>
                                                                         </td>
-                                                                        <td><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
+                                                                        <td><a href="javascript:;" class="text-inherit">12345678912</a></td>
                                                                         <td>Feb 15, 2024</td> 
-                                                                        <td>T497209787352090</td>
-                                                                        <td>500</td>
-                                                                        <td><span class="badge bg-soft-success text-success"><span class="legend-indicator bg-success"></span>Paid</span></td> 
+                                                                        <td>11:55:00 AM</td>
+                                                                        <td>1,05,765</td>
+                                                                        <td>50,568</td>
                                                                     </tr>
 
                                                                     <tr>
@@ -513,11 +468,11 @@
                                                                                 <label class="form-check-label" for="ordersCheck20"></label>
                                                                             </div>
                                                                         </td>
-                                                                        <td><a href="javascript:;" class="text-inherit">78Q53A6</a></td>
+                                                                        <td><a href="javascript:;" class="text-inherit">12345678912</a></td>
                                                                         <td>Feb 15, 2024</td> 
-                                                                        <td>T497209787352090</td>
-                                                                        <td>1000</td>
-                                                                        <td><span class="badge bg-soft-warning text-warning"><span class="legend-indicator bg-warning"></span>Pending</span></td> 
+                                                                        <td>11:55:00 AM</td>
+                                                                        <td>43,286</td>
+                                                                        <td>50,568</td>
                                                                     </tr>
                                                                 </tbody>
                                                             </table>
@@ -552,26 +507,7 @@
     </div> 
     <!-- Admin Structure End -->
 
-    <!-- modal Payment -->
-    <div class="modal fade" id="confermetionpayment" tabindex="-1" aria-labelledby="confermetionpaymentLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-            <!-- Body -->
-            <div class="modal-body py-4">
-                <div class="row row-gap-4">
-                <div class="col-auto mx-auto"><div class=""><i class="fas fa-exclamation-circle fs-80 text-success"></i></div></div>
-                <div class="col-12 text-center"><h3 class="m-0">Are You Sure?</h3></div>
-                <p class="fs-6 text-center m-0">Role Users will be payment. Do you confirm that?</p>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-white" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Confirm</button>
-            </div>
-            <!-- End Body -->
-            </div>
-        </div>
-    </div>
+
     <!-- modal filter -->
     <div class="modal fade" id="filter" tabindex="-1" aria-labelledby="filterLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">

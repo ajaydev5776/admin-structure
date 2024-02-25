@@ -66,6 +66,7 @@
     } 
 }
 .rightside {
+    width: calc(100% - 280px);
     & .navbar {
         height: 70px;
     }
@@ -211,6 +212,17 @@
                 height: auto;
                 width: 1.3333333333rem;
                 border-radius: 0;
+            }
+            & table {
+                & thead {
+                    & tr {
+                        & th {
+                            &:last-child{
+                                width: 120px;
+                            }
+                        }
+                    }
+                }
             }
         }
         & .bg-soft-success {
@@ -408,8 +420,8 @@
         line-height: normal;
     }
     & .avatar-xss{
-        height: 25px;
-        width: 25px;
+        height: 20px;
+        width: 20px;
     }
 }   
 
